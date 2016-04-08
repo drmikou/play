@@ -38,7 +38,7 @@ Seq[Any](format.raw/*5.19*/("""
 """),_display_(/*12.2*/main("Salut")/*12.15*/ {_display_(Seq[Any](format.raw/*12.17*/("""
 
     """),format.raw/*17.8*/("""
-    
+    """),_display_(/*18.6*/play20/*18.12*/.welcome(message, style = "Java")),format.raw/*18.45*/("""
 
 """)))}),format.raw/*20.2*/("""
 """))
@@ -64,11 +64,11 @@ Seq[Any](format.raw/*5.19*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 08 11:36:40 CEST 2016
+                  DATE: Fri Apr 08 11:45:12 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/index.scala.html
-                  HASH: aa4cfb26b33268fb78650daa54764e5e0376f141
-                  MATRIX: 834->95|946->112|975->312|1003->314|1025->327|1065->329|1098->458|1136->466
-                  LINES: 30->5|35->5|37->11|38->12|38->12|38->12|40->17|43->20
+                  HASH: edb93e8e393d96be0446a4825ba7478271f6dd2d
+                  MATRIX: 834->95|946->112|975->312|1003->314|1025->327|1065->329|1098->458|1130->464|1145->470|1199->503|1232->506
+                  LINES: 30->5|35->5|37->11|38->12|38->12|38->12|40->17|41->18|41->18|41->18|43->20
                   -- GENERATED --
               */
           

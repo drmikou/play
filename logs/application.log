@@ -1,3 +1,1 @@
-2016-04-08 09:36:04,146 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-3 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-04-08 09:36:17,152 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-04-08T07:36:17.151Z
-2016-04-08 09:36:17,438 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-04-08 11:08:28,125 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000

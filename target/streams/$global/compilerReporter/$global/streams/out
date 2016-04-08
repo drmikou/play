@@ -1,0 +1,7 @@
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
+[0m[[31merror[0m] [0mthree errors found[0m

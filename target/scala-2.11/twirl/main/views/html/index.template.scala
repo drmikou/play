@@ -35,7 +35,7 @@ class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
 Seq[Any](format.raw/*5.19*/("""
 
 """),format.raw/*11.4*/("""
-"""),_display_(/*12.2*/main("Welcome to Play")/*12.25*/ {_display_(Seq[Any](format.raw/*12.27*/("""
+"""),_display_(/*12.2*/main("Welcome to ddPlay")/*12.27*/ {_display_(Seq[Any](format.raw/*12.29*/("""
 
     """),format.raw/*17.8*/("""
     """),_display_(/*18.6*/play20/*18.12*/.welcome(message, style = "Java")),format.raw/*18.45*/("""
@@ -64,10 +64,10 @@ Seq[Any](format.raw/*5.19*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 08 09:14:04 CEST 2016
+                  DATE: Fri Apr 08 10:56:21 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/index.scala.html
-                  HASH: 40a7a2f7caa34d9844dcdf863134f543db76115e
-                  MATRIX: 834->95|946->112|975->312|1003->314|1035->337|1075->339|1108->468|1140->474|1155->480|1209->513|1242->516
+                  HASH: 84b605332f50186565ef87830f5b1d7d785366bb
+                  MATRIX: 834->95|946->112|975->312|1003->314|1037->339|1077->341|1110->470|1142->476|1157->482|1211->515|1244->518
                   LINES: 30->5|35->5|37->11|38->12|38->12|38->12|40->17|41->18|41->18|41->18|43->20
                   -- GENERATED --
               */

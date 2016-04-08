@@ -1,7 +1,5 @@
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:16: type LoginController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /login                      controllers.LoginController.index[0m
-[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/controllers/LoginController.java:20: method render in class views.html.login cannot be applied to given types;[0m
+[0m[[31merror[0m] [0m  required: no arguments[0m
+[0m[[31merror[0m] [0m  found: java.lang.String[0m
+[0m[[31merror[0m] [0m  reason: actual and formal argument lists differ in length[0m
+[0m[[31merror[0m] [0mlogin.render[0m

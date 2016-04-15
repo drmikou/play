@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/phanthavong/play-java/conf/routes
-// @DATE:Fri Apr 08 10:06:38 CEST 2016
+// @DATE:Fri Apr 15 09:55:29 CEST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -104,8 +104,8 @@ package controllers.javascript {
 
   
     // @LINE:16
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LoginController.index",
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.LoginController.login",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/phanthavong/play-java/conf/routes
-// @DATE:Fri Apr 08 10:06:38 CEST 2016
+// @DATE:Fri Apr 15 09:55:29 CEST 2016
 
 package router
 
@@ -59,7 +59,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.LoginController.index"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.LoginController.login"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -136,15 +136,15 @@ class Routes(
   )
 
   // @LINE:16
-  private[this] lazy val controllers_LoginController_index4_route = Route("GET",
+  private[this] lazy val controllers_LoginController_login4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
-  private[this] lazy val controllers_LoginController_index4_invoker = createInvoker(
-    LoginController_4.index,
+  private[this] lazy val controllers_LoginController_login4_invoker = createInvoker(
+    LoginController_4.login,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.LoginController",
-      "index",
+      "login",
       Nil,
       "GET",
       """ Page de login""",
@@ -180,9 +180,9 @@ class Routes(
       }
   
     // @LINE:16
-    case controllers_LoginController_index4_route(params) =>
+    case controllers_LoginController_login4_route(params) =>
       call { 
-        controllers_LoginController_index4_invoker.call(LoginController_4.index)
+        controllers_LoginController_login4_invoker.call(LoginController_4.login)
       }
   }
 }

@@ -32,11 +32,51 @@ class login extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap Login Form</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" media="screen" href=""""),_display_(/*9.50*/routes/*9.56*/.Assets.versioned("stylesheets/bootstrap.min.css")),format.raw/*9.106*/("""">
+    <link rel="stylesheet" media="screen" href=""""),_display_(/*10.50*/routes/*10.56*/.Assets.versioned("stylesheets/login.css")),format.raw/*10.98*/("""">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-
+<!--login modal-->
+<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h1 class="text-center">Login</h1>
+            </div>
+            <div class="modal-body">
+                <form class="form col-md-12 center-block">
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control input-lg" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg btn-block">Sign In</button>
+                        <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="col-md-12">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- script references -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src=""""),_display_(/*48.15*/routes/*48.21*/.Assets.versioned("javascripts/bootstrap.min.js")),format.raw/*48.70*/("""" type="text/javascript"></script>
 </body>
 </html>"""))
       }
@@ -58,11 +98,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 08 10:56:21 CEST 2016
+                  DATE: Fri Apr 15 10:04:38 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/login.scala.html
-                  HASH: e5f643d2bf2701a794e9fdac3bd7a6b6f198be35
-                  MATRIX: 827->0
-                  LINES: 32->1
+                  HASH: 9ce19bbf594bc12f9230dbb70eb07458b754f960
+                  MATRIX: 827->0|1219->366|1233->372|1304->422|1383->474|1398->480|1461->522|3139->2173|3154->2179|3224->2228
+                  LINES: 32->1|40->9|40->9|40->9|41->10|41->10|41->10|79->48|79->48|79->48
                   -- GENERATED --
               */
           

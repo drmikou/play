@@ -16,8 +16,8 @@ public class LoginController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>. test
      */
-    public Result index() {
-        return ok(index.render("Your new application is ready."));
+    public Result login() {
+        return ok(login.render());
     }
 
 }

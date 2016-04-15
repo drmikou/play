@@ -1,5 +1,5 @@
-New log file opened at Fri Apr 08 10:56:33 CEST 2016 by 5905@MacBook-Pro-de-Mickael-2.local
-jvm 5905@MacBook-Pro-de-Mickael-2.local
+New log file opened at Fri Apr 08 11:07:41 CEST 2016 by 5980@MacBook-Pro-de-Mickael-2.local
+jvm 5980@MacBook-Pro-de-Mickael-2.local
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.77-b03
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /Users/phanthavong/play-java/project, returning: (play-java-build)
 Loading project definition from /Users/phanthavong/play-java/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1601f354, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@72117ea1, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -69,7 +69,7 @@ Set current project to play-java (in build file:/Users/phanthavong/play-java/)
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4e254bd2, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@76805a50, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -86,18 +86,18 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 8 avr. 2016 10:56:43
+Total time: 1 s, completed 8 avr. 2016 11:07:48
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@577e9ec8, check cycles: false
-Total time: 0 s, completed 8 avr. 2016 10:56:43
+Running task... Cancel: sbt.server.ServerTaskCancellation@474020d, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:07:48
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@3426ac15, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@7fb225af, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -114,36 +114,36 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 8 avr. 2016 10:56:43
+Total time: 1 s, completed 8 avr. 2016 11:07:49
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@63854580, check cycles: false
-Total time: 0 s, completed 8 avr. 2016 10:56:43
+Running task... Cancel: sbt.server.ServerTaskCancellation@3b6336a2, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:07:49
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@6e48d3a2, check cycles: false
-Total time: 0 s, completed 8 avr. 2016 10:56:51
+Running task... Cancel: sbt.server.ServerTaskCancellation@5094b837, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:07:52
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@6f6efb4d, check cycles: false
-Total time: 1 s, completed 8 avr. 2016 10:56:55
+Running task... Cancel: sbt.server.ServerTaskCancellation@3de2bb3e, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:07:55
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@37320c14, check cycles: false
-Total time: 0 s, completed 8 avr. 2016 10:56:57
+Running task... Cancel: sbt.server.ServerTaskCancellation@584af1ed, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:07:56
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/Users/phanthavong/play-java/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@4a4c37f9, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@73df62ad, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -164,12 +164,12 @@ Copy resource mappings:
 	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
 	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
 	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
-Total time: 2 s, completed 8 avr. 2016 10:57:01
+Total time: 2 s, completed 8 avr. 2016 11:07:58
 > server-post-command-cleanup
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@832bf2, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@4b43a07, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -188,50 +188,34 @@ All initially invalidated sources: Set(/Users/phanthavong/play-java/app/controll
 
 Read from stdout: Compiling 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
 Compiling 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
-Attempting to call com.sun.tools.javac.api.JavacTool@14498611 directly...
-Java compilation took 0.94727523 s
-Java analysis took 0.369995149 s
-Java compile + analysis took 1.331881403 s
+Attempting to call com.sun.tools.javac.api.JavacTool@af4c848 directly...
+Java compilation took 0.600352475 s
+Java analysis took 0.308821802 s
+Java compile + analysis took 0.919781913 s
 New invalidations:
 	Set()
 Initial set of included nodes: Set()
 Previously invalidated, but (transitively) depend on new invalidations:
 	Set()
 All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 3 s, completed 8 avr. 2016 11:07:32
+Total time: 2 s, completed 8 avr. 2016 11:08:16
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/Users/phanthavong/play-java/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@140c4122, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 8 avr. 2016 11:07:33
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@5400889c, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:08:17
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/Users/phanthavong/play-java/}root/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@56f44cf1, check cycles: false
-Total time: 0 s, completed 8 avr. 2016 11:07:33
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@1593cece, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:08:17
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/Users/phanthavong/play-java/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@3faa2e6f, check cycles: false
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@7018557e, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -252,7 +236,633 @@ Copy resource mappings:
 	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
 	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
 	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
-Total time: 1 s, completed 8 avr. 2016 11:07:35
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'org.scalatest.tools.Framework' not present.
+Framework implementation 'org.scalatest.tools.ScalaTestFramework' not present.
+Subclass fingerprints: List((junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@6120bfd3))
+Annotation fingerprints: List((org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@958eb59), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@6de20386))
+Forking tests - parallelism = false
+Create a single-thread test executor
+Runner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.
+  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@5efd934a, false, [SuiteSelector])
+Test run started
+Test ApplicationTest.simpleCheck started
+Test ApplicationTest.simpleCheck finished, took 0.005 sec
+Test ApplicationTest.renderTemplate started
+Test ApplicationTest.renderTemplate finished, took 0.941 sec
+Test run finished: 0 failed, 0 ignored, 2 total, 0.96s
+    Produced 0 nested tasks and 2 events.
+  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@18a5a6b4, false, [SuiteSelector])
+Test run started
+Test IntegrationTest.test started
+[info] application - Creating Pool for datasource 'default'
+[info] application - ApplicationTimer demo: Starting application at 2016-04-08T09:08:22.790Z
+[info] application - ApplicationTimer demo: Stopping application at 2016-04-08T09:08:25.949Z after 3s.
+[info] application - Shutting down connection pool.
+Test IntegrationTest.test finished, took 5.887 sec
+Test run finished: 0 failed, 0 ignored, 1 total, 5.888s
+    Produced 0 nested tasks and 1 events.
+Summary for JUnit not available.
+Read from stdout: Passed: Total 3, Failed 0, Errors 0, Passed 3
+Passed: Total 3, Failed 0, Errors 0, Passed 3
+Passed tests:
+	ApplicationTest
+	IntegrationTest
+Total time: 9 s, completed 8 avr. 2016 11:08:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@355122ff, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:08:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@4adb9955, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:08:28
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@4b9b68e6, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 2bfc205c, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 4.274432289 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 6 s, completed 8 avr. 2016 11:26:33
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7755632b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 140729e4, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.627930441 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 2 s, completed 8 avr. 2016 11:30:43
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1d601938, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 143db895, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.469052748 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 2 s, completed 8 avr. 2016 11:31:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@5f3302db, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source and 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 6206c2d1, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.395869166 s
+Attempting to call com.sun.tools.javac.api.JavacTool@44b5da59 directly...
+Read from stdout: /Users/phanthavong/play-java/app/controllers/LoginController.java:20: method render in class views.html.login cannot be applied to given types;
+Read from stdout: required: no arguments
+Read from stdout: found: java.lang.String
+Read from stdout: reason: actual and formal argument lists differ in length
+/Users/phanthavong/play-java/app/controllers/LoginController.java:20: method render in class views.html.login cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+Read from stdout: login.render
+login.render
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 2 s, completed 8 avr. 2016 11:35:46
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@39b6c10d, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/phanthavong/play-java/app/controllers/LoginController.java)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source and 1 Java source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 323181f3, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.820656145 s
+Attempting to call com.sun.tools.javac.api.JavacTool@35d65ce4 directly...
+Read from stdout: /Users/phanthavong/play-java/app/controllers/LoginController.java:20: method render in class views.html.login cannot be applied to given types;
+Read from stdout: required: no arguments
+Read from stdout: found: java.lang.String
+Read from stdout: reason: actual and formal argument lists differ in length
+/Users/phanthavong/play-java/app/controllers/LoginController.java:20: method render in class views.html.login cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+Read from stdout: login.render
+login.render
+Total time: 2 s, completed 8 avr. 2016 11:35:49
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@556a30cf, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 4d382539, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 0.773103198 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 1 s, completed 8 avr. 2016 11:36:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1b0487d9, check cycles: false
+
+Canceling execution...
+Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@1e3637fc rejected from java.util.concurrent.ThreadPoolExecutor@413eb9a5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@1e3637fc rejected from java.util.concurrent.ThreadPoolExecutor@413eb9a5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 2
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@7397a17f, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:36:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@1e931aa2, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:36:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@25822ff1, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'org.scalatest.tools.Framework' not present.
+Framework implementation 'org.scalatest.tools.ScalaTestFramework' not present.
+Subclass fingerprints: List((junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@7e21e3d6))
+Annotation fingerprints: List((org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@22a6418), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@49c8808))
+Forking tests - parallelism = false
+Create a single-thread test executor
+Runner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.
+  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@413548a, false, [SuiteSelector])
+Test run started
+Test ApplicationTest.simpleCheck started
+Test ApplicationTest.simpleCheck finished, took 0.003 sec
+Test ApplicationTest.renderTemplate started
+Read from stdout: Test ApplicationTest.renderTemplate failed: null, took 0.855 sec
+Test ApplicationTest.renderTemplate failed: null, took 0.855 sec
+Test ApplicationTest.renderTemplate finished, took 0.856 sec
+Test run finished: 1 failed, 0 ignored, 2 total, 0.871s
+    Produced 0 nested tasks and 2 events.
+  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@17beb79, false, [SuiteSelector])
+Test run started
+Test IntegrationTest.test started
+[info] application - Creating Pool for datasource 'default'
+[info] application - ApplicationTimer demo: Starting application at 2016-04-08T09:36:47.746Z
+[info] application - ApplicationTimer demo: Stopping application at 2016-04-08T09:36:50.796Z after 3s.
+[info] application - Shutting down connection pool.
+Read from stdout: Test IntegrationTest.test failed: null, took 5.781 sec
+Test IntegrationTest.test failed: null, took 5.781 sec
+Test IntegrationTest.test finished, took 5.781 sec
+Test run finished: 1 failed, 0 ignored, 1 total, 5.785s
+    Produced 0 nested tasks and 1 events.
+Summary for JUnit not available.
+Read from stdout: Failed: Total 3, Failed 2, Errors 0, Passed 1
+Failed: Total 3, Failed 2, Errors 0, Passed 1
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	ApplicationTest
+Read from stdout: 	IntegrationTest
+	ApplicationTest
+	IntegrationTest
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 9 s, completed 8 avr. 2016 11:36:51
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@627e772f, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:36:51
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@2b2414, check cycles: false
+Total time: 0 s, completed 8 avr. 2016 11:36:52
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@5447405, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 1 s, completed 8 avr. 2016 11:36:59
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@1942542b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 3a61257d, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.397126329 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 2 s, completed 8 avr. 2016 11:45:14
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@3b14446b, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/phanthavong/play-java/target/scala-2.11/twirl/main/views/html/index.template.scala)
+
+Read from stdout: Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source to /Users/phanthavong/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 7aa93f32, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_77.jdk/Contents/Home/jre/classes:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+	-classpath
+	/Users/phanthavong/play-java/target/scala-2.11/classes:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/config/1.3.0/bundles/config.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/joda-time/joda-time/2.9.2/jars/joda-time.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-core/2.7.1/bundles/jackson-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-annotations/2.7.1/bundles/jackson-annotations.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.core/jackson-databind/2.7.1/bundles/jackson-databind.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.7.1/bundles/jackson-datatype-jdk8.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/2.7.1/bundles/jackson-datatype-jsr310.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/slf4j-api/1.7.16/jars/slf4j-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jul-to-slf4j/1.7.16/jars/jul-to-slf4j.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.slf4j/jcl-over-slf4j/1.7.16/jars/jcl-over-slf4j.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-stream_2.11/2.4.2/jars/akka-stream_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-actor_2.11/2.4.2/jars/akka-actor_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-akka_2.11/0.1.3/bundles/ssl-config-akka_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe/ssl-config-core_2.11/0.1.3/bundles/ssl-config-core_2.11.jar:/Users/phanthavong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.typesafe.akka/akka-slf4j_2.11/2.4.2/jars/akka-slf4j_2.11.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/Users/phanthavong/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/phanthavong/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/phanthavong/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject/guice/4.0/jars/guice.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-context/4.2.4.RELEASE/jars/spring-context.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-core/4.2.4.RELEASE/jars/spring-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.springframework/spring-beans/4.2.4.RELEASE/jars/spring-beans.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.guava/guava/19.0/bundles/guava.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.tomcat/tomcat-servlet-api/8.0.32/jars/tomcat-servlet-api.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams-http/jars/netty-reactive-streams-http-1.0.5.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.5.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-handler/4.0.34.Final/jars/netty-handler.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-buffer/4.0.34.Final/jars/netty-buffer.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-common/4.0.34.Final/jars/netty-common.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-transport/4.0.34.Final/jars/netty-transport.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec/4.0.34.Final/jars/netty-codec.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/io.netty/netty-codec-http/4.0.34.Final/jars/netty-codec-http.jar:/Users/phanthavong/.ivy2/cache/io.netty/netty-transport-native-epoll/jars/netty-transport-native-epoll-4.0.34.Final-linux-x86_64.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-core/1.1.4/jars/logback-core.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/ch.qos.logback/logback-classic/1.1.4/jars/logback-classic.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.zaxxer/HikariCP/2.4.3/bundles/HikariCP.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/com.h2database/h2/1.4.191/jars/h2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.1.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.1.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/async-http-client/jars/async-http-client-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver-dns/jars/netty-resolver-dns-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-resolver/jars/netty-resolver-2.0.0-RC16.jar:/Users/phanthavong/.ivy2/cache/org.asynchttpclient/netty-codec-dns/jars/netty-codec-dns-2.0.0-RC16.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/phanthavong/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/Users/phanthavong/Documents/PlayFramework/activator-dist-1.3.9/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/Users/phanthavong/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar
+Scala compilation took 1.376900314 s
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 3 s, completed 15 avr. 2016 08:47:13
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@34d5d3c9, check cycles: false
+Total time: 0 s, completed 15 avr. 2016 08:47:13
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -261,4 +871,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 5905@MacBook-Pro-de-Mickael-2.local logs at Fri Apr 08 11:07:35 CEST 2016, goodbye.
+Closing the 5980@MacBook-Pro-de-Mickael-2.local logs at Fri Apr 15 08:47:14 CEST 2016, goodbye.

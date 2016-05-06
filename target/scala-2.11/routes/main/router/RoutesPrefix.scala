@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/phanthavong/play-java/conf/routes
-// @DATE:Fri Apr 15 09:55:29 CEST 2016
+// @DATE:Fri May 06 09:52:09 CEST 2016
 
 
 package router {

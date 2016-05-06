@@ -1,4 +1,7 @@
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/controllers/LoginController.java:20: cannot find symbol[0m
-[0m[[31merror[0m] [0m  symbol:   method form(java.lang.Class<controllers.LoginController.Login>)[0m
-[0m[[31merror[0m] [0m  location: class controllers.LoginController[0m
-[0m[[31merror[0m] [0mform[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
+[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
+[0m[[31merror[0m] [0mthree errors found[0m

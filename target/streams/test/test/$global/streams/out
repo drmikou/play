@@ -1,100 +1,22 @@
 [0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@7089352b, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@5efd934a, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m started[0m
-[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.006 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.004 sec[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m started[0m
-[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m finished, took 1.078 sec[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 1.097s[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m finished, took 1.085 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 1.108s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@198f24ae, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@18a5a6b4, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m started[0m
-[0m[[31merror[0m] [0mTest [33mIntegrationTest[0m.[31mtest[0m failed: play.api.[31mConfiguration$$anon$1[0m: Configuration error[Cannot connect to database [db]], took 2.49 sec[0m
-[0m[[31merror[0m] [0m    at play.api.Configuration$.configError(Configuration.scala:154)[0m
-[0m[[31merror[0m] [0m    at play.api.Configuration.reportError(Configuration.scala:806)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:48)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:42)[0m
-[0m[[31merror[0m] [0m    at scala.collection.immutable.List.foreach(List.scala:381)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDBApi.connect(DefaultDBApi.scala:42)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:72)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DBApiProvider.get(DBModule.scala:62)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DBApiProvider.get(DBModule.scala:58)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:104)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:54)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:62)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:984)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:149)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.cglib.reflect.$FastMethod.invoke(FastMethod.java:53)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:57)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:91)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:174)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.Initializer.injectAll(Initializer.java:108)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:174)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.Guice.createInjector(Guice.java:96)[0m
-[0m[[31merror[0m] [0m    at com.google.inject.Guice.createInjector(Guice.java:84)[0m
-[0m[[31merror[0m] [0m    at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)[0m
-[0m[[31merror[0m] [0m    at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)[0m
-[0m[[31merror[0m] [0m    at play.api.test.FakeApplication.<init>(Fakes.scala:209)[0m
-[0m[[31merror[0m] [0m    at play.test.FakeApplication.<init>(FakeApplication.java:51)[0m
-[0m[[31merror[0m] [0m    at play.test.FakeApplication.<init>(FakeApplication.java:69)[0m
-[0m[[31merror[0m] [0m    at play.test.Helpers.fakeApplication(Helpers.java:172)[0m
-[0m[[31merror[0m] [0m    at IntegrationTest.test([35mIntegrationTest.java[0m:[33m19[0m)[0m
-[0m[[31merror[0m] [0m    ...[0m
-[0m[[31merror[0m] [0mCaused by: Configuration error: Configuration error[either dataSource or dataSourceClassName is required][0m
-[0m[[31merror[0m] [0m    at play.api.Configuration$.configError(Configuration.scala:154)[0m
-[0m[[31merror[0m] [0m    at play.api.PlayConfig.reportError(Configuration.scala:996)[0m
-[0m[[31merror[0m] [0m    at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:69)[0m
-[0m[[31merror[0m] [0m    at play.api.db.PooledDatabase.createDataSource(Databases.scala:200)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:124)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDatabase.dataSource(Databases.scala:122)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDatabase.getConnection(Databases.scala:143)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDatabase.getConnection(Databases.scala:139)[0m
-[0m[[31merror[0m] [0m    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:44)[0m
-[0m[[31merror[0m] [0m    ... 86 more[0m
-[0m[[31merror[0m] [0mCaused by: java.lang.IllegalArgumentException: either dataSource or dataSourceClassName is required[0m
-[0m[[31merror[0m] [0m    at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:785)[0m
-[0m[[31merror[0m] [0m    at play.api.db.HikariCPConfig.toHikariConfig(HikariCPModule.scala:140)[0m
-[0m[[31merror[0m] [0m    at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:57)[0m
-[0m[[31merror[0m] [0m    at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:54)[0m
-[0m[[31merror[0m] [0m    at scala.util.Try$.apply(Try.scala:192)[0m
-[0m[[31merror[0m] [0m    at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)[0m
-[0m[[31merror[0m] [0m    ... 92 more[0m
-[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m finished, took 2.586 sec[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 2.589s[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m finished, took 5.634 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 5.634s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
-[0m[[31merror[0m] [0mFailed: Total 3, Failed 1, Errors 0, Passed 2[0m
+[0m[[0minfo[0m] [0mPassed: Total 3, Failed 0, Errors 0, Passed 3[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	ApplicationTest[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	IntegrationTest[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0mdebug[0m] [0m	IntegrationTest[0m

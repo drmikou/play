@@ -51,7 +51,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h1 class="text-center">Login</h1>fdsfdsf
+                <h1 class="text-center">Login</h1>
             </div>
             <div class="modal-body">
                 <form class="form col-md-12 center-block">
@@ -99,10 +99,10 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Fri May 06 09:48:40 CEST 2016
+                  DATE: Fri May 06 09:52:09 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/login.scala.html
-                  HASH: cbf1bec1580e714e1e52cbd134346150f8903cb6
-                  MATRIX: 827->0|1219->366|1233->372|1304->422|1383->474|1398->480|1461->522|3147->2181|3162->2187|3232->2236
+                  HASH: 2472d429daf1769a2ae9386319d96bc389e552bb
+                  MATRIX: 827->0|1219->366|1233->372|1304->422|1383->474|1398->480|1461->522|3140->2174|3155->2180|3225->2229
                   LINES: 32->1|40->9|40->9|40->9|41->10|41->10|41->10|80->49|80->49|80->49
                   -- GENERATED --
               */

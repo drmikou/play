@@ -492,3 +492,15 @@ Caused by: java.sql.SQLException: No suitable driver
 	... 69 common frames omitted
 2016-05-06 09:34:07,431 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-05-06T07:34:07.429Z
 2016-05-06 09:34:07,618 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-05-06 09:48:11,912 [INFO] from application in application-akka.actor.default-dispatcher-14 - ApplicationTimer demo: Stopping application at 2016-05-06T07:48:11.912Z after 844s.
+2016-05-06 09:48:12,499 [INFO] from application in application-akka.actor.default-dispatcher-14 - ApplicationTimer demo: Starting application at 2016-05-06T07:48:12.499Z
+2016-05-06 09:48:12,583 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-14 - Application started (Dev)
+2016-05-06 09:48:18,239 [INFO] from application in application-akka.actor.default-dispatcher-8 - ApplicationTimer demo: Stopping application at 2016-05-06T07:48:18.239Z after 6s.
+2016-05-06 09:48:18,349 [INFO] from application in application-akka.actor.default-dispatcher-8 - ApplicationTimer demo: Starting application at 2016-05-06T07:48:18.348Z
+2016-05-06 09:48:18,419 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-8 - Application started (Dev)
+2016-05-06 09:48:25,367 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Stopping application at 2016-05-06T07:48:25.367Z after 7s.
+2016-05-06 09:48:25,462 [INFO] from application in application-akka.actor.default-dispatcher-5 - ApplicationTimer demo: Starting application at 2016-05-06T07:48:25.462Z
+2016-05-06 09:48:25,526 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-05-06 09:48:45,648 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Stopping application at 2016-05-06T07:48:45.648Z after 20s.
+2016-05-06 09:48:45,774 [INFO] from application in application-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Starting application at 2016-05-06T07:48:45.774Z
+2016-05-06 09:48:45,874 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)

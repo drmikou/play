@@ -1,18 +1,18 @@
 [0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
 [0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
 [0m[[0mdebug[0m] [0mRunner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@413548a, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@7089352b, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m started[0m
-[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.002 sec[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36msimpleCheck[0m finished, took 0.006 sec[0m
 [0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m started[0m
-[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m finished, took 0.626 sec[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.635s[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mApplicationTest[0m.[36mrenderTemplate[0m finished, took 1.078 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 1.097s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
-[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@11bf7f7e, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@198f24ae, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0m[34mTest run started[0m[0m
 [0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m started[0m
-[0m[[31merror[0m] [0mTest [33mIntegrationTest[0m.[31mtest[0m failed: play.api.[31mConfiguration$$anon$1[0m: Configuration error[Cannot connect to database [db]], took 1.471 sec[0m
+[0m[[31merror[0m] [0mTest [33mIntegrationTest[0m.[31mtest[0m failed: play.api.[31mConfiguration$$anon$1[0m: Configuration error[Cannot connect to database [db]], took 2.49 sec[0m
 [0m[[31merror[0m] [0m    at play.api.Configuration$.configError(Configuration.scala:154)[0m
 [0m[[31merror[0m] [0m    at play.api.Configuration.reportError(Configuration.scala:806)[0m
 [0m[[31merror[0m] [0m    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:48)[0m
@@ -88,8 +88,8 @@
 [0m[[31merror[0m] [0m    at scala.util.Try$.apply(Try.scala:192)[0m
 [0m[[31merror[0m] [0m    at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)[0m
 [0m[[31merror[0m] [0m    ... 92 more[0m
-[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m finished, took 1.597 sec[0m
-[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 1.597s[0m[0m
+[0m[[0mdebug[0m] [0mTest [33mIntegrationTest[0m.[36mtest[0m finished, took 2.586 sec[0m
+[0m[[0mdebug[0m] [0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 2.589s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[31merror[0m] [0mFailed: Total 3, Failed 1, Errors 0, Passed 2[0m

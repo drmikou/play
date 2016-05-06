@@ -1485,3 +1485,418 @@ Total time: 4 s, completed 6 mai 2016 09:22:13
 > server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@32b49149, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 6 mai 2016 09:27:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@190e915, check cycles: false
+Total time: 0 s, completed 6 mai 2016 09:27:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> test
+Evaluating tasks: test:test
+Running task... Cancel: sbt.server.ServerTaskCancellation@3210e982, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+Framework implementation 'org.scalacheck.ScalaCheckFramework' not present.
+Framework implementation 'org.specs2.runner.Specs2Framework' not present.
+Framework implementation 'org.specs2.runner.SpecsFramework' not present.
+Framework implementation 'org.specs.runner.SpecsFramework' not present.
+Framework implementation 'org.scalatest.tools.Framework' not present.
+Framework implementation 'org.scalatest.tools.ScalaTestFramework' not present.
+Subclass fingerprints: List((junit.framework.TestCase,false,com.novocode.junit.JUnit3Fingerprint@3f562134))
+Annotation fingerprints: List((org.junit.runner.RunWith,false,com.novocode.junit.RunWithFingerprint@38a94cbd), (org.junit.Test,false,com.novocode.junit.JUnitFingerprint@67a7087d))
+Forking tests - parallelism = false
+Create a single-thread test executor
+Runner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.
+  Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@7089352b, false, [SuiteSelector])
+Test run started
+Test ApplicationTest.simpleCheck started
+Test ApplicationTest.simpleCheck finished, took 0.006 sec
+Test ApplicationTest.renderTemplate started
+Test ApplicationTest.renderTemplate finished, took 1.078 sec
+Test run finished: 0 failed, 0 ignored, 2 total, 1.097s
+    Produced 0 nested tasks and 2 events.
+  Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@198f24ae, false, [SuiteSelector])
+Test run started
+Test IntegrationTest.test started
+[info] application - Creating Pool for datasource 'default'
+[info] application - Creating Pool for datasource 'db'
+[error] c.z.h.HikariConfig - either dataSource or dataSourceClassName is required
+[info] application - Creating Pool for datasource 'default'
+[info] application - Creating Pool for datasource 'db'
+[error] c.z.h.HikariConfig - either dataSource or dataSourceClassName is required
+[info] application - Creating Pool for datasource 'default'
+[info] application - Creating Pool for datasource 'db'
+[error] c.z.h.HikariConfig - either dataSource or dataSourceClassName is required
+[info] application - Creating Pool for datasource 'default'
+[info] application - Creating Pool for datasource 'db'
+[error] c.z.h.HikariConfig - either dataSource or dataSourceClassName is required
+Read from stdout: Test IntegrationTest.test failed: play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [db]], took 2.49 sec
+Test IntegrationTest.test failed: play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [db]], took 2.49 sec
+Read from stdout: at play.api.Configuration$.configError(Configuration.scala:154)
+    at play.api.Configuration$.configError(Configuration.scala:154)
+Read from stdout: at play.api.Configuration.reportError(Configuration.scala:806)
+    at play.api.Configuration.reportError(Configuration.scala:806)
+Read from stdout: at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:48)
+    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:48)
+Read from stdout: at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:42)
+    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:42)
+Read from stdout: at scala.collection.immutable.List.foreach(List.scala:381)
+    at scala.collection.immutable.List.foreach(List.scala:381)
+Read from stdout: at play.api.db.DefaultDBApi.connect(DefaultDBApi.scala:42)
+    at play.api.db.DefaultDBApi.connect(DefaultDBApi.scala:42)
+Read from stdout: at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:72)
+    at play.api.db.DBApiProvider.get$lzycompute(DBModule.scala:72)
+Read from stdout: at play.api.db.DBApiProvider.get(DBModule.scala:62)
+    at play.api.db.DBApiProvider.get(DBModule.scala:62)
+Read from stdout: at play.api.db.DBApiProvider.get(DBModule.scala:58)
+    at play.api.db.DBApiProvider.get(DBModule.scala:58)
+Read from stdout: at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
+    at com.google.inject.internal.ProviderInternalFactory.provision(ProviderInternalFactory.java:81)
+Read from stdout: at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
+    at com.google.inject.internal.BoundProviderFactory.provision(BoundProviderFactory.java:72)
+Read from stdout: at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+    at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:61)
+Read from stdout: at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
+    at com.google.inject.internal.BoundProviderFactory.get(BoundProviderFactory.java:62)
+Read from stdout: at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
+    at com.google.inject.internal.SingleParameterInjector.inject(SingleParameterInjector.java:38)
+Read from stdout: at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
+    at com.google.inject.internal.SingleParameterInjector.getAll(SingleParameterInjector.java:62)
+Read from stdout: at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:104)
+    at com.google.inject.internal.ConstructorInjector.provision(ConstructorInjector.java:104)
+Read from stdout: at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)
+    at com.google.inject.internal.ConstructorInjector.construct(ConstructorInjector.java:85)
+Read from stdout: at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)
+    at com.google.inject.internal.ConstructorBindingImpl$Factory.get(ConstructorBindingImpl.java:267)
+Read from stdout: at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+    at com.google.inject.internal.ProviderToInternalFactoryAdapter$1.call(ProviderToInternalFactoryAdapter.java:46)
+Read from stdout: at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+Read from stdout: at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+    at com.google.inject.internal.ProviderToInternalFactoryAdapter.get(ProviderToInternalFactoryAdapter.java:40)
+Read from stdout: at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
+    at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:145)
+Read from stdout: at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
+    at com.google.inject.internal.InternalFactoryToProviderAdapter.get(InternalFactoryToProviderAdapter.java:41)
+Read from stdout: at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)
+    at com.google.inject.internal.FactoryProxy.get(FactoryProxy.java:56)
+Read from stdout: at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:54)
+    at com.google.inject.internal.SingleFieldInjector.inject(SingleFieldInjector.java:54)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+Read from stdout: at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1103)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+    at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:62)
+    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:62)
+Read from stdout: at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:984)
+    at com.google.inject.internal.InjectorImpl.injectMembers(InjectorImpl.java:984)
+Read from stdout: at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:149)
+    at com.google.inject.util.Providers$GuicifiedProviderWithDependencies.initialize(Providers.java:149)
+Read from stdout: at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)
+    at com.google.inject.util.Providers$GuicifiedProviderWithDependencies$$FastClassByGuice$$2a7177aa.invoke(<generated>)
+Read from stdout: at com.google.inject.internal.cglib.reflect.$FastMethod.invoke(FastMethod.java:53)
+    at com.google.inject.internal.cglib.reflect.$FastMethod.invoke(FastMethod.java:53)
+Read from stdout: at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:57)
+    at com.google.inject.internal.SingleMethodInjector$1.invoke(SingleMethodInjector.java:57)
+Read from stdout: at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:91)
+    at com.google.inject.internal.SingleMethodInjector.inject(SingleMethodInjector.java:91)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+    at com.google.inject.internal.MembersInjectorImpl.injectMembers(MembersInjectorImpl.java:132)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:93)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+    at com.google.inject.internal.MembersInjectorImpl$1.call(MembersInjectorImpl.java:80)
+Read from stdout: at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+    at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1092)
+Read from stdout: at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+    at com.google.inject.internal.MembersInjectorImpl.injectAndNotify(MembersInjectorImpl.java:80)
+Read from stdout: at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:174)
+    at com.google.inject.internal.Initializer$InjectableReference.get(Initializer.java:174)
+Read from stdout: at com.google.inject.internal.Initializer.injectAll(Initializer.java:108)
+    at com.google.inject.internal.Initializer.injectAll(Initializer.java:108)
+Read from stdout: at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:174)
+    at com.google.inject.internal.InternalInjectorCreator.injectDynamically(InternalInjectorCreator.java:174)
+Read from stdout: at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+    at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+Read from stdout: at com.google.inject.Guice.createInjector(Guice.java:96)
+    at com.google.inject.Guice.createInjector(Guice.java:96)
+Read from stdout: at com.google.inject.Guice.createInjector(Guice.java:84)
+    at com.google.inject.Guice.createInjector(Guice.java:84)
+Read from stdout: at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
+    at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:181)
+Read from stdout: at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
+    at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:123)
+Read from stdout: at play.api.test.FakeApplication.<init>(Fakes.scala:209)
+    at play.api.test.FakeApplication.<init>(Fakes.scala:209)
+Read from stdout: at play.test.FakeApplication.<init>(FakeApplication.java:51)
+    at play.test.FakeApplication.<init>(FakeApplication.java:51)
+Read from stdout: at play.test.FakeApplication.<init>(FakeApplication.java:69)
+    at play.test.FakeApplication.<init>(FakeApplication.java:69)
+Read from stdout: at play.test.Helpers.fakeApplication(Helpers.java:172)
+    at play.test.Helpers.fakeApplication(Helpers.java:172)
+Read from stdout: at IntegrationTest.test(IntegrationTest.java:19)
+    at IntegrationTest.test(IntegrationTest.java:19)
+Read from stdout: ...
+    ...
+Read from stdout: Caused by: Configuration error: Configuration error[either dataSource or dataSourceClassName is required]
+Caused by: Configuration error: Configuration error[either dataSource or dataSourceClassName is required]
+Read from stdout: at play.api.Configuration$.configError(Configuration.scala:154)
+    at play.api.Configuration$.configError(Configuration.scala:154)
+Read from stdout: at play.api.PlayConfig.reportError(Configuration.scala:996)
+    at play.api.PlayConfig.reportError(Configuration.scala:996)
+Read from stdout: at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:69)
+    at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:69)
+Read from stdout: at play.api.db.PooledDatabase.createDataSource(Databases.scala:200)
+    at play.api.db.PooledDatabase.createDataSource(Databases.scala:200)
+Read from stdout: at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:124)
+    at play.api.db.DefaultDatabase.dataSource$lzycompute(Databases.scala:124)
+Read from stdout: at play.api.db.DefaultDatabase.dataSource(Databases.scala:122)
+    at play.api.db.DefaultDatabase.dataSource(Databases.scala:122)
+Read from stdout: at play.api.db.DefaultDatabase.getConnection(Databases.scala:143)
+    at play.api.db.DefaultDatabase.getConnection(Databases.scala:143)
+Read from stdout: at play.api.db.DefaultDatabase.getConnection(Databases.scala:139)
+    at play.api.db.DefaultDatabase.getConnection(Databases.scala:139)
+Read from stdout: at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:44)
+    at play.api.db.DefaultDBApi$$anonfun$connect$1.apply(DefaultDBApi.scala:44)
+Read from stdout: ... 86 more
+    ... 86 more
+Read from stdout: Caused by: java.lang.IllegalArgumentException: either dataSource or dataSourceClassName is required
+Caused by: java.lang.IllegalArgumentException: either dataSource or dataSourceClassName is required
+Read from stdout: at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:785)
+    at com.zaxxer.hikari.HikariConfig.validate(HikariConfig.java:785)
+Read from stdout: at play.api.db.HikariCPConfig.toHikariConfig(HikariCPModule.scala:140)
+    at play.api.db.HikariCPConfig.toHikariConfig(HikariCPModule.scala:140)
+Read from stdout: at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:57)
+    at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:57)
+Read from stdout: at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:54)
+    at play.api.db.HikariCPConnectionPool$$anonfun$1.apply(HikariCPModule.scala:54)
+Read from stdout: at scala.util.Try$.apply(Try.scala:192)
+    at scala.util.Try$.apply(Try.scala:192)
+Read from stdout: at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)
+    at play.api.db.HikariCPConnectionPool.create(HikariCPModule.scala:54)
+Read from stdout: ... 92 more
+    ... 92 more
+Test IntegrationTest.test finished, took 2.586 sec
+Test run finished: 1 failed, 0 ignored, 1 total, 2.589s
+    Produced 0 nested tasks and 1 events.
+Summary for JUnit not available.
+Read from stdout: Failed: Total 3, Failed 1, Errors 0, Passed 2
+Failed: Total 3, Failed 1, Errors 0, Passed 2
+Passed tests:
+	ApplicationTest
+Read from stdout: Failed tests:
+Failed tests:
+Read from stdout: 	IntegrationTest
+	IntegrationTest
+Read from stdout: (test:test) sbt.TestsFailedException: Tests unsuccessful
+(test:test) sbt.TestsFailedException: Tests unsuccessful
+Total time: 6 s, completed 6 mai 2016 09:27:46
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7a26be6f, check cycles: false
+Total time: 0 s, completed 6 mai 2016 09:27:47
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@4c173191, check cycles: false
+Total time: 0 s, completed 6 mai 2016 09:27:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@7818f0a7, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 2 s, completed 6 mai 2016 09:28:21
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@2500e283, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 1 s, completed 6 mai 2016 09:28:44
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@207bd3d4, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 1 s, completed 6 mai 2016 09:29:51
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@147c326f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 1 s, completed 6 mai 2016 09:30:40
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/phanthavong/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@432b9e60, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(/Users/phanthavong/play-java/conf/application.conf,/Users/phanthavong/play-java/target/scala-2.11/classes/application.conf)
+	(/Users/phanthavong/play-java/conf/logback.xml,/Users/phanthavong/play-java/target/scala-2.11/classes/logback.xml)
+	(/Users/phanthavong/play-java/conf/routes,/Users/phanthavong/play-java/target/scala-2.11/classes/routes)
+Total time: 1 s, completed 6 mai 2016 09:34:06
+> server-post-command-cleanup
+> server-handle-next-server-request

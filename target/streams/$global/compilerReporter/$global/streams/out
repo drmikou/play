@@ -1,7 +1,5 @@
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/conf/routes:19: type AccueilController is not a member of package controllers[0m
-[0m[[31merror[0m] [0mGET     /accueil                    controllers.AccueilController.accueil[0m
-[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/views/accueil.scala.html:1: missing arguments for method apply in class main;[0m
+[0m[[31merror[0m] [0mfollow this method with `_' if you want to treat it as a partially applied function[0m
+[0m[[31merror[0m] [0m@main(title = "Accueil")[0m
+[0m[[31merror[0m] [0m     ^[0m
+[0m[[31merror[0m] [0mone error found[0m

@@ -43,6 +43,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
 <body>
 <!--login modal-->
 <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
@@ -76,7 +77,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 </div>
 <!-- script references -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src=""""),_display_(/*48.15*/routes/*48.21*/.Assets.versioned("javascripts/bootstrap.min.js")),format.raw/*48.70*/("""" type="text/javascript"></script>
+<script src=""""),_display_(/*49.15*/routes/*49.21*/.Assets.versioned("javascripts/bootstrap.min.js")),format.raw/*49.70*/("""" type="text/javascript"></script>
 </body>
 </html>"""))
       }
@@ -98,11 +99,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Fri Apr 15 10:04:38 CEST 2016
+                  DATE: Fri Apr 15 10:14:35 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/login.scala.html
-                  HASH: 9ce19bbf594bc12f9230dbb70eb07458b754f960
-                  MATRIX: 827->0|1219->366|1233->372|1304->422|1383->474|1398->480|1461->522|3139->2173|3154->2179|3224->2228
-                  LINES: 32->1|40->9|40->9|40->9|41->10|41->10|41->10|79->48|79->48|79->48
+                  HASH: 2472d429daf1769a2ae9386319d96bc389e552bb
+                  MATRIX: 827->0|1219->366|1233->372|1304->422|1383->474|1398->480|1461->522|3140->2174|3155->2180|3225->2229
+                  LINES: 32->1|40->9|40->9|40->9|41->10|41->10|41->10|80->49|80->49|80->49
                   -- GENERATED --
               */
           

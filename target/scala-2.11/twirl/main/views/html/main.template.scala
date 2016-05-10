@@ -56,13 +56,6 @@ Seq[Any](format.raw/*1.58*/("""
     <!-- Custom Fonts -->
     <link rel="stylesheet" media="screen" href=""""),_display_(/*26.50*/routes/*26.56*/.Assets.versioned("font-awesome/css/font-awesome.min.css")),format.raw/*26.114*/("""">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -94,7 +87,8 @@ Seq[Any](format.raw/*1.58*/("""
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    <h5 class="media-heading">
+                                        <strong>John Smith</strong>
                                     </h5>
                                     <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -109,7 +103,8 @@ Seq[Any](format.raw/*1.58*/("""
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    <h5 class="media-heading">
+                                        <strong>John Smith</strong>
                                     </h5>
                                     <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -124,7 +119,8 @@ Seq[Any](format.raw/*1.58*/("""
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                 <div class="media-body">
-                                    <h5 class="media-heading"><strong>John Smith</strong>
+                                    <h5 class="media-heading">
+                                        <strong>John Smith</strong>
                                     </h5>
                                     <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -134,33 +130,6 @@ Seq[Any](format.raw/*1.58*/("""
                     </li>
                     <li class="message-footer">
                         <a href="#">Read All New Messages</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                <ul class="dropdown-menu alert-dropdown">
-                    <li>
-                        <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                    </li>
-                    <li>
-                        <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">View All</a>
                     </li>
                 </ul>
             </li>
@@ -199,23 +168,19 @@ Seq[Any](format.raw/*1.58*/("""
     </nav>
 
     <div id="page-wrapper">
-        """),_display_(/*171.10*/content),format.raw/*171.17*/("""
-    """),format.raw/*172.5*/("""</div>
+        """),_display_(/*140.10*/content),format.raw/*140.17*/("""
+    """),format.raw/*141.5*/("""</div>
     <!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src=""""),_display_(/*179.15*/routes/*179.21*/.Assets.versioned("javascripts/jquery.js")),format.raw/*179.63*/("""" type="text/javascript"></script>
+<script src=""""),_display_(/*148.15*/routes/*148.21*/.Assets.versioned("javascripts/jquery.js")),format.raw/*148.63*/("""" type="text/javascript"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src=""""),_display_(/*182.15*/routes/*182.21*/.Assets.versioned("javascripts/boostrap.min.js")),format.raw/*182.69*/("""" type="text/javascript"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src=""""),_display_(/*185.15*/routes/*185.21*/.Assets.versioned("javascripts/plugins/morris/raphael.min.js")),format.raw/*185.83*/("""" type="text/javascript"></script>
-<script src=""""),_display_(/*186.15*/routes/*186.21*/.Assets.versioned("javascripts/plugins/morris/morris.min.js")),format.raw/*186.82*/("""" type="text/javascript"></script>
-<script src=""""),_display_(/*187.15*/routes/*187.21*/.Assets.versioned("javascripts/plugins/morris/morris-data.js")),format.raw/*187.83*/("""" type="text/javascript"></script>
+<script src=""""),_display_(/*151.15*/routes/*151.21*/.Assets.versioned("javascripts/bootstrap.min.js")),format.raw/*151.70*/("""" type="text/javascript"></script>
+
 </body>
 
 </html>
@@ -239,11 +204,11 @@ Seq[Any](format.raw/*1.58*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Fri May 06 11:48:24 CEST 2016
+                  DATE: Tue May 10 16:03:14 CEST 2016
                   SOURCE: /Users/phanthavong/play-java/app/views/main.scala.html
-                  HASH: eafece31535ccc8fefa7cf245eac6f8d8cf96cb7
-                  MATRIX: 753->1|904->57|932->59|1249->349|1275->354|1393->445|1408->451|1480->501|1584->578|1599->584|1666->629|1777->713|1792->719|1856->762|1962->841|1977->847|2057->905|9033->7853|9062->7860|9095->7865|9216->7958|9232->7964|9296->8006|9409->8091|9425->8097|9495->8145|9607->8229|9623->8235|9707->8297|9784->8346|9800->8352|9883->8413|9960->8462|9976->8468|10060->8530
-                  LINES: 27->1|32->1|34->3|45->14|45->14|48->17|48->17|48->17|51->20|51->20|51->20|54->23|54->23|54->23|57->26|57->26|57->26|202->171|202->171|203->172|210->179|210->179|210->179|213->182|213->182|213->182|216->185|216->185|216->185|217->186|217->186|217->186|218->187|218->187|218->187
+                  HASH: 70c48af24a44121cbdff1c4c1fcac66579c309c1
+                  MATRIX: 753->1|904->57|932->59|1249->349|1275->354|1393->445|1408->451|1480->501|1584->578|1599->584|1666->629|1777->713|1792->719|1856->762|1962->841|1977->847|2057->905|7441->6261|7470->6268|7503->6273|7624->6366|7640->6372|7704->6414|7783->6465|7799->6471|7870->6520
+                  LINES: 27->1|32->1|34->3|45->14|45->14|48->17|48->17|48->17|51->20|51->20|51->20|54->23|54->23|54->23|57->26|57->26|57->26|171->140|171->140|172->141|179->148|179->148|179->148|182->151|182->151|182->151
                   -- GENERATED --
               */
           

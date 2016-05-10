@@ -16,8 +16,12 @@ public class AccueilController extends Controller {
      * this method will be called when the application receives a
      * <code>GET</code> request with a path of <code>/</code>. test
      */
-    public Result accueil() {
-        return ok(accueil.render());
+
+    public Result accueil(){
+
+        String test = "gsggdsgfd";
+
+        return ok(accueil.render(test));
     }
 
 }

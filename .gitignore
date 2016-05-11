@@ -186,3 +186,4 @@ Temporary Items
 
 .idea/workspace.xml
 .sbtserver/connections/master.log
+.conf/application.conf

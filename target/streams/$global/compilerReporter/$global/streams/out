@@ -1,2 +1,4 @@
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/controllers/AccueilController.java:22: not a statement[0m
-[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/controllers/AccueilController.java:22: ';' expected[0m
+[0m[[31merror[0m] [0m/Users/phanthavong/play-java/app/views/main.scala.html:51: not found: value userName[0m
+[0m[[31merror[0m] [0m                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @userName <b class="caret"></b></a>[0m
+[0m[[31merror[0m] [0m                                                                                                       ^[0m
+[0m[[31merror[0m] [0mone error found[0m

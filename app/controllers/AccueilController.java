@@ -19,7 +19,7 @@ public class AccueilController extends Controller {
 
     public Result accueil(){
 
-        String test = "gsggdsgfd";
+        String test = "gsggdsffgfd";
 
         return ok(accueil.render(test));
     }

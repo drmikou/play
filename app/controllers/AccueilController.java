@@ -19,9 +19,9 @@ public class AccueilController extends Controller {
 
     public Result accueil(){
 
-        String test = "bento";
+        String test = "prout";
 
-        return ok(accueil.render(test));
+        return ok(result.render(test));
     }
 
 }

@@ -5,7 +5,9 @@ import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+import java.util.List;
 
 @Entity
 public class Promotion extends Model {
@@ -17,14 +19,14 @@ public class Promotion extends Model {
     public int annee;
 
 
-    //@OneToMany(mappedBy = "promotion")
-    //public List<Session> Session;
+    @OneToMany(mappedBy = "promotion")
+    public List<Session> sessions;
+
 
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -32,22 +34,13 @@ public class Promotion extends Model {
     public int getAnnee() {
         return annee;
     }
-
     public void setAnnee(int Annee) {
         this.annee = annee;
     }
 
+    public List<Session> getSessions() { return sessions; }
+    public void setSessions(List<Session> sessions) { this.sessions = sessions; }
 
 
-    public static Finder find = new Finder(Long.class, Promotion.class);
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Promotion");
-        sb.append("{id=").append(id);
-        sb.append(", annee='").append(annee).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
 }

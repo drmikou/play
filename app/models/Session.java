@@ -5,6 +5,9 @@ import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Session extends Model {
@@ -15,16 +18,17 @@ public class Session extends Model {
     @Constraints.Required
     public String nom;
 
-    //@ManyToOne
-    //public Promotion promotion;
+    @ManyToOne
+    public Promotion promotion;
 
+    //@OneToMany(mappedBy = "session")
+    //public List<Groupe> groupes;
 
 
 
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -32,10 +36,24 @@ public class Session extends Model {
     public String getNom() {
         return nom;
     }
-
     public void setNom(String Nom) {
         this.nom = nom;
     }
 
+    public Promotion getPromotion(){ return promotion; }
+    public void setPromotion(Promotion promotion) { this.promotion = promotion; }
 
+    //public List<Groupe> getGroupes() { return groupe; }
+    //public void setGroupes(List<Groupe> groupes) { this.groupes = groupes; }
+
+    /*@Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Session");
+        sb.append("{id=").append(id);
+        sb.append(", nom='").append(nom).append('\'');
+        sb.append(", promotion='").append(promotion).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }*/
 }

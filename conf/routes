@@ -17,3 +17,6 @@ GET     /login                      controllers.LoginController.login
 
 # Page d'accueil User
 GET     /accueil                    controllers.AccueilController.accueil
+
+# Page de réunion
+GET     /reunion                    controllers.ReunionController.reunion

@@ -1,4 +1,4 @@
-@(viewMonequipe: Array[String], visualisationArray: Array[String])
+@(viewMonequipe: List[User], visualisationArray: Array[String])
 
 @main(title = "Accueil"){
 
@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    @viewMonequipe(0) Accueil @visualisationArray(0)
+                     Accueil @visualisationArray(0)
                 </h1>
             </div>
         </div>
@@ -23,11 +23,9 @@
                     </div>
                     <div class="panel-body">
                         <ul class="list-group">
-                            <li class="list-group-item">User 1</li>
-                            <li class="list-group-item">User 2</li>
-                            <li class="list-group-item">User 3</li>
-                            <li class="list-group-item">User 4</li>
-                            <li class="list-group-item">User 5</li>
+                            @for(monequipe <- viewMonequipe){
+                                <li class="list-group-item">@monequipe.nom  @monequipe.prenom</li>
+                            }
                         </ul>
                         <div class="text-right">
                             <a href="#">Plus d'informations <i class="fa fa-arrow-circle-right"></i></a>

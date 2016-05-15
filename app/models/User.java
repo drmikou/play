@@ -35,8 +35,15 @@ public class User extends Model {
     public String getNom() {
         return nom;
     }
-    public void setNom(int Nom) {
+    public void setNom(String Nom) {
         this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+    public void setPrenom(String Prenom) {
+        this.prenom = prenom;
     }
 
     public Equipe getEquipe(){ return equipe; }

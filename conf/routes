@@ -25,4 +25,4 @@ GET     /depot                      controllers.DepotEleveController.depot
 GET     /reunion                    controllers.ReunionController.reunion
 
 # Page de visualisation d'une équipe
-GET     /visuEquipe                 controllers.VisuEquipeController.visuEquipe
+GET     /equipe                 controllers.VisuEquipeController.visuEquipe

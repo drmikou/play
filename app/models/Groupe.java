@@ -46,6 +46,6 @@ public class Groupe extends Model {
     public List<Equipe> getEquipes() { return equipes; }
     public void setEquipes(List<Equipe> equipes) { this.equipes = equipes; }
 
-
+    public static Finder find = new Finder(Long.class, Groupe.class);
 
 }

@@ -42,5 +42,5 @@ public class Promotion extends Model {
     public void setSessions(List<Session> sessions) { this.sessions = sessions; }
 
 
-
+    public static Finder find = new Finder(Long.class, Promotion.class);
 }

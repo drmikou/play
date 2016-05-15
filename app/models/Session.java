@@ -47,4 +47,6 @@ public class Session extends Model {
     public void setGroupes(List<Groupe> groupes) { this.groupes = groupes; }
 
 
+    public static Finder find = new Finder(Long.class, Session.class);
+
 }

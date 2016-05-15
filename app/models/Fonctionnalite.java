@@ -51,7 +51,7 @@ public class Fonctionnalite extends Model {
     public void setEquipe(Equipe equipe) { this.equipe = equipe; }
 
 
-
+    public static Finder find = new Finder(Long.class, Fonctionnalite.class);
 
 
 }

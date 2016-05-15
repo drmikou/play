@@ -1,8 +1,11 @@
 package controllers;
 
+import models.Projet;
 import play.mvc.*;
 
 import views.html.*;
+
+import com.avaje.ebean.Ebean;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -18,6 +21,25 @@ public class AccueilController extends Controller {
      */
 
     public Result accueil(){
+
+        // Ajouter
+        Projet projet = new Projet();
+        projet.nom = "test";
+        projet.save();
+
+        // Editer
+        Projet editProjet = (Projet) Projet.find.byId("1");
+        editProjet.nom = "edi1t";
+        editProjet.save();
+
+        // Supprimer
+        Projet suppProjet = (Projet) Projet.find.byId("2");
+        if( suppProjet != null)
+        {
+            Ebean.delete(suppProjet);
+        }
+
+
 
         String test = "dd";
 

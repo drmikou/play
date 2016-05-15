@@ -21,7 +21,7 @@ public class Projet extends Model {
 
     @ManyToOne
     public Equipe equipe;
-    
+
 
     public Long getId() {
         return id;
@@ -40,7 +40,7 @@ public class Projet extends Model {
     public Equipe getEquipe(){ return equipe; }
     public void setEquipe(Equipe equipe) { this.equipe = equipe; }
 
-
+    public static Finder find = new Finder(Long.class, Projet.class);
 
 
 }

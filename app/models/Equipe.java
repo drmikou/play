@@ -63,4 +63,5 @@ public class Equipe extends Model {
     public List<Fonctionnalite> getFonctionnalites() { return fonctionnalites; }
     public void setFonctionnalites(List<Fonctionnalite> fonctionnalites) { this.fonctionnalites = fonctionnalites; }
 
+    public static Finder find = new Finder(Long.class, Equipe.class);
 }

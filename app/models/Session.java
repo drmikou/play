@@ -21,8 +21,8 @@ public class Session extends Model {
     @ManyToOne
     public Promotion promotion;
 
-    //@OneToMany(mappedBy = "session")
-    //public List<Groupe> groupes;
+    @OneToMany(mappedBy = "session")
+    public List<Groupe> groupes;
 
 
 
@@ -43,17 +43,8 @@ public class Session extends Model {
     public Promotion getPromotion(){ return promotion; }
     public void setPromotion(Promotion promotion) { this.promotion = promotion; }
 
-    //public List<Groupe> getGroupes() { return groupe; }
-    //public void setGroupes(List<Groupe> groupes) { this.groupes = groupes; }
+    public List<Groupe> getGroupes() { return groupes; }
+    public void setGroupes(List<Groupe> groupes) { this.groupes = groupes; }
 
-    /*@Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Session");
-        sb.append("{id=").append(id);
-        sb.append(", nom='").append(nom).append('\'');
-        sb.append(", promotion='").append(promotion).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }*/
+
 }

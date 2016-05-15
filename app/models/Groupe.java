@@ -22,8 +22,8 @@ public class Groupe extends Model {
     @ManyToOne
     public Session session;
 
-    //@OneToMany(mappedBy = "promotion")
-    //public List<Session> sessions;
+    @OneToMany(mappedBy = "groupe")
+    public List<Equipe> equipes;
 
 
     public Long getId() {
@@ -43,9 +43,8 @@ public class Groupe extends Model {
     public Session getSession(){ return session; }
     public void setSession(Session session) { this.session = session; }
 
-    //public List<Session> getSessions() { return sessions; }
-    //public void setSessions(List<Session> sessions) { this.sessions = sessions; }
-
+    public List<Equipe> getEquipes() { return equipes; }
+    public void setEquipes(List<Equipe> equipes) { this.equipes = equipes; }
 
 
 

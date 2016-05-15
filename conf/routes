@@ -20,3 +20,6 @@ GET     /accueil                    controllers.AccueilController.accueil
 
 # Page dépot User
 GET     /depot                      controllers.DepotEleveController.depot
+
+# Page de réunion
+GET     /reunion                    controllers.ReunionController.reunion

@@ -188,3 +188,4 @@ Temporary Items
 .sbtserver/connections/master.log
 .conf/application.conf
 project/.sbtserver
+.sbtserver/

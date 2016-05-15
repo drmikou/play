@@ -34,6 +34,9 @@ public class Equipe extends Model {
     @OneToMany(mappedBy = "equipe")
     public List<Fonctionnalite> fonctionnalites;
 
+    @OneToMany(mappedBy = "equipe")
+    public List<User> users;
+
     public Long getId() {
         return id;
     }
@@ -62,6 +65,9 @@ public class Equipe extends Model {
 
     public List<Fonctionnalite> getFonctionnalites() { return fonctionnalites; }
     public void setFonctionnalites(List<Fonctionnalite> fonctionnalites) { this.fonctionnalites = fonctionnalites; }
+
+    public List<User> getUsers() { return users; }
+    public void setUsers(List<Depot> depots) { this.users = users; }
 
     public static Finder find = new Finder(Long.class, Equipe.class);
 }

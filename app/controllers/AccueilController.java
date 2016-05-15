@@ -1,6 +1,8 @@
 package controllers;
 
 import models.Projet;
+import models.User;
+import models.Equipe;
 import play.mvc.*;
 
 import views.html.*;
@@ -39,11 +41,38 @@ public class AccueilController extends Controller {
             Ebean.delete(suppProjet);
         }
 
+        //  -----------------
+        // |     Variable    |
+        //  -----------------
+        // Utilisateur
+            // On récupère la variable de session userId
+            int userId = 0;
+            // On recherche l'utilisateur à partir de userId
+            User user = (User) User.find.byId(userId);
+        // Equipe
+            // On récupère l'équipe de l'utilisateur
+            Equipe userEquipe = user.getEquipe();
 
 
-        String test = "dd";
+        //  -----------------
+        // |    Mon équipe   |
+        //  -----------------
+        // On récupère tous les utilisateurs d'une même équipe
+            User[] usersEquipe = ;
+        // Déclaration de l'array à passer dans la vue
+            String[] viewMonequipe = new String[2];
 
-        return ok(accueil.render(test));
+            viewMonequipe[0] = "0";
+            viewMonequipe[1] = "1";
+
+
+
+        String[] visualisationArray = new String[2];
+        visualisationArray[0] = "0";
+        visualisationArray[1] = "1";
+
+
+        return ok(accueil.render(viewMonequipe, visualisationArray));
     }
 
 }

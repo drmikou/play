@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,6 +19,10 @@ public class Depot extends Model {
 
     @Constraints.Required
     public String nom;
+
+    public String commentaire;
+
+    public Date datedepot;
 
     @ManyToOne
     public Equipe equipe;
@@ -33,8 +38,22 @@ public class Depot extends Model {
     public String getNom() {
         return nom;
     }
-    public void setNom(int Nom) {
+    public void setNom(String Nom) {
         this.nom = nom;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+    public void setCommentaire(String Commentaire) {
+        this.commentaire = commentaire;
+    }
+
+    public Date getDatedepot() {
+        return datedepot;
+    }
+    public void setDatedepot(Date datedepot) {
+        this.datedepot = datedepot;
     }
 
     public Equipe getEquipe(){ return equipe; }

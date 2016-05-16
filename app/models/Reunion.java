@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,6 +19,8 @@ public class Reunion extends Model {
 
     @Constraints.Required
     public String nom;
+
+    public Date date;
 
     @ManyToOne
     public Equipe equipe;
@@ -34,8 +37,15 @@ public class Reunion extends Model {
     public String getNom() {
         return nom;
     }
-    public void setNom(int Nom) {
+    public void setNom(String Nom) {
         this.nom = nom;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date Date) {
+        this.date = date;
     }
 
     public Equipe getEquipe(){ return equipe; }

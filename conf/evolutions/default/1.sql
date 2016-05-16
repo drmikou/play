@@ -6,6 +6,8 @@
 create table depot (
   id                            bigint auto_increment not null,
   nom                           varchar(255),
+  commentaire                   varchar(255),
+  datedepot                     datetime(6),
   equipe_id                     bigint,
   constraint pk_depot primary key (id)
 );
@@ -48,6 +50,7 @@ create table promotion (
 create table reunion (
   id                            bigint auto_increment not null,
   nom                           varchar(255),
+  date                          datetime(6),
   equipe_id                     bigint,
   constraint pk_reunion primary key (id)
 );

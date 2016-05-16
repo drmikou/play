@@ -1,8 +1,13 @@
 package controllers;
 
-import models.Projet;
-import models.User;
+import models.Promotion;
+import models.Session;
+import models.Groupe;
 import models.Equipe;
+import models.User;
+import models.Projet;
+import models.Depot;
+
 import play.mvc.*;
 
 import views.html.*;
@@ -23,21 +28,62 @@ public class AccueilController extends Controller {
      */
 
     public Result accueil(){
+        //  -----------------------------------
+        // |     Création de variables test    |
+        //  -----------------------------------
+        User userPresence = (User) User.find.byId("0");
+        if( userPresence == null)
+        {
+            Promotion promotionObj = new Promotion();
+            //promotionObj.annee = int 2016;
+            promotionObj.save();
 
-        // Ajouter
-        /*Projet projet = new Projet();
-        projet.nom = "test";
-        projet.save();
+            Session sessionObj = new Session();
+            sessionObj.nom = "testSessionNom";
+            sessionObj.promotion = promotionObj;
+            sessionObj.save();
 
-        Equipe equipeObj = new Equipe();
-        equipeObj.nom = "test";
-        equipeObj.save();
+            Groupe groupeObj = new Groupe();
+            groupeObj.nom = "testGroupeNom";
+            groupeObj.session = sessionObj;
+            groupeObj.save();
 
-        User userObj = new User();
-        userObj.nom = "test";
-        userObj.prenom = "test";
-        userObj.equipe = equipeObj;
-        userObj.save();*/
+            Equipe equipeObj = new Equipe();
+            equipeObj.nom = "testEquipeNom";
+            equipeObj.groupe = groupeObj;
+            equipeObj.save();
+
+            User userObj = new User();
+            userObj.nom = "testNom";
+            userObj.prenom = "testPrenom";
+            userObj.equipe = equipeObj;
+            userObj.save();
+
+            User user2Obj = new User();
+            user2Obj.nom = "test2Nom";
+            user2Obj.prenom = "test2Prenom";
+            user2Obj.equipe = equipeObj;
+            user2Obj.save();
+
+            User user3Obj = new User();
+            user3Obj.nom = "test3Nom";
+            user3Obj.prenom = "test3Prenom";
+            user3Obj.equipe = equipeObj;
+            user3Obj.save();
+
+            Projet projet = new Projet();
+            projet.nom = "testProjetNom";
+            projet.equipe = equipeObj;
+            projet.save();
+
+            Depot depot = new Depot();
+            depot.nom = "testDepotNom";
+            depot.equipe = equipeObj;
+            depot.commentaire = "testDepotCommentaire commentaire";
+            depot.save();
+        }
+
+
 
         // Editer
         /*Projet editProjet = (Projet) Projet.find.byId("1");

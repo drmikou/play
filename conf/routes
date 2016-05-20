@@ -27,3 +27,6 @@ GET     /reunion                    controllers.ReunionController.reunion
 
 # Page de visualisation d'une équipe
 GET     /equipe                 controllers.VisuEquipeController.visuEquipe
+
+# Page inscription client
+GET     /newclient                controllers.AdminRegisterController.adminRegister

@@ -3,6 +3,9 @@ package controllers;
 import play.mvc.*;
 
 import views.html.*;
+import play.data.DynamicForm;
+import play.data.Form;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -17,7 +20,22 @@ public class LoginController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>. test
      */
     public Result login() {
-        return ok(login.render());
+
+
+
+
+        String test = "test";
+
+        return ok(login.render(test));
+    }
+
+    public Result loginSubmit()
+    {
+
+        DynamicForm dynamicForm = Form.form().bindFromRequest();
+        String test = dynamicForm.get("Email");
+
+        return ok(login.render(test));
     }
 
 }

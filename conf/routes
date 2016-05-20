@@ -14,6 +14,7 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # Page de login
 GET     /login                      controllers.LoginController.login
+POST    /login/submit               controllers.LoginController.loginSubmit
 
 # Page d'accueil User
 GET     /accueil                    controllers.AccueilController.accueil
@@ -27,5 +28,5 @@ GET     /reunion                    controllers.ReunionController.reunion
 # Page de visualisation d'une équipe
 GET     /equipe                 controllers.VisuEquipeController.visuEquipe
 
-# Page de visualisation inscription nouveau client
-GET     /newclient                 controllers.AdminRegisterController.adminRegister
+# Page inscription client
+GET     /newclient                controllers.AdminRegisterController.adminRegister

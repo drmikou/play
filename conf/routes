@@ -29,4 +29,4 @@ GET     /reunion                    controllers.ReunionController.reunion
 GET     /equipe                 controllers.VisuEquipeController.visuEquipe
 
 # Page inscription client
-GET     /newclient                controllers.AdminRegisterController.adminRegister
+GET     /admin/client/ajouter                controllers.AdminRegisterController.adminRegister

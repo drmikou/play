@@ -26,7 +26,13 @@ GET     /depot                      controllers.DepotEleveController.depot
 GET     /reunion                    controllers.ReunionController.reunion
 
 # Page de visualisation d'une équipe
-GET     /equipe                 controllers.VisuEquipeController.visuEquipe
+GET     /equipe                     controllers.VisuEquipeController.visuEquipe
 
-# Page inscription client
+# Admin liste des utilisateurs
+GET     /admin/utilisateurs            controllers.AdminUserController.adminUser
+
+# Admin inscription client
 GET     /admin/client/ajouter                controllers.AdminRegisterController.adminRegister
+POST    /admin/client/ajouter/submit         controllers.AdminRegisterController.adminRegisterSubmit
+
+

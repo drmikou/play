@@ -1,0 +1,74 @@
+@import utils.core.formHelper._
+@(field: Field, label: String = "CHANGEME", optionMap: Map[KeyValueObject, Boolean], isMultiple: Boolean, help: String = "", isSelect2: Boolean = false)
+
+<div class="form-group @if(field.hasErrors) {has-error}">
+    <label for="@field.id">@label</label>
+    <div class="select2@field.id">
+      <select
+        class="form-control"
+        id="@field.id"
+        autocomplete="off"
+        name="@if(isMultiple) {@(field.name + "[]")} else {@field.name}"
+        @if(isMultiple) {multiple="multiple"}>
+        @if(!isMultiple) {<option class="blank" value="">Please select a value</option>}
+        @for((optionName, isSelected) <- optionMap) {
+          <option value="@optionName.key" @if(isSelected) {selected}>@optionName.value</option>
+        }
+      </select>
+      <span class="help-block">@help</span>
+      <span class="help-block addGroups"></span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+    </div>
+  </div>
+
+  @if(isSelect2) {
+  <script type="text/javascript">
+      var groups@field.id;
+      function addGroup@{field.id}(group) {
+        var currentData = $("#@field.id").select2('val');
+
+        $("#@field.id option").each(function() {
+          var index = $(this).val();
+          if ($(this).text().indexOf(group) >= 0 && currentData.indexOf(index) === -1) {
+            currentData = currentData.concat(index);
+          }
+        });
+        $("#@field.id").select2('val', currentData, true);
+        groups@{field.id}.splice(groups@{field.id}.indexOf(group), 1);
+        if (groups@{field.id}.length > 0) {
+        var links = "";
+         for (var i = groups@{field.id}.length - 1; i>=0; i-- ) {
+          links += "<a href=\"javascript:addGroup@{field.id}('"+groups@{field.id}[i]+"')\">" + groups@{field.id}[i] + "</a>";
+          if (i != 0) {
+            links += ", ";
+          }
+         }
+         $(".select2@field.id .addGroups").html("Ajouter tous les membres du groupe " + links);
+         } else {
+         $(".select2@field.id .addGroups").html("");
+         }
+      }
+      $(document).ready(function() {
+        $("#@field.id").select2();
+
+        @if(isMultiple) {
+          $("#@field.id").on('select2-selecting', function(e) {
+             e.preventDefault();
+             groups@field.id = e.choice.text.split(' - ')[2].split(',');
+             if (groups@{field.id}.length > 0) {
+             var links = "";
+             for (var i = groups@{field.id}.length - 1; i>=0; i-- ) {
+              links += "<a href=\"javascript:addGroup@{field.id}('"+groups@{field.id}[i]+"')\">" + groups@{field.id}[i] + "</a>";
+              if (i != 0) {
+                links += ", ";
+              }
+             }
+             $(".select2@field.id .addGroups").html("Ajouter tous les membres du groupe " + links);
+             }
+             $("#@field.id").select2('data', $("#@field.id").select2('data').concat(e.choice));
+
+          });
+        }
+      });
+  </script>
+  }

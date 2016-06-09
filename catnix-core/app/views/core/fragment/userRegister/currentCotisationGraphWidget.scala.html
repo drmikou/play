@@ -1,0 +1,7 @@
+
+
+@import views.html.core.widget._
+
+@widget("Cotisation à l'heure actuelle", minimizable=true, size = 3) {
+	@asyncFragmentReplace("registrationEvolution", "coreFragmentRoutes.controllers.core.UserRegister.renderCurrentCotisationGraph()")
+}

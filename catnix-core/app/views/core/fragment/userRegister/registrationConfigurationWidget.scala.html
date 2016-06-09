@@ -1,0 +1,16 @@
+@(confForm: Form[formData.core.userRegister.NewUserConfigurationData])
+
+@import views.html.core.widget._
+@import views.html.core.formTool._
+
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
+
+	@restrict(la(as("prez"))) {
+	        @widget("Configuration d'ajout de compte", minimizable=true) {
+	            @form(confForm, controllers.core.routes.UserRegister.editRegisterConfigurationPost()) {
+						@inputSwitch(confForm("forcedJustifUpload"), label = "Upload pièces jointes obligatoire")
+	                	<input type="submit" class="btn btn-sm btn-default" value="Sauvegarder">
+				}
+	        }
+	}

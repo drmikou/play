@@ -1,0 +1,50 @@
+@(tableName: String, columnNameList: List[String])(dataContent: Html)
+
+		<div class="page-tables">
+			<!-- Table -->
+			<div class="table-responsive">
+                <div id="@(tableName)Id_wrapper" class="dataTables_wrapper" role="grid">
+					<table style="width: 100%;" class="table table-bordered table-striped" id="@(tableName)Id"
+                        border="0" cellpadding="0" cellspacing="0" width="100%">
+
+						<thead>
+							<tr role="row">
+                                @columnNameList.map { columnName =>
+
+								<th	colspan="1" rowspan="1" tabindex="0" role="columnheader">@columnName</th>
+                                }
+							</tr>
+						</thead>
+
+                        <tbody role="alert">
+                            @dataContent
+                        </tbody>
+
+						<tfoot>
+							<tr>
+                                @columnNameList.map { columnName =>
+								<th	colspan="1" rowspan="1">@columnName</th>
+                                }
+							</tr>
+						</tfoot>
+
+					</table>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+<script type="text/javascript" charset="utf-8">
+
+$(document).ready(function() {
+    $('#@(tableName)Id').dataTable({
+	   sPaginationType: "full_numbers",
+	   aLengthMenu: [
+	                 [25, 100, -1],
+	                 [25, 100, "All"]
+	             	],
+       iDisplayLength: -1
+	});
+});
+</script>
+

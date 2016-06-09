@@ -1,0 +1,15 @@
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+
+	@widget("demo pdf") {
+	    <h1>DEMO PDF</h1>
+
+	    <div class="row">
+	        @documentPreview("/tmp/catnix/data/idJustif/idJustif-2.pdf", size = 4)
+	    </div>
+
+    }
+
+}

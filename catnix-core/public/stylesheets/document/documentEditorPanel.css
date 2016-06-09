@@ -1,0 +1,60 @@
+.cke_button__comment_icon {
+    background:url(../../ckeditor-custom-plugins/comment/comment.png) no-repeat 0 -7px !important;
+    width: 24px!important;
+}
+.cke_button__fullscreen_icon {
+    background:url(../../ckeditor/skins/office2013/icons.png) no-repeat 0 -888px!important;
+}
+.cke_button__togglePreview_icon {
+    background:url(../../ckeditor/skins/office2013/icons.png) no-repeat 0 -1272px!important;
+}
+.cke_button__asidetoggler_icon {
+    background:url(../../ckeditor-custom-plugins/asideToggle.png) no-repeat 0 -6px!important;
+    width: 32px!important;
+}
+
+.cke_chrome{
+    display:block;
+    padding:0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.hide {
+    display: none;
+}
+
+#documentEditorContent {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+
+#documentEditorDocumentContainer {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+#documentEditorDocumentContainer div {
+    margin-bottom: 0;
+}
+
+#documentEditorDocumentContainer div div .help-block {
+    display: none;
+}
+
+#documentEditorAsideBarContainer {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+#cke_1_bottom {
+    margin-bottom: 20px;
+}
+
+
+

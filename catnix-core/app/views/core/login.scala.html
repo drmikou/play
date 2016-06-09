@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@loginLayout.head()
+
+<body class="hold-transition login-page">
+
+<div class="login-box">
+    <div class="login-logo">
+      <a href="/"><img src="@controllers.core.routes.Assets.versioned("images/logo-catnix.png")" alt="catnix"></a>
+    </div>
+      <!-- /.login-logo -->
+    <div class="login-box-body">
+      @showAlert(content: String) = {
+        @if(content!=null) {
+          <div class="alert alert-danger">
+            @Html(content.toString.stripMargin.replaceAll("\n", " \\ "))
+          </div>
+        }
+
+      }
+
+      @showAlert(flash.get("connectionError"))
+
+      <form method="post" action="@controllers.core.login.routes.LdapixLogin.authenticate()">
+        <div class="form-group has-feedback">
+          <input type="text" class="form-control" placeholder="Username" name="username">
+          <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Password" name="password">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        <div class="row">
+          <div class="col-xs-4">
+            <button type="submit" class="btn btn-flat">
+              Se connecter
+              @*<img src="@controllers.core.routes.Assets.versioned("images/cat.png")" alt="Sign in" style="width: 30px;">*@
+            </button>
+          </div>
+            <!-- /.col -->
+        </div>
+      </form>
+    </div>
+      <!-- /.login-box-body -->
+  </div>
+	
+@loginLayout.footScripts()
+
+</body>
+</html>

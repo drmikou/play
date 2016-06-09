@@ -1,0 +1,63 @@
+@(registration: models.core.UserRegistration, formulaire: Form[formData.core.userRegister.UserRegistrationData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userRegister.topMenu()) {
+
+    @widget(registration.registrationId.toString()) {
+
+        @form(formulaire, controllers.core.routes.UserRegister.editUserRegistrationPost()) {
+			@inputHidden(formulaire("registrationId"))
+
+            <div class="container">
+                @inputBoolean(formulaire("isSectInter"), label = "Section internationale")
+
+                @inputBoolean(formulaire("isStranger"), label = "Nationalité étrangère")
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <h1>Piece d'identié</h1>
+                    @documentPreview(registration.identite, size = 4)
+                    @inputFile(formulaire("idJustifFile"),"Piece d'identié", size = 4)
+                </div>
+
+                <div class="row">
+                    <h1> No sécurité sociale</h1>
+                    @documentPreview(registration.secu, size = 3)
+                    @inputFile(formulaire("secuJustifFile"),"No sécurité sociale", size = 3)
+                </div>
+
+                <div class="row">
+                    <h1>Certificat de scolarité</h1>
+                    @documentPreview(registration.certifScolarite, size = 3)
+                    @inputFile(formulaire("certifScolariteFile"),"Certificat de scolarité", size = 3)
+                </div>
+
+                <div class="row">
+                    <h1>Cotisation à la Junior</h1>
+                    @documentPreview(registration.cotisation, size = 3)
+                    @inputFile(formulaire("cotisationFile"),"Cotisation à la Junior", size = 3)
+                </div>
+
+
+                @conditionalDiv("isStranger") {
+                    <div class="row">
+                        <h1>Visa</h1>
+                    	@documentPreview(registration.visa, size = 3)
+                        @inputFile(formulaire("visaFile"),"Visa (étudiant étranger seulement)", size = 3)
+                    </div>
+                }
+            </div>
+            <div class="btn-group">
+                <input type="submit" class="btn btn-sm btn-default" value="Mettre à jour">
+                <a class="btn btn-sm btn-default" href="@controllers.core.routes.UserRegister.confirmUser(registration.registrationId.toString())">Editer la Cet</a>
+            </div>
+        }
+    }
+
+}

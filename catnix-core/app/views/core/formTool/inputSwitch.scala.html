@@ -1,0 +1,24 @@
+@(field: Field, label: String = "CHANGEME", color : String="red", help:String = "")
+
+
+<div class="form-group">
+	<label class="control-label">@label</label>
+	<div class="sw-@color">
+		<div class="onoffswitch">
+			<input
+				id="@field.name"
+				name="@field.name"
+				class="toggleBtn onoffswitch-checkbox"
+				type="checkbox"
+            	value="true"
+            	@if(field.value.getOrElse("false")=="true") {checked}>
+		</div>
+		<span class="help-block">@help</span>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+		$('#@field.name').onoff();
+	});
+</script>

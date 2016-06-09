@@ -1,0 +1,22 @@
+@(field: Field, label: String = "CHANGEME", buttonNameList: Map[String, String], help: String = "", buttonStyle: Boolean = false)
+
+  <div class="form-group @if(field.hasErrors) {has-error}">
+    <label for="@field.id">@label</label>
+    <div id="@(field.id + "s")" >
+      @if(buttonStyle) {<div class="btn-group" data-toggle="buttons">}
+      @for((buttonName, buttonValue) <- buttonNameList) {
+      <label class="@if(buttonStyle) {btn btn-default @if(buttonName == field.value.getOrElse("")) {active}} else {radio-inline}">
+        <input
+          type="radio"
+          name="@field.name"
+          id="@buttonName"
+          value="@buttonName"
+          @if(buttonName == field.value.getOrElse("")) {checked} />
+        @buttonValue
+      </label>
+      }
+      @if(buttonStyle) {</div>}
+      <span class="help-block">@help</span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+    </div>
+  </div>

@@ -1,0 +1,27 @@
+.navbar{
+	margin-bottom: 0px;		
+}
+
+.mainbar .page-head {
+	padding: 6px 20px;
+}
+
+.form-horizontal .control-label {
+	text-align:left;
+}
+
+.warningIcon {
+	color: orange;
+}
+
+.fatalIcon {
+	color: firebrick;
+}
+
+.small-box:hover {
+	color: black;
+}
+
+.small-box button.navbar-toggle {
+	color: black;
+}

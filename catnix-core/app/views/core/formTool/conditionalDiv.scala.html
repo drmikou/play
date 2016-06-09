@@ -1,0 +1,15 @@
+@(checkboxName: String)(content: Html)
+
+<div id=divFor@(checkboxName)>
+@content
+</div>
+
+<script>
+
+$(function () {
+	  $('#@(checkboxName)').change(function () {
+		  $('#divFor@(checkboxName)').toggle( this.checked );
+      }).change();
+	});
+
+</script>

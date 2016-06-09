@@ -1,0 +1,32 @@
+<footer class="main-footer">
+	<div class="pull-right hidden-xs">
+		<b>Version</b> 1.0.0
+	</div>
+	<strong>Copyright &copy; 2015-2016 <a href="http://www.juniorisep.com">Junior ISEP</a>.</strong> All rights
+	reserved.
+</footer>
+
+<script>
+
+$(".totop").hide();
+
+$(function(){
+	$(window).scroll(function(){
+	  if ($(this).scrollTop()>300)
+	  {
+		$('.totop').fadeIn();
+	  }
+	  else
+	  {
+		$('.totop').fadeOut();
+	  }
+	});
+
+	$('.totop a').click(function (e) {
+	  e.preventDefault();
+	  $('body,html').animate({scrollTop: 0}, 500);
+	});
+
+});
+
+</script>

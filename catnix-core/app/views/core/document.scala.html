@@ -1,0 +1,38 @@
+@(docType: String, ref: String, target: String, coverContent: Html = Html(""), introContent: Html = Html(""), documentContent: Html = Html(""))(guardPageContent: Html = Html(""))
+
+@import views.html.core.documentLayout._
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>@ref</title>
+
+		<link rel="stylesheet" href="@controllers.core.routes.Assets.versioned("stylesheets/document/document.css")">
+		<link rel="stylesheet" href="@controllers.core.routes.Assets.versioned("stylesheets/document/documentGrid.css")">
+		<link rel="stylesheet" href="@controllers.core.routes.Assets.versioned("stylesheets/document/documentPrint.css")" media="print">
+		@if(coverContent.body.nonEmpty) {
+			<link rel="stylesheet" href="@controllers.core.routes.Assets.versioned("stylesheets/document/documentCoverPrint.css")" media="print">
+		}
+
+		<link rel="stylesheet" href="@controllers.core.routes.Assets.versioned("stylesheets/document/documentEditorEdition.css")" media="screen">
+
+	</head>
+
+	<body>
+
+		@header(docType, ref, target)
+		@footer()
+		@legalFooter()
+
+		@cover(coverContent)
+
+		@guardPage(guardPageContent)
+
+		@intro(introContent)
+
+		@docContent(documentContent)
+
+	</body>
+</html>

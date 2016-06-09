@@ -1,0 +1,24 @@
+@(missingCetRegistrationList: List[models.core.UserRegistration])
+
+@import views.html.core.widget._
+@import views.html.core.formTool._
+
+@import views.html.core.fragment.userRegister._
+
+@import views.html.core.modelUnit.user._
+
+@widget("Top 5 des Cet manquantes", minimizable=true, size = 4) {
+
+	@lightTable("missingCetTable", scala.collection.immutable.List("Login", "RegistrationDate", "Corriger")) {
+	
+		@for(registration <- missingCetRegistrationList) {
+	    	@defining(registration.user) { user =>
+	            <tr>
+	            	<td>@userProfile(user)</td>
+	                <td>@registration.registrationDate.format("dd-MM-yyyy")</td>
+                    <td>@editCetBtn(registration)</td>
+	            </tr>
+			}
+		}
+	}
+}

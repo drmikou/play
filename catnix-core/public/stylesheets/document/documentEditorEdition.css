@@ -1,0 +1,64 @@
+
+/*
+ * Header, Footer and Intro
+ */
+.printOnly {
+	display: none;	
+}
+
+body {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2cm;
+	text-align: justify;
+	width: 794px;
+	-moz-box-shadow: 0 0 6px 1px rgba(172,181,194,0.56);
+	-webkit-box-shadow: 0 0 6px 1px rgba(172,181,194,0.56);
+	box-shadow: 0 0 6px 1px rgba(172,181,194,0.56);
+	border: 1px solid #2b579a;
+	background: white;
+}
+
+html {
+	background: #dfdfdf;
+}
+
+
+.commented.open:hover,.commented.open.fired {
+	background: #f2dede;
+}
+
+.commented.closed:hover,.commented.closed.fired {
+	background: #dff0d8;
+}
+
+.commented.progress:hover,.commented.progress.fired {
+	background: #d9edf7;
+}
+
+.commented.open {
+	border: 1px solid #d2322d;
+}
+
+.commented.closed {
+	border: 1px solid #47a447;
+}
+
+.commented.progress {
+	border: 1px solid #39b3d7;
+}
+
+/* fix preview styles */
+.cke_panel_listItem p {
+	padding-left: 0!important;
+	max-width: 100%!important;
+	text-align: left!important;
+	text-indent: 0!important;
+	padding-bottom: 0!important;
+}
+
+.cke_panel_listItem h3 {
+	padding-left: 0!important;
+	text-indent: 0!important;
+}

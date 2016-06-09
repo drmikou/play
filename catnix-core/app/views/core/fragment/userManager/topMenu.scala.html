@@ -1,0 +1,11 @@
+
+@import views.html.core.widget.pageHeadMenu
+
+@pageHeadMenu("user", "UserManager") {
+		<li><a href="@controllers.core.routes.UserManager.allUserList()">Liste des utilisateurs</a></li>
+		<li><a href="@controllers.core.routes.UserManager.teamUserRoleList()">Modifier les postes</a></li>
+		<li><a href="@controllers.core.routes.UserManager.allUserStatusList()">Modifier les status</a></li>
+		<li><a href="@controllers.core.routes.UserManager.potentialA1MemberList()">Ajouter des CDP</a></li>
+		<li><a href="@controllers.core.routes.UserManager.potentialCosMemberList()">Ajouter des Cos</a></li>
+}
+	

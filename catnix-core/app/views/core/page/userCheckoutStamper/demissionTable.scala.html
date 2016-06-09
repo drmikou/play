@@ -1,0 +1,36 @@
+@(demissionList: List[models.core.UserCheckout])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userCheckoutStamper.topMenu()) {
+
+@widget("liste des demissions") {
+        @dataTable("demissionTable", scala.collection.immutable.List("Id", "date", "login", "Promotion", "réintégrer")) {
+
+            @for(demission <- demissionList) {
+                @defining(demission.user) { user =>
+
+                    <tr>
+                        <td>@demission.checkoutId</td>
+                        <td>@demission.checkoutDate.format("dd-MM-yyyy")</td>
+                        <td>@userProfile(user)</td>
+                        <td>@user.promotion</td>
+                        <td><a href="@controllers.core.routes.UserCheckoutStamper.revertUserDemission(demission.checkoutId.toString())" class="btn btn-default">Réintégrer</a></td>
+                    </tr>
+
+                }
+            }
+        }
+
+
+	}
+
+}
+
+
+
+
+
+

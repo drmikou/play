@@ -1,0 +1,199 @@
+@(field: Field, placeHolder: String, size: Integer = 12)
+
+<div id="@(field.id)TmpFilePath">
+    @inputHidden(field)
+</div>
+
+<div class="col-md-@size">
+	<div id="@(field.id)PreviewZone" class="uploadFilePreviewZone">
+
+		<input id="@(field.id)FileInput" type="file" accept="application/pdf" data-url="@controllers.core.routes.FileManager.asyncUploadFile(field.id)">
+		<h4></h4>
+		<i class="deleteBtn fa fa-times fa-2x fatalIcon"></i>
+	</div>
+
+
+	<div id="@(field.id)ProgressZone" class="uploadFileProgressZone">
+		<div class="row">
+			<div class="progress progress-animated progress-striped active pull-left">
+				<div id="@(field.id)ProgressBar" class="progress-bar progress-bar-success" data-percentage="100"></div>
+			</div>
+
+			<div class="cancelBtn pull-left">
+				<i id="cclBtn" class="fa fa-times fa-2x warningIcon"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+
+$(function () {
+
+	var previewZone = $("#@(field.id)PreviewZone");
+	var progressBar = $('#@(field.id)ProgressBar');
+	var progressBarContainer = $('#@(field.id)ProgressZone .progress');
+	var placeholder = $('#@(field.id)PreviewZone h4');
+	var fileInput = $("#@(field.id)FileInput");
+	var tmpFilePath = $("#@(field.id)TmpFilePath input");
+
+	var cancelBtn = $("#@(field.id)ProgressZone .cancelBtn");
+	var deleteBtn = $("#@(field.id)PreviewZone .deleteBtn");
+
+	previewZone.keepRatio();
+	fileInput.width(previewZone.width());
+	fileInput.height(previewZone.height());
+
+	function setProgress(progress) {
+		progressBar.css('width', progress + '%');
+		progressBar.text(progress + '%');
+	}
+
+	function resetFile() {
+		var fileName = "@field.name";
+		coreJsRoutes.controllers.core.FileManager.asyncDeleteTmpFile(fileName).ajax({
+	    	type : "POST",
+	        contentType : 'text/plain; charset=utf-8',
+	        success : function(data) {
+                tmpFilePath.val('');
+	        },
+	        error : function () {
+	            console.error("error on ajax delete tmpFile");
+	        }
+		});
+	}
+
+    function fetchExistingFile() {
+        var fileName = "@field.name";
+        coreJsRoutes.controllers.core.FileManager.asyncCheckTmpFileExists(fileName).ajax({
+                type : "GET",
+                contentType : 'text/plain; charset=utf-8',
+                success : function(data) {
+                    var filePath = data;
+
+                    if(filePath != "false") {
+                        tmpFilePath.val(filePath);
+                        uploadedLayout();
+                    } else {
+                        resetLayout();
+                    }
+                },
+                error : function () {
+                    console.error("error on ajax check tmpFile exist");
+                }
+        });
+    }
+
+
+	/* Layout */
+	function resetLayout() {
+		setProgress(0);
+
+	    placeholder.html('Déposez ici: <br/><br/> @placeHolder');
+	    progressBarContainer.removeClass('col-md-9');
+	    progressBarContainer.addClass('col-md-12');
+
+
+	    previewZone.addClass('uploadNotStarted');
+	    previewZone.removeClass('uploadInProgress');
+	    previewZone.removeClass('uploadDone');
+
+        cancelBtn.hide();
+	   	deleteBtn.hide();
+	}
+
+	function uploadingLayout() {
+	    progressBarContainer.removeClass('col-md-12');
+	    progressBarContainer.addClass('col-md-9');
+
+	    previewZone.removeClass('uploadNotStarted');
+	    previewZone.addClass('uploadInProgress');
+	    previewZone.removeClass('uploadDone');
+
+	    cancelBtn.show();
+	    deleteBtn.hide();
+	}
+
+	function uploadedLayout() {
+		setProgress(100);
+	    progressBarContainer.removeClass('col-md-9');
+	    progressBarContainer.addClass('col-md-12');
+
+	    previewZone.removeClass('uploadNotStarted');
+	    previewZone.removeClass('uploadInProgress');
+	    previewZone.addClass('uploadDone');
+
+        cancelBtn.hide();
+	   	deleteBtn.show();
+
+	    placeholder.text('@placeHolder');
+	}
+
+	function handleError(e, data) {
+		var uploadErrors = [];
+        var fileType = data.originalFiles[0].name.split('.').pop().toLowerCase();
+
+        if($.inArray(fileType, ['pdf']) == -1) {
+            uploadErrors.push('Seul les Pdf sont acceptés');
+        }
+
+        if(uploadErrors.length > 0) {
+            alert(uploadErrors.join("\n"));
+        } else {
+            var jqXHR = data.submit();
+
+            cancelBtn.click(function (e) {
+        		jqXHR.abort();
+        	});
+        }
+	}
+
+
+	/* Init */
+    //resizePreviewZone();
+    fetchExistingFile();
+
+
+	/* FileUpload implementation */
+	deleteBtn.on("click",function(e){
+		e.stopPropagation();
+		resetFile();
+        resetLayout();
+        lockMutex("");
+	});
+
+	fileInput.fileupload({
+        acceptFileTypes: /(\.|\/)(pdf)$/i,
+        start: function (e, data) {
+            resetFile();
+        	uploadingLayout();
+            lockMutex("uploading @field.name");
+        },
+        done: function (e, data) {
+            fetchExistingFile();
+            uploadedLayout();
+            unlockMutex("uploading @field.name");
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            setProgress(progress);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            unlockMutex("uploading @field.name");
+            if (errorThrown === 'abort') {
+        		resetFile();
+                resetLayout();
+            }
+        },
+        dropZone: previewZone,
+        add: function (e, data) {
+            handleError(e, data);
+        }
+        
+    });
+});
+
+
+</script>

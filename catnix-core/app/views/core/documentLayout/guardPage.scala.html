@@ -1,0 +1,8 @@
+@(guardPage: Html)
+
+@if(guardPage.body.nonEmpty) {
+    <div id="documentGuardPage" class="printOnly textMargin">
+    @guardPage
+    </div>
+}
+

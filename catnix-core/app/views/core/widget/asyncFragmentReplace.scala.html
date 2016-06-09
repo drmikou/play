@@ -1,0 +1,16 @@
+@(fragmentId: String, ajaxCall: String)
+
+<div id="@(fragmentId)Fragment"></div>
+
+<script type="text/javascript">
+	@(ajaxCall).ajax({
+		type : "GET",
+           contentType : 'text/plain;',
+           success : function(data) {
+               $("#@(fragmentId)Fragment").replaceWith(data);
+           },
+           error : function () {
+               console.error("ajax fragment error for: @ajaxCall");
+           }
+	});
+</script>

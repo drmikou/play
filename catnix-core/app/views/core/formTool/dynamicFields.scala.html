@@ -1,0 +1,41 @@
+@(templateElementSelector: String, elementSelector: String, formSelector: String, listType: String, addBtnSelector: String, removeBtnSelector: String, elementSurroundWith: String, customJs: String = "")
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('@removeBtnSelector').on('click', function(e) {
+            $(this).parents('@elementSelector').remove();
+            renumber();
+        });
+
+        $('@addBtnSelector').on('click', function(e) {
+            var template = $('@templateElementSelector');
+            template.before(@Html(elementSurroundWith));
+            renumber();
+        });
+
+        $('@formSelector').submit(function() {
+            $('@templateElementSelector').remove();
+            return true;
+        });
+
+        var renumber = function() {
+            $('@elementSelector').each(function(i) {
+                $(this).html($(this).html().replace(/INDEX/g, i));
+                $('input, textarea, select', this).each(function() {
+                    var $input = $(this);
+                    var oldName = $input.attr('name');
+                    if (oldName) {
+                        var newName = oldName.replace(/@listType\[.+?\]/g, '@{listType}[' + i + ']');
+                        $input.attr('name', newName);
+                    }
+                });
+            });
+            $('@removeBtnSelector').on('click', function(e) {
+                $(this).parents('@elementSelector').remove();
+                renumber();
+            });
+
+            @Html(customJs)
+        }
+    });
+</script>

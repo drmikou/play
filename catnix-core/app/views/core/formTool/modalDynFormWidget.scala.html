@@ -1,0 +1,48 @@
+@(modalId: String, title: String, onCallAction: Call, async: Boolean = false)(formContent: Html)
+
+@import helper._
+
+<div style="display: none;" id="@modalId" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	
+	<div class="modal-dialog">
+		<div class="modal-content">
+		
+			<form id="form@modalId" method="POST" action="@onCallAction" class="form-horizontal">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title">@title</h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="container-fluid">
+						@formContent
+					</div>
+				</div>
+				
+				<div class="modal-footer">
+					<button class="btn btn-primary" type="submit">Ok</button>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<script>
+
+$('#@modalId').appendTo($('body'));
+@if(async) {
+	$('#form@modalId').submit(function(e) {
+		e.preventDefault();
+		$.post('@onCallAction', $('#form@modalId').serialize()).done(function() {
+				console.log('Form successfully submitted');
+				$('#@modalId').modal('hide')
+			})
+			.fail(function() {
+				console.error('Error on submitting form');
+			});
+	});
+}
+
+</script>

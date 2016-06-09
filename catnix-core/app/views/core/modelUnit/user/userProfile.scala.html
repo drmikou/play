@@ -1,0 +1,6 @@
+@(user: models.core.User)
+
+@import views.html.core.modelUnit.user._
+
+<a href="@controllers.core.routes.UserManager.viewUser(user.userId.toString())"><i></i> @user.login()</a>
+

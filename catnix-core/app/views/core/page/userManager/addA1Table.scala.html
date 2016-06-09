@@ -1,0 +1,32 @@
+@(registrationList: List[models.core.UserRegistration])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.fragment.userManager._
+@import views.html.core.fragment.userRegister._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+@widget("ajouter des CDP") {
+
+            @dataTable("newCdpTable", scala.collection.immutable.List("Id", "Login", "Status", "Editer", "Ajouter")) {
+
+                @for(registration <- registrationList) {
+                    @defining(registration.user) { user =>
+                        <tr>
+                            <td>@registration.registrationId</td>
+                            <td>@userProfile(user)</td>
+                            <td>@userStatusList(user)</td>
+                            <td>@editRegistrationBtn(registration)</td>
+                            <td>
+                                <a href="@controllers.core.routes.UserManager.upgradeUserToA1(user.userId.toString())" class="btn btn-default"> Ajouter comme CDP </a>
+                            </td>
+                        </tr>
+                    }
+                }
+        }
+
+	}
+
+}

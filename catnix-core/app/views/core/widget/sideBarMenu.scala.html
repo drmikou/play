@@ -1,0 +1,48 @@
+@(faIcon: String, title: String, urlActive: String)(menuList: Html)
+
+@import utils.core.templateHelper._
+
+@defineHash(title, "SideMenu") { sideMenuHash =>
+	
+	<li class="treeview@if(request.uri.contains(urlActive)) { active}" id="@sideMenuHash">
+		<a href="#">
+			<i class="fa fa-@faIcon"></i>@title
+			<i class="fa fa-angle-left pull-right"></i>
+		</a>
+		<ul class="treeview-menu">
+	 		@menuList
+		</ul>
+	</li>
+	
+	<script>
+		/*$("#@sideMenuHash > a").click(function(e) {
+			e.preventDefault();
+			var menu_li = $("#@sideMenuHash");
+			var menu_ul = $(this).next("ul");
+	
+			if (menu_li.hasClass("open")) {
+				menu_ul.slideUp(350);
+				menu_li.removeClass("open")
+			} else {
+				$("#nav > li > ul").slideUp(350);
+				$("#nav > li").removeClass("open");
+				menu_ul.slideDown(350)
+				menu_li.addClass("open");
+			}
+		});*/
+
+		//TODO find a better way to solve it
+		function resizeAside(){
+			$('aside.main-sidebar div.slimScrollDiv').height($(window).height() - 50);
+			setTimeout(function() {
+				resizeAside();
+			}, 3000);
+		}
+
+		resizeAside();
+
+	</script>
+
+}
+
+

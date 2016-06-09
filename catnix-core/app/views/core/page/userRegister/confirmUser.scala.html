@@ -1,0 +1,46 @@
+@(registration: models.core.UserRegistration, confirmationForm: Form[formData.core.userRegister.NewUserConfirmationData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+@import views.html.core.formTool._
+
+@main("Roles", views.html.core.fragment.userRegister.topMenu()) {
+
+@widget("Confirmer l'inscription") {
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <h1>confirmation</h1>
+
+            <a href="@controllers.core.routes.UserRegister.buildCet(registration.registrationId.toString())"> Télécharger</a>
+        </div>
+
+        <div class="col-md-3">
+            <h1>déposer la CET signée</h1>
+            @form(confirmationForm, controllers.core.routes.UserRegister.confirmUserPost()) {
+            	@inputHidden(confirmationForm("registrationId"))
+	
+				<div class="row">
+                    @inputFile(confirmationForm("cetFile"), "CET signée", size = 4)
+                </div>
+
+                <input type="submit" class="btn btn-sm btn-default" value="Confirmer">
+
+            }
+        </div>
+
+    </div>
+</div>
+}
+}
+
+
+
+
+
+

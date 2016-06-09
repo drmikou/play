@@ -1,0 +1,22 @@
+@(error:Throwable)
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("Le chat n'arrive plus à descendre de l'arbre", views.html.core.fragment.demo.topMenu("Erreur !")) {
+
+    @widget("Le chat est coincé, il requiert l'aide des responsables techniques pour le descendre de l'arbre.") {
+
+        <h3>Une grave erreur est apparue, merci de contacter au plus vite l'équipe en charge du développement de catnix !</h3>
+        <h1><a class="surprise" href="mailto:rtech@@juniorisep.com?subject=[CATNIX][ERROR] Catnix à rencontré une erreur 500&body=@error.getMessage">Prévenir l'équipe technique.</a></h1>
+        Informations techniques
+        <pre>
+        @error.getMessage
+        </pre>
+        Cause
+        <pre>
+        @error.getCause.getMessage
+        </pre>
+
+
+    }
+}

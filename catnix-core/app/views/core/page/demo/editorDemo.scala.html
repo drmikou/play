@@ -1,0 +1,12 @@
+@(documentContent: Html, currentUser: models.core.User)
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+
+	@documentEditor("testEditor", controllers.core.routes.Demo.demoEditorPost(), currentUser) {
+        @documentContent
+    }
+
+}

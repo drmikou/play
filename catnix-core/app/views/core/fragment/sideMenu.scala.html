@@ -1,0 +1,24 @@
+
+@import views.html.core.widget.sideBarMenu
+
+@sideBarMenu("question", "Démo", "demo") {
+	<li><a href="@controllers.core.routes.Demo.index()">Demo Page</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoPost()">Demo Post</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoEditor()">Demo Editor</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoPrintEditor()">Demo Print Editor</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoFlash()">Demo Flash</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoPdf()">Demo pdf</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoTable()">Demo table</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoPreviewPdf()">Demo preview pdf</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoGraph()">Demo graphique</a></li>
+	<li><a href="@controllers.core.routes.Demo.demoMail()">Demo email</a></li>
+
+	<li><a href="@controllers.core.routes.Auth.login()">Login page</a></li>
+}
+
+@sideBarMenu("user", "Utilisateurs", "user") {
+	<li><a href="@controllers.core.routes.UserManager.index()">User Manager</a></li>
+	<li><a href="@controllers.core.routes.UserRegister.index()">User Register</a></li>
+	<li><a href="@controllers.core.routes.UserCheckoutStamper.index()">User Checkout</a></li>
+}
+

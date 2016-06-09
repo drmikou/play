@@ -1,0 +1,7 @@
+
+@import views.html.core.widget.pageHeadMenu
+
+@pageHeadMenu("user", "UserRegister") {
+	<li><a href="@controllers.core.routes.UserRegister.createUser()">Ajouter utilisateur</a></li>
+	<li><a href="@controllers.core.routes.UserRegister.registrationList()">Liste des inscriptions </a></li>
+}

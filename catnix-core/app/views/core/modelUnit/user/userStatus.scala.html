@@ -1,0 +1,25 @@
+@(userStatus: security.UserStatus)
+
+@if(userStatus.getName() == "actif"){
+	<span class="label label-success">@userStatus.getName()</span>
+}
+
+@if(userStatus.getName() == "ancien") {
+	<span class="label label-warning">@userStatus.getName()</span>
+}
+
+@if(userStatus.getName() == "etranger") {
+	<span class="label label-primary">@userStatus.getName()</span>
+}
+
+@if(userStatus.getName() == "sectionInter") {
+	<span class="label label-info">@userStatus.getName()</span>
+}
+
+@if(userStatus.getName() == "demission") {
+	<span class="label label-danger">@userStatus.getName()</span>
+}
+
+@if(userStatus.getName() == "dossierIncomplet") {
+	<span class="label label-danger">@userStatus.getName()</span>
+}

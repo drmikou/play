@@ -1,0 +1,24 @@
+
+@import views.html.core.widget.asyncFragmentReplace
+
+<aside class="main-sidebar">
+
+	<section class="sidebar">
+		@asyncFragmentReplace("searchBar", "coreFragmentRoutes.controllers.core.Demo.renderDemoSearchBar()")
+
+	<!--- Sidebar navigation -->
+	<!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+	<ul class="sidebar-menu">
+		<!-- Main menu with font awesome icon -->
+		
+		@asyncFragmentReplace("coreSideMenu", "coreFragmentRoutes.controllers.core.Core.renderSideMenu()")
+		
+		@asyncFragmentReplace("reunionSideMenu", "reunionFragmentRoutes.controllers.reunion.Reunion.renderSideMenu()")		
+		@asyncFragmentReplace("calendarSideMenu", "calendarFragmentRoutes.controllers.calendar.Calendar.renderSideMenu()")
+		@asyncFragmentReplace("mailEditorSideMenu", "mailEditorFragmentRoutes.controllers.mailEditor.Maileditor.renderSideMenu()")
+		@asyncFragmentReplace("appelSideMenu", "appelFragmentRoutes.controllers.appel.Appel.renderSideMenu()")
+		@asyncFragmentReplace("prospSideMenu", "prospFragmentRoutes.controllers.prosp.Prosp.renderSideMenu()")
+        @asyncFragmentReplace("clientsSideMenu", "clientsFragmentRoutes.controllers.clients.Clients.renderSideMenu()")
+	</ul>
+	</section>
+</aside>

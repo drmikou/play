@@ -1,0 +1,23 @@
+@(allRoleList: List[security.EPoste])
+
+@import security.EPoste
+@import views.html.core.modelUnit.user._
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+
+	@widget("table démo") {
+
+        @dataTable("toto", scala.collection.immutable.List("Role", "Name", "Token")) {
+            @for(role <- allRoleList) {
+                <tr>
+                    <td>@role.toString()</td>
+                    <td>@role.getName()</td>
+                    <td>@userPoste(role)</td>
+                </tr>
+            }
+        }
+	}
+}

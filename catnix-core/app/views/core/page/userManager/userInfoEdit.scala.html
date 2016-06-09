@@ -1,0 +1,32 @@
+@(user: models.core.User, infoForm: Form[formData.core.userManager.UserInfoData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+    @widget(user.login()) {
+
+        @form(infoForm, controllers.core.routes.UserManager.editUserInfoPost()) {
+
+            @inputHidden(infoForm("userId"))
+
+            <h1>Informations</h1>
+            @inputTextLine(infoForm("firstName"), label = "Prénom")
+
+            @inputTextLine(infoForm("lastName"), label = "Nom de famille")
+
+            @inputInteger(infoForm("promotion"), label = "Promotion")
+
+            <input type="submit" class="btn btn-sm btn-default" value="Mettre à jour">
+        }
+    }
+
+}
+
+
+
+

@@ -1,0 +1,127 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /renderSideMenu                                                                     controllers.core.Core.renderSideMenu()
+GET         /                                                                                   controllers.core.Demo.index()
+
+# DEMO
+GET         /demo/renderDemoSearchBar                                                           controllers.core.Demo.renderDemoSearchBar()
+GET         /demo/renderDemoGraph/:startTimeStamp/:endTimeStamp                                 controllers.core.Demo.renderDemoGraph(startTimeStamp: Long, endTimeStamp: Long)
+
+GET         /demo/demoPost                                                                      controllers.core.Demo.demoPost()
+POST        /demo/demoPostPost                                                                  controllers.core.Demo.demoPostPost()
+POST        /demo/demoDynPost                                                                   controllers.core.Demo.demoDynPost()
+GET         /demo/demoEditor                                                                    controllers.core.Demo.demoEditor()
+POST        /demo/demoEditorPost                                                                controllers.core.Demo.demoEditorPost()
+GET         /demo/demoPrintEditor                                                               controllers.core.Demo.demoPrintEditor()
+POST        /demo/demoPrintEditorPost                                                           controllers.core.Demo.demoPrintEditorPost()
+GET         /demo/demoPdf                                                                       controllers.core.Demo.demoPdf()
+GET         /demo/demoFlash                                                                     controllers.core.Demo.demoFlash()
+GET         /demo/demoTable                                                                     controllers.core.Demo.demoTable()
+GET         /demo/demoPreviewPdf                                                                controllers.core.Demo.demoPreviewPdf()
+GET         /demo/demoGraph                                                                     controllers.core.Demo.demoGraph()
+GET         /demo/demoMail                                                                      controllers.core.Demo.demoMail()
+
+
+# FILE MANAGER
+GET         /fileManager/download/*filePath                                                     controllers.core.FileManager.downloadFile(filePath)
+GET         /fileManager/preview/*filePath                                                      controllers.core.FileManager.previewDocument(filePath)
+
+POST        /fileManager/asyncCheckTmpFileExists/*fileName                                      controllers.core.FileManager.asyncCheckTmpFileExists(fileName)
+POST        /fileManager/asyncFileUpload/*fileName                                              controllers.core.FileManager.asyncUploadFile(fileName)
+POST        /fileManager/asyncUploadDraft/*fileName                                             controllers.core.FileManager.asyncUploadDraft(fileName)
+POST        /fileManager/asyncDeleteTmpFile/*fileName                                           controllers.core.FileManager.asyncDeleteTmpFile(fileName)
+
+
+
+#DOCUMENT PROCESSING
+POST        /documentProcessing/renderDiscussion                                                controllers.core.DocumentProcessing.renderDiscussion()
+
+# USER MANAGER
+GET         /userManager/renderCurrentUserAccount                                               controllers.core.UserManager.renderCurrentUserAccount()
+
+GET         /userManager                                                                        controllers.core.UserManager.index()
+GET         /userManager/allUserList                                                            controllers.core.UserManager.allUserList()
+
+GET         /userManager/teamUserRoleList                                                       controllers.core.UserManager.teamUserRoleList()
+POST        /userManager/updateRolePost                                                         controllers.core.UserManager.updateRolePost()
+
+GET         /userManager/userStatusList                                                         controllers.core.UserManager.allUserStatusList()
+POST        /userManager/updateStatusPost/                                                      controllers.core.UserManager.updateStatusPost()
+
+GET         /userManager/potentialA1MemberList                                                  controllers.core.UserManager.potentialA1MemberList()
+GET         /userManager/potentialCosMemberList                                                 controllers.core.UserManager.potentialCosMemberList()
+GET         /userManager/upgradeUserToA1/*userId                                                controllers.core.UserManager.upgradeUserToA1(userId)
+GET         /userManager/upgradeUserToCos/*userId                                               controllers.core.UserManager.upgradeUserToCos(userId)
+
+GET         /userManager/viewUser/*userId                                                       controllers.core.UserManager.viewUser(userId)
+
+GET         /userManager/editUserContact/*userId                                                controllers.core.UserManager.editUserContact(userId)
+POST        /userManager/editUserContactPost/                                                   controllers.core.UserManager.editUserContactPost()
+GET         /userManager/editUserInfo/*userId                                                   controllers.core.UserManager.editUserInfo(userId)
+POST        /userManager/editUserInfoPost/                                                      controllers.core.UserManager.editUserInfoPost()
+
+
+# USER REGISTER
+GET         /userRegister/renderRegistrationConfigurationWidget                                 controllers.core.UserRegister.renderRegistrationConfigurationWidget()
+GET         /userRegister/renderTopIncompleteRegistrationWiget/:topCount                        controllers.core.UserRegister.renderTopIncompleteRegistrationWiget(topCount: Integer )
+GET         /userRegister/renderCurrentCotisationGraph                                          controllers.core.UserRegister.renderCurrentCotisationGraph()
+GET         /userRegister/renderCurrentCotisationGraphWidget                                    controllers.core.UserRegister.renderCurrentCotisationGraphWidget()
+GET         /userRegister/renderTopMissingCetWidget/:topCount                                   controllers.core.UserRegister.renderTopMissingCetWidget(topCount: Integer)
+GET         /userRegister/renderRegistrationEvolutionGraphWidget                                controllers.core.UserRegister.renderRegistrationEvolutionGraphWidget()
+
+GET         /userRegister/renderRegistrationEvolutionGraph/:startTimeStamp/:endTimeStamp        controllers.core.UserRegister.renderRegistrationEvolutionGraph(startTimeStamp: Long, endTimeStamp: Long)
+
+
+GET         /userRegister                                                                       controllers.core.UserRegister.index()
+POST        /userRegister/editRegisterConfigurationPost                                         controllers.core.UserRegister.editRegisterConfigurationPost()
+
+GET         /userRegister/registrationList                                                      controllers.core.UserRegister.registrationList()
+
+GET         /userRegister/createUser                                                            controllers.core.UserRegister.createUser()
+POST        /userRegister/createUserPost                                                        controllers.core.UserRegister.createUserPost()
+
+GET         /userRegister/buildCet/*registrationId                                              controllers.core.UserRegister.buildCet(registrationId)
+
+GET         /userRegister/confirmUser/*registrationId                                           controllers.core.UserRegister.confirmUser(registrationId)
+POST        /userRegister/confirmUserPost                                                       controllers.core.UserRegister.confirmUserPost()
+
+GET         /userRegister/editUserRegistration/*registrationId                                  controllers.core.UserRegister.editUserRegistration(registrationId)
+POST        /userRegister/editUserRegistrationPost                                              controllers.core.UserRegister.editUserRegistrationPost()
+
+
+# USER CHECKOUT STAMPER
+GET         /userCheckoutStamper                                                                controllers.core.UserCheckoutStamper.index()
+GET         /userCheckoutStamper/oldTeamUserList                                                controllers.core.UserCheckoutStamper.oldTeamUserList()
+GET         /userCheckoutStamper/demissionList                                                  controllers.core.UserCheckoutStamper.demissionList()
+GET         /userCheckoutStamper/demissionableUserList                                          controllers.core.UserCheckoutStamper.demissionableUserList()
+
+GET         /userCheckoutStamper/recordUserDemission/*userId                                    controllers.core.UserCheckoutStamper.recordUserDemission(userId)
+POST        /userCheckoutStamper/recordUserDemissionPost/                                       controllers.core.UserCheckoutStamper.recordUserDemissionPost()
+GET         /userCheckoutStamper/revertUserDemission/*checkoutId                                controllers.core.UserCheckoutStamper.revertUserDemission(checkoutId)
+
+GET         /userCheckoutStamper/endOfMandatory                                                 controllers.core.UserCheckoutStamper.endOfMandatory()
+POST        /userCheckoutStamper/endOfMandatoryPost                                             controllers.core.UserCheckoutStamper.endOfMandatoryPost()
+
+
+# UTILS
+# GET     /logUser/*userId                                                            controllers.core.Auth.logUser(userId)
+
+#--------------------------------------
+GET         /logout                                                                             controllers.core.Auth.logout()
+GET         /sp                                                                                 controllers.core.Auth.sp()
+GET         /snp                                                                                controllers.core.Auth.snp()
+GET         /who                                                                                controllers.core.Auth.who()
+GET         /login                                                                              controllers.core.Auth.login()
+POST        /authenticate                                                                       controllers.core.login.LdapixLogin.authenticate()
+POST        /fetchInfo                                                                          controllers.core.login.LdapixLogin.fetchInfo()
+#GET         /testLdapix                                                                 controllers.core.login.LdapixLogin.testLdapix()
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                                                                       controllers.core.Assets.versioned(path="/public", file)
+GET         /javascriptRoutes                                                                   controllers.core.Core.javascriptRoutes()
+GET         /asyncFragmentRoutes                                                                controllers.core.Core.asyncFragmentRoutes()

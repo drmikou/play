@@ -1,0 +1,18 @@
+
+@display(typeNoti: String, content: String) = {
+	@if(content != null) {
+		setTimeout( function() {noty({text: '@Html(content.toString.stripMargin.replaceAll("\n", " \\ "))',layout:'topRight',type:'@typeNoti'});}, 0);
+	}
+}
+
+<script>
+    $(document).ready(function(){
+
+        @display("alert", flash.get("alert"))
+        @display("success", flash.get("success"))
+        @display("information", flash.get("information"))
+        @display("warning", flash.get("warning"))
+        @display("error", flash.get("error"))
+
+    });
+</script>

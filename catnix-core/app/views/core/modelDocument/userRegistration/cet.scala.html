@@ -1,0 +1,21 @@
+@(userRegistration: models.core.UserRegistration, president: models.core.User)
+
+@import views.html.core.document
+@import models.core.User
+@import views.html.core.documentLayout._
+
+@defining(userRegistration.user) { user =>
+	@document("CONVENTION ETUDIANTE", "DEMO DOC", "CIBLE") {
+	
+		<div class="documentSection">
+			<h1>coucou, c'est la CET de @user.login() </h1>
+			
+			<div class="documentSection">
+				<h2>le président est: @president.firstName</h2>
+			</div>
+			
+		</div>
+
+		<h2>le président est: @president.firstName</h2>
+	}
+}

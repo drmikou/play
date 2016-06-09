@@ -1,0 +1,21 @@
+@(title: String)
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<!-- Title and other stuffs -->
+	<title>@title</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<!--<meta name="description" content="">-->
+	<!--<meta name="keywords" content="">-->
+	<!--<meta name="author" content="">-->
+	
+	<script src="@controllers.core.routes.Assets.versioned("js/jquery.js")"></script>
+	@ajaxRoutes()
+	
+  	@styles()
+  	@customStyles()
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="@controllers.core.routes.Assets.versioned("img/favicon/favicon.png")">
+</head>

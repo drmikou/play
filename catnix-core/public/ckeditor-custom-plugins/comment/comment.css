@@ -1,0 +1,30 @@
+
+.comment {
+	width: 100%;
+	border: 1px solid black;
+}
+
+.commented.open:hover,.commented.open.fired {
+	background: #d9534f;
+}
+
+
+.commented.closed:hover,.commented.closed.fired {
+	background: #5cb85c;
+}
+
+.commented.responses:hover,.commented.progress.fired {
+	background: #5bc0de;
+}
+
+.commented.open {
+	border: 10px solid #d9534f;
+}
+
+.commented.closed {
+	border: 10px solid #5cb85c;
+}
+
+.commented.progress {
+	border: 10px solid #5bc0de;
+}

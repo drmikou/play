@@ -1,0 +1,5 @@
+@(evolutionData: Map[utils.core.graph.GraphSerie, Map[Double, Double]])
+
+@import views.html.core.graphTool._
+
+@graphHisto("registrationEvolutionGraph", "Evolution des inscriptions", evolutionData, stack = true, timeLine = true)

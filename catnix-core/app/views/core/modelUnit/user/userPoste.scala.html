@@ -1,0 +1,13 @@
+@(userPoste: security.EPoste)
+
+@if(userPoste.getName() == "client" || userPoste.getName() == "consultant" || userPoste.getName() == "a1" || userPoste.getName() == "a2" || userPoste.getName() == "a1" || userPoste.getName() == "bureau" || userPoste.getName() == "cos"){
+	<span class="label label-success">@userPoste.getName()</span>
+}
+
+@if(userPoste.getName() == "vt" || userPoste.getName() == "vq" || userPoste.getName() == "vp") {
+	<span class="label label-primary">@userPoste.getName()</span>
+}
+
+@if(userPoste.getName() == "Comm" || userPoste.getName() == "RC" || userPoste.getName() == "RQ" || userPoste.getName() == "RD" || userPoste.getName() == "sysOp" || userPoste.getName() == "sysAdmin" || userPoste.getName() == "trezo" || userPoste.getName() == "SG" || userPoste.getName() == "vicePrez" || userPoste.getName() == "prez") {
+	<span class="label label-danger">@userPoste.getName()</span>
+}

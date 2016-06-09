@@ -1,0 +1,28 @@
+@(userList: List[models.core.User])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userCheckoutStamper.topMenu()) {
+
+@widget("liste de la team") {
+
+            @dataTable("quitableUser", scala.collection.immutable.List("login", "role", "Ajouter une démission")) {
+
+                @for(user <- userList) {
+                    <tr>
+                        <td>@userProfile(user)</td>
+                        <td>@userPosteList(user)</td>
+                        <td><a href="@controllers.core.routes.UserCheckoutStamper.recordUserDemission(user.userId.toString())" class="btn btn-default"> Demissioner </a></td>
+                    </tr>
+                }
+        }
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+@(incompleteRegistrationList: List[models.core.UserRegistration])
+
+@import views.html.core.widget._
+@import views.html.core.formTool._
+
+@import views.html.core.fragment.userRegister._
+
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
+
+@import views.html.core.modelUnit.user._
+
+@widget("Top 10 des Inscritpion incomplètes", minimizable=true, size = 4) {
+
+	@lightTable("incompleteRegistrationTable", scala.collection.immutable.List("Login", "RegistrationDate", "Corriger")) {
+	
+		@for(registration <- incompleteRegistrationList) {
+	    	@defining(registration.user) { user =>
+	            <tr>
+	            	<td>@userProfile(user)</td>
+	                <td>@registration.registrationDate.format("dd-MM-yyyy")</td>
+                    <td>@editRegistrationBtn(registration)</td>
+	            </tr>
+			}
+		}
+	}
+}

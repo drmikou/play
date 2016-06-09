@@ -1,0 +1,58 @@
+@(trueForm: Form[formData.core.demo.DemoFormData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@import views.html.core.formTool._
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+
+	@widget("post démo") {
+
+        @form(trueForm, controllers.core.routes.Demo.demoPostPost()) {
+            @inputBoolean(trueForm("b1"), label = "inputBoolean")
+            @conditionalDiv("b1") {
+                <p>b1 est activé !</p>
+            }
+
+            @inputSwitch(trueForm("b2"), label = "inputSwitch")
+            @conditionalDiv("b2") {
+                <p>b2 est activé !</p>
+            }
+
+            @inputDay(trueForm("d"), label = "inputDay")
+
+            @inputTime(trueForm("t"), label = "inputTime")
+
+            @inputDayTime(trueForm("dt"), label = "inputDayTime")
+
+            @inputHidden(trueForm("h"))
+
+            @inputEmail(trueForm("email"), label = "inputEmail")
+
+            @inputInteger(trueForm("i1"), label = "inputInteger")
+
+            @inputInteger(trueForm("i2"), label = "inputIntegerWithSlider", slider=true,sliderOrientation="horizontal",min=0,max=200)
+
+            <div class="row">
+                @inputFile(trueForm("f"), "placeholder", size = 2)
+            </div>
+
+            @inputPassword(trueForm("p"), label = "inputPassword")
+
+            @inputTextLine(trueForm("t1"), label = "inputTextLine")
+
+            @inputTextArea(trueForm("t2"), label = "inputTextArea")
+
+            @inputTextLine(trueForm("strList[0]"), label = "list item O")
+            @inputTextLine(trueForm("strList[1]"), label = "list item 1")
+
+            <button id="submit" type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        }
+
+
+
+
+	}
+
+}

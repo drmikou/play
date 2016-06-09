@@ -1,0 +1,151 @@
+@import java.util
+@import com.fasterxml.jackson.databind.JsonNode
+@(comments: JsonNode,responses: util.ArrayList[JsonNode])
+
+<div class="showComment">
+    <table>
+        <tr>
+            <td>
+            @comments.get("postedBy").asText()
+            </td>
+            <td>
+            @comments.get("postedOn").asText() (UTC)
+            </td>
+        </tr>
+    </table>
+    <div class="contentComment">
+        @comments.get("comment").asText()
+    </div>
+    <div class="btn-group" role="group" aria-label="set status">
+        <button type="button" id="setOpen" class="btn btn-default @if(comments.get("status").asText() == "open") { active }">Ouvert</button>
+        <button type="button" id="setResponses" class="btn btn-default @if(comments.get("status").asText() == "responses") { active }">En cours</button>
+        <button type="button" id="setClosed" class="btn btn-default @if(comments.get("status").asText() == "closed") { active }">clot</button>
+    </div>
+
+	<div class="responses">
+        @for(response <- responses) {
+            <div class='resp'>
+            <table>
+            <tr>
+            <td>@response.get("postedBy").asText()</td>
+            <td>@response.get("postedOn").asText()</td>
+            </tr>
+            </table>
+            <div class='contentComment'>
+            @response.get("comment").asText()
+            </div>
+            </div>
+        }
+    </div>
+    <div class="sendResponse">
+        <textarea id="response" placeholder="reponse"></textarea><br>
+        <input id="sendResponse" type="submit" value="repondre">
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var commentedArea = CKEDITOR.instances[editorId].document.$.getElementsByClassName("c@comments.get("id").asText()")[0];
+        var json = $(commentedArea).data("comment");
+        $(".showComment").mouseenter(function() {
+
+            if($(commentedArea).hasClass("fired")) {
+            } else {
+                $(commentedArea).addClass("fired");
+            }
+
+        }).mouseleave(function() {
+
+            if($(commentedArea).hasClass("fired")) {
+                $(commentedArea).removeClass("fired");
+            }
+
+        });
+
+        $("#setOpen").click(function() {
+            if ($(commentedArea).hasClass("closed")) {
+                $(commentedArea).removeClass("closed");
+                $("#setClosed").removeClass("active");
+            }
+
+            if ($(commentedArea).hasClass("responses")) {
+                $(commentedArea).removeClass("responses");
+                $("#setResponses").removeClass("active");
+            }
+
+            $(commentedArea).addClass("open");
+            $("#setOpen").addClass("active");
+            json.status = "open";
+            commentedArea.dataset.comment = JSON.stringify(json);
+        });
+
+        $("#setResponses").click(function() {
+            if ($(commentedArea).hasClass("closed")) {
+                $(commentedArea).removeClass("closed");
+                $("#setClosed").removeClass("active");
+            }
+
+            if ($(commentedArea).hasClass("open")) {
+                $(commentedArea).removeClass("open");
+                $("#setOpen").removeClass("active");
+            }
+
+            $(commentedArea).addClass("responses");
+            $("#setResponses").addClass("active");
+            json.status = "responses";
+            commentedArea.dataset.comment = JSON.stringify(json);
+        });
+
+        $("#setClosed").click(function() {
+            if ($(commentedArea).hasClass("responses")) {
+                $(commentedArea).removeClass("responses");
+                $("#setResponses").removeClass("active");
+            }
+
+            if ($(commentedArea).hasClass("open")) {
+                $(commentedArea).removeClass("open");
+                $("#setOpen").removeClass("active");
+            }
+
+            $(commentedArea).addClass("closed");
+            $("#setClosed").addClass("active");
+            json.status = "closed";
+            commentedArea.dataset.comment = JSON.stringify(json);
+        });
+
+        function sendResponse(){
+            var commentedArea = CKEDITOR.instances[editorId].document.$.getElementsByClassName("c@comments.get("id").asText()")[0];
+            var json = $(commentedArea).data("comment");
+            var now = new Date();
+            var response = {
+                postedBy: "Tata",
+                postedOn: now.getUTCDay()+"/"+now.getUTCMonth()+"/"+now.getUTCFullYear()+" "+now.getUTCHours()+":"+now.getUTCMinutes(),
+                comment: $("#response").val()
+            };
+            $(".responses").append("<div class='resp'>" +
+             "<table>" +
+              "<tr>" +
+               "<td>"+response.postedBy+"</td>" +
+               "<td>"+response.postedOn+"</td>" +
+              "</tr>" +
+             "</table>" +
+              "<div class='contentComment'>" + response.comment +
+               "</div>" +
+              "</div>");
+            $("#response").val("");
+            json.responses.push(response);
+            commentedArea.dataset.comment = JSON.stringify(json);
+        }
+
+        $("#sendResponse").click(function(evt) {
+            evt.preventDefault();
+            sendResponse();
+        });
+        $("#response").keydown(function(e) {
+            if (e.keyCode == 13 && e.ctrlKey) {
+                e.preventDefault();
+                sendResponse();
+            }
+        });
+    });
+</script>

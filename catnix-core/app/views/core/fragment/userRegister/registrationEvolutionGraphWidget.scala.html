@@ -1,0 +1,20 @@
+
+
+@import views.html.core.widget._
+
+@widget("Evolution des cotisations", minimizable=true, size = 12) {
+	<div class = "row">
+		@timeGap("cotisationEvolution") {
+			coreFragmentRoutes.controllers.core.UserRegister.renderRegistrationEvolutionGraph(startDate.getTime(), endDate.getTime()).ajax({
+			type : "GET",
+	           contentType : 'text/plain;',
+	           success : function(data) {
+	                mainContent.html(data);
+	           },
+	           error : function () {
+	                console.error("error on ajax load of render TimeGap");
+	           }
+			});
+		}
+	</div>
+}

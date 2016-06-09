@@ -1,0 +1,30 @@
+@(user: models.core.User, demissionForm: Form[formData.core.userCheckoutStamper.UserCheckoutData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userCheckoutStamper.topMenu()) {
+
+    @widget("demission de " + user.login()) {
+
+        @form(demissionForm, controllers.core.routes.UserCheckoutStamper.recordUserDemissionPost()) {
+
+			@inputHidden(demissionForm("userId"))
+
+	        @inputDay(demissionForm("checkoutDate"), label = "Date de démission")
+
+	        @inputTextArea(demissionForm("leaveNote"), label = "Note de départ", placeholder = "il s'agit ici d'expliquer les actions menées par cette personne au sein de la structure")
+
+	            <input type="submit" class="btn btn-sm btn-default" value="Enregistrer">
+
+        }
+
+    }
+
+}
+
+
+
+

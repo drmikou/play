@@ -1,0 +1,31 @@
+@(user: models.core.User)
+
+@import security.UserStatus
+
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+<a href="#modalStatusChange@user.userId" class="btn btn-default" data-toggle="modal">Editer Status</a>
+
+@modalDynFormWidget("modalStatusChange" + user.userId, "Editer les status de " + user.login(), controllers.core.routes.UserManager.updateStatusPost()) {
+
+	<input type="hidden" name="userId" value="@user.userId">
+
+    <label class="checkbox-inline">
+        <input type="checkbox" name="active" value="true"
+        @if(user.active) {checked} >
+        @userStatus(UserStatus.actif)
+    </label>
+
+    <label class="checkbox-inline">
+        <input type="checkbox" name="stranger" value="true"
+        @if(user.stranger) {checked} >
+        @userStatus(UserStatus.etranger)
+    </label>
+
+    <label class="checkbox-inline">
+        <input type="checkbox" name="sectInter" value="true"
+        @if(user.sectInter) {checked} >
+        @userStatus(UserStatus.sectionInter)
+    </label>
+}

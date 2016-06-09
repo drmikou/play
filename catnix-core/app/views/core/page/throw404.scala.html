@@ -1,0 +1,94 @@
+@import views.html.core.main
+@import views.html.core.widget._
+<img id="cat" src="@controllers.core.routes.Assets.versioned("images/cat.gif")">
+<img id="phoenix" src="@controllers.core.routes.Assets.versioned("images/phoenix.png")">
+@main("Le chat s'est perdu, peut être cherche-t-il un phoenix ?", views.html.core.fragment.demo.topMenu("Miam !")) {
+
+    @widget("Seriez-vous perdu ?") {
+
+        <h3>Nous vous invitons à manger l'oiseau pour retrouver votre chemin.</h3>
+
+        <script>
+            $(document).ready(function() {
+                var $body = $("body");
+                $body.css("overflow", "hidden");
+
+                var $cat = $("#cat");
+                $cat.css("position","absolute");
+                $cat.css("z-index",10000001);
+                $cat.css("top",0);
+                $cat.css("left",0);
+
+                var $phoenix = $("#phoenix");
+                $phoenix.css("position","absolute");
+                $phoenix.css("z-index",10000000);
+
+                $phoenix.css("top",Math.max(0,parseInt(Math.random()*window.innerHeight,10)-$phoenix.height())+"px");
+                $phoenix.css("left",Math.max(0,parseInt(Math.random()*window.innerWidth,10)-$phoenix.width())+"px");
+
+
+                function checkEndOfTheGame() {
+                    var $cat2 = $("#cat");
+                    var xCat = parseInt($cat2.css("left"),10);
+                    var yCat = parseInt($cat2.css("top"),10);
+                    var wCat = parseInt($cat2.width(),10);
+                    var hCat = parseInt($cat2.height(),10);
+
+                    var $phoenix2 = $("#phoenix");
+                    var xPhoenix = parseInt($phoenix2.css("left"),10);
+                    var yPhoenix = parseInt($phoenix2.css("top"),10);
+                    var wPhoenix = parseInt($phoenix2.width(),10);
+                    var hPhoenix = parseInt($phoenix2.height(),10);
+
+                    return (xCat > xPhoenix && yCat > yPhoenix && xCat+wCat < xPhoenix+wPhoenix && yCat+hCat < yPhoenix + hPhoenix);
+                }
+
+                while(checkEndOfTheGame()||(parseInt($phoenix.css("left"),10)==0&&parseInt($phoenix.css("top"),10)==0)) {
+                    $phoenix.css("top",Math.max(0,parseInt(Math.random()*window.innerHeight,10)-$phoenix.height())+"px");
+                    $phoenix.css("left",Math.max(0,parseInt(Math.random()*window.innerWidth,10)-$phoenix.width())+"px");
+                }
+
+                $body.keydown(function(evt) {
+                    evt.preventDefault();
+                });
+
+                if ( window.addEventListener ) {
+                    window.addEventListener('keydown', function(evt){
+                        var $cat2 = $("#cat");
+                        if (evt.keyCode == 38&&parseInt($cat2.css("top"),10)-10>0) {
+                            //haut
+                            console.log("event fired : UP");
+                            $cat2.css("top",parseInt($cat2.css("top"),10)-10+"px");
+                        }
+                        if (evt.keyCode == 40&&parseInt($cat2.css("top"),10)+10+$cat2.height()<window.innerHeight) {
+                            //bas
+                            console.log("event fired : DOWN");
+                            $cat2.css("top",parseInt($cat2.css("top"),10)+10+"px");
+                        }
+                        if (evt.keyCode == 37&&parseInt($cat2.css("left"),10)-10>0) {
+                            //gauche
+                            console.log("event fired : LEFT");
+                            $cat2.css("left",parseInt($cat2.css("left"),10)-10+"px");
+                        }
+                        if (evt.keyCode == 39&&parseInt($cat2.css("left"),10)+10+$cat2.width()<window.innerWidth) {
+                            //droite
+                            console.log("event fired : RIGHT");
+                            $cat2.css("left",parseInt($cat2.css("left"),10)+10+"px");
+                        }
+
+                        if(checkEndOfTheGame()) {
+                            $phoenix.fadeOut();
+                            setTimeout(function() {
+                                alert("Vous avez mangé l'oiseau !");
+                                window.location = "/";
+                            },1000);
+
+                        }
+                    });
+                }
+            });
+        </script>
+
+
+    }
+}

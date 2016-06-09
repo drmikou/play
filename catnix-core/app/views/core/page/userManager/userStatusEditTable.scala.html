@@ -1,0 +1,31 @@
+@(userList: List[models.core.User])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.fragment.userManager._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+@widget("Liste des status") {
+
+        @dataTable("securityRoleTable", scala.collection.immutable.List("Id", "Login", "Status", "Modifier")) {
+            @for(user <- userList) {
+                <tr>
+                    <td>@user.userId</td>
+                    <td>@userProfile(user)</td>
+                    <td>@userStatusList(user)</td>
+                    <td>@editStatusBtn(user)</td>
+                </tr>
+            }
+        }
+
+	}
+
+}
+
+
+
+
+
+

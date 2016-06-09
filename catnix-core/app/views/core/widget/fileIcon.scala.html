@@ -1,0 +1,10 @@
+@(filePath: String)
+
+@if(filePath != null && !filePath.isEmpty()){
+    <a href="@controllers.core.routes.FileManager.downloadFile(filePath)" class="fa fa-download"></a>
+} else {
+    <a >
+        <i class="fa fa-warning warningIcon"></i>
+    </a>
+}
+

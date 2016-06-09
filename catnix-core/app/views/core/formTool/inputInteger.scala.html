@@ -1,0 +1,48 @@
+@(field: Field, label: String = "CHANGEME", placeholder: String = "", help: String = "", slider:Boolean = false, sliderOrientation:String="horizontal", min:Integer=0,max:Integer=10,sliderRange:String="min")
+
+  <div class="form-group @if(field.hasErrors) {has-error}">
+    <label for="@field.id">@label</label>
+        @if(slider) {
+            <div class="row">
+                <div class="col-sm-2">
+                    <input type="number"
+                    class="form-control"
+                    id="@field.id"
+                    name="@field.name"
+                    value="@field.value.getOrElse(min)"
+                    placeholder="@placeholder" />
+                </div>
+                <div class="col-sm-10">
+                    <div id="slider-@field.id"></div>
+                </div>
+            </div>
+            <script type="application/javascript">
+                $(function () {
+                    $("#slider-@field.id").slider({
+                        range: "@sliderRange",
+                        min: @min,
+                        max: @max,
+                        orientation: "@sliderOrientation",
+                        animate:true,
+                        value: $("#@field.id").val(),
+                        slide: function( event, ui ) {
+                            $( "#@field.id" ).val(ui.value);
+                        }
+                    });
+                    $( "#@field.id" ).change(function() {
+                        var value = $(this).val();
+                        $("#slider-@field.id").slider("value",value);
+                    });
+                });
+            </script>
+        } else {
+            <input type="number"
+            class="form-control"
+            id="@field.id"
+            name="@field.name"
+            value="@field.value.getOrElse("")"
+            placeholder="@placeholder" />
+        }
+      <span class="help-block">@help</span>
+      <span class="help-block">@{field.error.map { error => error.message }}</span>
+  </div>

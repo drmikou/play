@@ -1,0 +1,9 @@
+
+@import views.html.core.widget.pageHeadMenu
+
+@pageHeadMenu("user", "UserCheckoutStamper") {
+	<li><a href="@controllers.core.routes.UserCheckoutStamper.demissionableUserList()">Ajouter une démission</a></li>
+	<li><a href="@controllers.core.routes.UserCheckoutStamper.oldTeamUserList()">Liste des anciens</a></li>
+	<li><a href="@controllers.core.routes.UserCheckoutStamper.demissionList()">Annuler une démission</a></li>
+	<li><a href="@controllers.core.routes.UserCheckoutStamper.endOfMandatory()">Fin de mandat</a></li>
+}

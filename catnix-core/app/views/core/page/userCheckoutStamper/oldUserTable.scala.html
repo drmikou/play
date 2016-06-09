@@ -1,0 +1,41 @@
+@(oldUserList: List[models.core.UserCheckout])
+
+@import security.UserStatus
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+
+@main("Roles", views.html.core.fragment.userCheckoutStamper.topMenu()) {
+
+    @widget("liste des anciens") {
+        @dataTable("oldUserTable", scala.collection.immutable.List("Id", "date", "login", "poste", "promotion", "démission", "leaveNote")) {
+
+            @for(checkout <- oldUserList) {
+                @defining(checkout.user) { user =>
+
+                    <tr>
+                        <td>@checkout.checkoutId</td>
+                        <td>@checkout.checkoutDate.format("dd-MM-yyyy")</td>
+                        <td>@userProfile(user)</td>
+                        <td>@userPosteList(user)</td>
+                        <td>@user.promotion</td>
+                        <td>@if(checkout.demission) { @userStatus(UserStatus.demission) }</td>
+                        <td>@checkout.leaveNote</td>
+                    </tr>
+
+                }
+            }
+        }
+
+
+	}
+
+}
+
+
+
+
+
+

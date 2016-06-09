@@ -1,0 +1,15 @@
+
+@loadAjaxRoutes(moduleName: String) = {
+	<script type="text/javascript" src='/@(moduleName)/javascriptRoutes'></script>
+	<script type="text/javascript" src='/@(moduleName)/asyncFragmentRoutes'></script>
+}
+
+@loadAjaxRoutes("core")
+@loadAjaxRoutes("reunion")
+@loadAjaxRoutes("calendar")
+@loadAjaxRoutes("mailEditor")
+@loadAjaxRoutes("appel")
+@loadAjaxRoutes("prosp")
+@loadAjaxRoutes("clients")
+
+

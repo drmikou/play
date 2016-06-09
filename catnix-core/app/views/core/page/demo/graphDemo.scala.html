@@ -1,0 +1,79 @@
+@(pieMap : Map[utils.core.graph.GraphSerie, Double], functionMap: Map[utils.core.graph.GraphSerie, Map[Double, Double]], histoMap: Map[utils.core.graph.GraphSerie, Map[Double, Double]], functionTimeMap: Map[utils.core.graph.GraphSerie, Map[Double, Double]], histoTimeMap: Map[utils.core.graph.GraphSerie, Map[Double, Double]])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.graphTool._
+
+@callPieBackDemo = {
+	alert(item.series.label);
+}
+
+@callFunctionBackDemo = {
+	alert(item.series.label);
+}
+
+@callHistoBackDemo = {
+	alert(item.series.label);
+}
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+	
+	<div class="row">
+	
+		@widget("widget title") {
+			<div class = "row">
+				@timeGap("demoTimeGap") {
+					coreFragmentRoutes.controllers.core.Demo.renderDemoGraph(startDate.getTime(), endDate.getTime()).ajax({
+					type : "GET",
+			           contentType : 'text/plain;',
+			           success : function(data) {
+			                mainContent.html(data);
+			           },
+			           error : function () {
+			                console.error("error on ajax load of render TimeGap");
+			           }
+					});
+				}
+			</div>
+		}
+	</div>
+	
+	<div class="row">
+		@widget("widget title") {
+			<div class = "row">
+				@graphHisto("demoTime", "stacked histo with time", histoTimeMap, stack = true, timeLine = true, size = 6)
+				@graphFunction("demoTime2", "function  with time", functionTimeMap, timeLine = true, size = 6)
+			</div>
+		}
+
+	</div>
+	
+	 <div class="row">
+		@widget("widget title") {
+			<div class = "row">
+				@graphHisto("demoHisto", "stacked histo", histoMap, stack = true, size = 4)
+				@graphHisto("demoHisto2", "histo", histoMap, size = 4)
+                @graphHisto("demoHisto3", "stacked histo clickable", histoMap, stack = true, callBackOnClick = callFunctionBackDemo, size = 4)
+			</div>
+		}
+
+	</div>
+
+	 <div class="row">
+		@widget("widget title") {
+			<div class = "row">
+				@graphFunction("demoFunction", "clickable function", functionMap, callBackOnClick = callFunctionBackDemo, size = 6)
+				@graphFunction("demoFunction2", "function", functionMap, size = 6)
+			</div>
+		}
+	</div>
+
+	<div class="row">
+		@widget("widget title") {
+			<div class = "row">
+				@graphPie("demoPie", "clickable pie", pieMap, callBackOnClick = callPieBackDemo, size = 6)
+				@graphPie("demoPie2", "pie", pieMap, size = 6)
+			</div>
+		}
+	</div>
+}

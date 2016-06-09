@@ -1,0 +1,13 @@
+@(field: Field, label: String = "CHANGEME", help: String = "")
+
+<div class="form-group @if(field.hasErrors) {has-error}">
+	<label for="@field.name">@label</label>
+	<div class="input-group" id="@field.id">
+		<label class="checkbox-inline"> <input type="checkbox"
+			name="@field.name" id="@field.name"
+			@if(field.value.getOrElse("false")=="true") { value="true" checked}>
+			checkboxName
+		</label> <span class="help-block">@help</span> <span class="help-block">@{field.error.map
+			{ error => error.message }}</span>
+	</div>
+</div>

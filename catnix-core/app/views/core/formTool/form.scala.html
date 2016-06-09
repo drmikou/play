@@ -1,0 +1,20 @@
+@(formulaire: Form[_], onCallAction: play.api.mvc.Call)(formContent: Html)
+
+@helper.form(onCallAction) {
+	@if(formulaire.hasErrors) {
+	    <div class="alert alert-danger">
+	        <a class="close" data-dismiss="alert">x</a>
+	        @if(formulaire.errors.size() > 0) {
+	            @for((key, value) <- formulaire.errors) {
+	                @key.toString() :<br>
+	                    @for(err <- value) {
+	                        - @err.message().toString()<br>
+	                    }
+	            }
+	        }
+	    </div>
+	}
+
+	@formContent
+	
+}

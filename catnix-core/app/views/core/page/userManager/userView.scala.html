@@ -1,0 +1,37 @@
+@(user: models.core.User)
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+    @widget(user.login()) {
+    
+		<h3>@user.login()</h3>
+		
+		<p>Nom: @user.lastName</p>
+		<p>Prenom: @user.firstName</p>
+		<p>Promotion: @user.promotion</p>
+		
+		@userPosteList(user)
+		<hr>
+		@userStatusList(user)
+		
+		<p>Téléphone: @user.phone</p>
+		<p>Mail: @user.mail</p>
+		<p>Mail alterantif: @user.mailAlt</p>
+		<p>Adresse: @user.adresse</p>
+
+
+    
+        
+    }
+
+}
+
+
+
+
+
+

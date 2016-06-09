@@ -1,0 +1,115 @@
+
+
+/*
+ * Page Break
+ */
+div.documentSection {
+  page-break-inside: avoid;
+}
+
+table, figure {
+  page-break-inside: avoid;
+}
+
+
+/*
+ * Page Format
+ */
+body {
+    margin: 0px 0px 0px 0px; 
+}
+
+.textMargin {
+  margin-left: 2cm;	
+  margin-right: 2cm;	
+}
+ 
+@page {
+  	size: A4;
+	margin-left: 0cm;
+	margin-right: 2cm;
+	margin-top: 2cm;
+	margin-bottom: 2cm;
+}
+
+
+/*
+ * Header and Footers
+ */
+#documentHeader {
+    display: block;
+    text-align: center;
+    position: running(header);
+}
+
+#documentLegalFooter {
+    display: block;
+    text-align: center;
+    position: running(legalFooter);
+}
+
+#documentFooter {
+    display: block;
+    text-align: center;
+    position: running(footer);
+}
+
+
+/*
+ * Document Section Declaration
+ */
+#documentGuardPage {
+	page: guardPage
+}
+
+#documentIntro {
+	page: introPage
+}
+
+#documentContent {
+	page: contentPage
+}
+
+
+/*
+ * Document Section Specification
+ */
+@page guardPage {
+	@top-center {
+     	content: element(header)
+     }
+     
+    @bottom-center {
+    	content: element(legalFooter)
+    }
+}
+
+@page introPage {
+	@top-center {
+     	content: element(header)
+     }
+     
+    @bottom-center {
+    	content: element(footer)
+    }
+    
+    @bottom-right-corner {
+		content: counter(page) " / " counter(pages);
+	}
+}
+
+@page contentPage {
+	@top-center {
+     	content: element(header)
+     }
+     
+    @bottom-center {
+    	content: element(footer)
+    }
+    
+    @bottom-right-corner {
+		content: counter(page) " / " counter(pages);
+	}
+}
+
+

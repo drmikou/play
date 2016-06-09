@@ -1,0 +1,62 @@
+@(filePath: String, size: Integer=3)
+
+@import utils.core.templateHelper._
+
+@if(filePath != null) {
+
+	@defineHash(filePath, "Preview") { documentHash =>
+
+		<div class="col-md-@size">
+			<canvas id="@(documentHash)" class="documentPreview" style="width:100%" ></canvas>
+		</div>
+
+		<script>
+			//TODO REVIEW THIS CODE ARCHITECTURE !!!
+			$(function () {
+				PDFJS.workerSrc = '@controllers.core.routes.Assets.versioned("javascripts/pdf.worker.js")';
+				var $documentViewer = $('#@(documentHash)');
+				var numPage@(documentHash) = 1;
+				var totalPage@(documentHash) = null;
+				var oPdf@(documentHash) = PDFJS.getDocument('@controllers.core.routes.FileManager.previewDocument(filePath)');
+				$documentViewer.keepRatio();
+				oPdf@(documentHash).then(renderPDF@(documentHash));
+
+				function renderPDF@(documentHash)(pdf@(documentHash)){
+				  if(totalPage@(documentHash) == null){
+					totalPage@(documentHash) = pdf@(documentHash).numPages;
+				  }
+				  if(numPage@(documentHash) <= totalPage@(documentHash)){
+					pdf@(documentHash).getPage(numPage@(documentHash)).then(renderPage@(documentHash));
+					numPage@(documentHash)++;
+					// 1 second later, we render the next page
+					setTimeout(function() {
+					  renderPDF@(documentHash)(pdf@(documentHash));
+					}, 1000);
+				  }
+				}
+
+				function renderPage@(documentHash)(page@(documentHash)){
+					var scale = 1;//todo : play with this value to see if we obtain a better result
+					var viewport = page@(documentHash).getViewport(scale);
+					var canvas = document.getElementById('@(documentHash)');
+					var context = canvas.getContext('2d');
+					canvas.height = viewport.height;
+					canvas.width = viewport.width;
+					var renderContext = {
+					  canvasContext: context,
+					  viewport: viewport
+					};
+					page@(documentHash).render(renderContext);
+				}
+
+			});
+		</script>
+	}
+} else {
+	<div class="col-md-@size">
+		<h3>Not Available</h3>
+	</div>
+}
+
+
+

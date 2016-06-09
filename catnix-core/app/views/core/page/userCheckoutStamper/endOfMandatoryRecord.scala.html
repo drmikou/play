@@ -1,0 +1,38 @@
+@import views.html.core.main
+@import views.html.core.widget._
+
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+@import utils.core.formHelper._
+
+@(leavingConsultantCount: Integer, a1LoginMap: Map[KeyValueObject, Boolean], adminList: List[models.core.User], formulaire: Form[formData.core.userCheckoutStamper.MandatoryCheckoutData])
+
+
+@main("Roles", views.html.core.fragment.userCheckoutStamper.topMenu()) {
+
+    @widget("enregistrement de la fin de mandat") {
+    	@form(formulaire, controllers.core.routes.UserCheckoutStamper.endOfMandatoryPost()) {
+
+            @inputDay(formulaire("endOfMandatoryDate"), label = "Date de fin de mandat")
+
+            <p>@leavingConsultantCount consultants sont en A3 et quittent la structure</p>
+
+            @inputSelect(formulaire("newPresidentLogin"), label = "Nouveau Président", a1LoginMap, false, help = "Choisir ici le login du nouveau président", isSelect2 = true)
+
+            @repeatAndZip(formulaire("userCheckoutList"), adminList) { (field, item) =>
+                <h2>@item.login()</h2>
+			    @inputHidden(field("userId"))
+			    @inputHidden(field("checkoutDate"))
+                @inputTextArea(field("leaveNote"), label = "Note de départ", placeholder = "Note de départ")
+			    <hr>
+			}
+
+            <input type="submit" class="btn btn-sm btn-default" value="Enregistrer">
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,34 @@
+@(title: String, size: Int = 12, minimizable: Boolean = false, closeable: Boolean = false, footerContent: Html = Html(""))(content: Html)
+
+@import utils.core.templateHelper._
+
+@defineHash(title, "Widget") { widgetHash =>
+	
+	<div class="col-xs-12 col-sm-@size">
+	    <div class="box box-primary" id="@(widgetHash)">
+	        <div class="box-header with-border">
+	            <div class="box-title">@title</div>
+				<div class="box-tools pull-right">
+				@if(minimizable) {
+					<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+					</button>
+				}
+				@if(closeable) {
+					<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+				}
+				</div>
+	        </div>
+	
+	        <div class="box-body">
+
+		        @content
+
+	        </div>
+	
+	        <div class="box-footer">
+				@footerContent
+	        </div>
+	    </div>
+	</div>
+}
+

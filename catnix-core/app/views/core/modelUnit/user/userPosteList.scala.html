@@ -1,0 +1,5 @@
+@(user: models.core.User)
+
+@for(poste <- user.getHierarchicalPosteList()) {
+	@userPoste(poste)
+}

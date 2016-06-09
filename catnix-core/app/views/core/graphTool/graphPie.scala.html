@@ -1,0 +1,49 @@
+@(graphId: String, title: String, dataMap : Map[utils.core.graph.GraphSerie, Double], callBackOnClick: Html = Html(""), size: Integer = 12)
+
+
+<div class="col-md-@size">
+	<div class="text-center">
+	    @title
+	</div>
+
+	<div id="@(graphId)Pie" style="height:250px;"></div>
+</div>
+
+<script>
+$(function() {
+
+	var data = [];
+    @for(((serie, value), currentIndex) <- dataMap.zipWithIndex) {
+        data[@currentIndex] = { label: "@serie.label",
+        						@if(serie.color != null) {
+        							color: "@serie.color",
+        						}
+        						data: @value};
+   	}
+
+    $.plot($("#@(graphId)Pie"), data, {
+        series: {
+            pie: {
+                innerRadius: 0.5,
+                show: true
+            }
+        },
+        legend: {
+            show: false
+        },
+        grid: {
+            hoverable: true,
+            clickable: true
+        }
+    });
+
+    $("#@(graphId)Pie").bind("plotclick", function (event, pos, item) {
+        if (item) {
+            @callBackOnClick
+        }
+    });
+
+});
+
+
+</script>

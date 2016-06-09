@@ -1,0 +1,138 @@
+@(newUserForm: Form[formData.core.userRegister.NewUserData])
+
+@import security.EPoste
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+
+@main("Roles", views.html.core.fragment.userRegister.topMenu()) {
+
+    <div class="row">
+
+        @widget("Compte ISEP", size = 4) {
+            <form id="isepLDAP" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Identifiant</label>
+                    <div class="col-sm-10">
+                        <input type="text"
+                        class="form-control"
+                        id="isepUsername"
+                        name="isepUsername"
+                        placeholder="identifiant">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Mot de passe</label>
+                    <div class="col-sm-10">
+                        <input type="password"
+                        class="form-control"
+                        id="isepPassword"
+                        name="isepPassword"
+                        placeholder="mot de passe">
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-sm btn-default" value="Auto-completer">
+            </form>
+            <script type="application/javascript">
+                    $(document).ready(function() {
+                        $("#isepLDAP").submit(function(evt) {
+                            evt.preventDefault();
+                            var data = {username:$("#isepUsername").val(),password:$("#isepPassword").val()};
+                            coreJsRoutes.controllers.core.login.LdapixLogin.fetchInfo().ajax({
+                                type : "POST",
+                                contentType : 'application/json;',
+                                data : JSON.stringify(data),
+                                success : function(data) {
+                                    $("#isepId").val(data.uid["0"]);
+                                    $("#firstName").val(data.givenName["0"]);
+                                    $("#lastName").val(data.sn["0"]);
+                                    $("#promotion").val(data.title["0"]);
+                                    $("#mail").val(data.mail["0"]);
+                                    $("#mailAlt").val(data.mailDestination["0"]);
+                                },
+                                error : function () {
+                                    console.error("error on ajax load of LDAP data");
+                                }
+                            });
+                        });
+                    });
+            </script>
+        }
+
+        @widget("Formulaire d'inscription", size = 8) {
+
+
+            @form(newUserForm, controllers.core.routes.UserRegister.createUserPost()) {
+
+                @inputDay(newUserForm("registrationDate"), label = "Date d'inscription")
+
+                <h1>Info</h1>
+                @inputTextLine(newUserForm("isepId"), label = "Identifiant ISEP")
+
+                @inputTextLine(newUserForm("firstName"), label = "Prénom")
+
+                @inputTextLine(newUserForm("lastName"), label = "Nom de famille")
+
+                @inputInteger(newUserForm("noSecu"), label = "Numéro de Sécu")
+
+                @inputInteger(newUserForm("promotion"), label = "Promotion")
+
+                @inputBoolean(newUserForm("withPartner"), label = "Cotisation partenaire")
+
+                @inputBoolean(newUserForm("isSectInter"), label = "Section internationale")
+
+                @inputBoolean(newUserForm("isStranger"), label = "Nationalité étrangère")
+
+                <h1>Contact</h1>
+                @inputTextLine(newUserForm("phone"), label = "Numéro tél", placeholder = "06 xx xx xx xx")
+
+                @inputEmail(newUserForm("mail"), label = "Mail")
+
+                @inputEmail(newUserForm("mailAlt"), label = "Mail Alt", help = "Adresse hors Isep")
+
+                <h1>Adresse</h1>
+                @inputTextLine(newUserForm("adresse"), label = "Nom et numéro de rue", placeholder = "285 rue de Vaugirard")
+
+                @inputTextLine(newUserForm("cp"), label = "Code postal", placeholder = "75015")
+
+                @inputTextLine(newUserForm("country"), label = "Pays", placeholder = "France")
+
+                <br>
+                <h1>Justificatifs</h1>
+
+
+                <div class="row">
+                    @inputFile(newUserForm("idJustifFile"), "Piece d'identié", size = 3)
+                    @inputFile(newUserForm("secuJustifFile"), "No sécurité sociale", size = 3)
+                    @inputFile(newUserForm("certifScolariteFile"), "Certificat de scolarité", size = 3)
+                    @inputFile(newUserForm("cotisationFile"), "Cotisation à la Junior", size = 3)
+                </div>
+
+                @conditionalDiv("isStranger") {
+                    <div class="row">
+                    @inputFile(newUserForm("visaFile"), "Visa (étudiant étranger seulement)", size = 3)
+                    </div>
+                }
+
+
+
+
+
+                <input type="submit" class="btn btn-sm btn-default" value="Ajouter">
+
+
+            }
+        }
+
+    </div>
+
+}
+
+
+
+
+
+

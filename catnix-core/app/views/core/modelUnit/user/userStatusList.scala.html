@@ -1,0 +1,5 @@
+@(user: models.core.User)
+
+@for(status <- user.getStatusList()) {
+	@userStatus(status)
+}

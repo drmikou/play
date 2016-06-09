@@ -1,0 +1,54 @@
+@(graphId: String, title: String, dataMap: Map[utils.core.graph.GraphSerie, Map[Double, Double]], callBackOnClick: Html = Html(""), stack: Boolean = false, timeLine: Boolean = false, size: Integer = 12)
+
+
+<div class="col-md-@size">
+	<div class="text-center">
+	    @title
+	</div>
+
+	<div id="@(graphId)GraphHisto" style="width:100%;height:250px;"></div>
+</div>
+
+<script>
+$(function () {
+
+    var data = [];
+    @for(((function, functionDataMap), currentIndex) <- dataMap.zipWithIndex) {
+        var functionData = [];
+
+        @for((xData, yData) <- functionDataMap.toSeq.sorted) {
+            functionData.push([@xData, @yData]);
+        }
+
+        data[@currentIndex] = { label: "@function.label",
+            @if(function.color != null) {
+                color: "@function.color",
+            }
+            data: functionData};
+    }
+
+
+    $.plot($("#@(graphId)GraphHisto"), data, {
+        series: {
+            stack: @stack,
+            lines: { show: true, fill: true, steps: false },
+        },
+        grid: { borderWidth: 0, hoverable: true, color: "#777", clickable: true},
+        @if(timeLine){
+        	xaxis: {
+            	mode: "time",
+            	timeformat: "%d/%m/%y"
+            }	
+        }
+        
+    });
+
+    $("#@(graphId)GraphHisto").bind("plotclick", function (event, pos, item) {
+        if (item) {
+            @callBackOnClick
+        }
+    });
+
+});
+
+</script>

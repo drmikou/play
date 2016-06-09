@@ -1,0 +1,43 @@
+@(userRegistrationList: List[models.core.UserRegistration])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.modelUnit.user._
+
+@import views.html.core.fragment.userRegister._
+
+@main("Roles", views.html.core.fragment.userRegister.topMenu()) {
+
+    @widget("Liste des inscriptions") {
+        @dataTable("securityRoleTable", scala.collection.immutable.List("Id", "userId", "Login", "Prénom", "Nom de famille", "Date d'inscription", "Status", "Cet", "No Sécu", "Edit", "Piece d'identité", "Justif sécu", "Certificat de scolarité", "Cotisation", "Cotisation partenaire", "Visa")) {
+
+            @for(registration <- userRegistrationList) {
+                @defining(registration.user) { user =>
+
+                    <tr>
+                        <td>@registration.registrationId</td>
+                        <td>@user.userId</td>
+                        <td>@userProfile(user)</td>
+                        <td>@user.firstName</td>
+                        <td>@user.lastName</td>
+                        <td>@registration.registrationDate.format("dd-MM-yyyy")</td>
+                        <td>@userStatusList(user)</td>
+                        <td>@fileIcon(registration.cet)</td>
+                        <td>@registration.noSecu</td>
+                    	<td>@editRegistrationBtn(registration)</td>
+                        <td>@fileIcon(registration.identite)</td>
+                        <td>@fileIcon(registration.secu)</td>
+                        <td>@fileIcon(registration.certifScolarite)</td>
+                        <td>@fileIcon(registration.cotisation)</td>
+                        <td>@checkItem(registration.withPartner)</td>
+                        <td>@if(registration.user.stranger) {
+                                @fileIcon(registration.visa)
+                            }
+                        </td>
+                    </tr>
+
+                }
+            }
+        }
+    }
+}

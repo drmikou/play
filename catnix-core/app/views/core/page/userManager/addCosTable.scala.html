@@ -1,0 +1,31 @@
+@(checkoutList: List[models.core.UserCheckout])
+
+@import views.html.core.main
+@import views.html.core.widget._
+@import views.html.core.fragment.userManager._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+@widget("ajouter des Membres au cos") {
+
+            @dataTable("newCdpTable", scala.collection.immutable.List("Id", "Login", "Status", "Editer", "Note de départ")) {
+
+                @for(checkout <- checkoutList) {
+                    @defining(checkout.user) { user =>
+                        <tr>
+                            <td>@checkout.checkoutId</td>
+                            <td>@userProfile(user)</td>
+                            <td>@userStatusList(user)</td>
+                            <td>
+                                <a href="@controllers.core.routes.UserManager.upgradeUserToCos(user.userId.toString())" class="btn btn-default"> Ajouter Au Cos </a>
+                            </td>
+                            <td>@checkout.leaveNote</td>
+                        </tr>
+                    }
+                }
+        }
+
+	}
+
+}

@@ -1,0 +1,67 @@
+@(discussionContent: common.DocumentDiscussion, currentUser: models.core.User)
+
+    @import views.html.core.documentLayout._
+
+    @defining(if(discussionContent.status == "open") "danger" else if(discussionContent.status == "progress") "info" else "success") { discussionType =>
+
+        <div class="showComment">
+
+            <div class="alert alert-@discussionType">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <h3 class="text-center">@discussionContent.subject</h3>
+                    </div>
+                    <p class="pull-left" id="discussionTimeStamp"></p>
+                    <p class="pull-right">ouvert par: @discussionContent.discussionCreator</p>
+                    <time class="timeago" id="discussionTimeStamp" ></time>
+
+
+                </div>
+            </div>
+
+            <div class="row scroll-chats">
+                <ul class="chats">
+                @for( commentUnit <- discussionContent.commentList) {
+                    @comment(commentUnit, currentUser.login())
+                }
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="form-group sendResponse">
+                    <div class="col-md-12">
+                        <textarea class="form-control" rows="4" id="commentEditor" placeholder="réponse"></textarea>
+                    </div>
+
+                    <label class="control-label col-md-12" for="response">
+                        <div class="btn-group pull-right">
+                            <button class="btn btn-@discussionType dropdown-toggle" data-toggle="dropdown"> @discussionContent.status <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a id="setOpen">Ouvert</a></li>
+                                <li><a id="setProgress">En cours</a></li>
+                                <li><a id="setClosed">Fermé</a></li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+    <script>
+$(document).ready(function(){
+    $("#discussionTimeStamp").text($.timeago(new Date(@discussionContent.timeStamp.getTime())));
+    $('.scroll-chats').slimscroll({
+        height: '150px',
+        color: 'rgba(0,0,0,0.3)',
+        size: '5px'
+    });
+});
+</script>
+
+
+
+

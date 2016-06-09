@@ -1,0 +1,20 @@
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("Roles", views.html.core.fragment.userRegister.topMenu()) {
+
+	<div class="row">
+		@asyncFragmentReplace("registrationConfiguration", "coreFragmentRoutes.controllers.core.UserRegister.renderRegistrationConfigurationWidget()")
+	</div>
+
+	<div class="row">
+	
+		@asyncFragmentReplace("registrationEvolution", "coreFragmentRoutes.controllers.core.UserRegister.renderRegistrationEvolutionGraphWidget()")
+		@asyncFragmentReplace("missingCet", "coreFragmentRoutes.controllers.core.UserRegister.renderTopMissingCetWidget(10)")
+		@asyncFragmentReplace("incompleteRegistrationTop", "coreFragmentRoutes.controllers.core.UserRegister.renderTopIncompleteRegistrationWiget(10)")
+		@asyncFragmentReplace("currentCotisation", "coreFragmentRoutes.controllers.core.UserRegister.renderCurrentCotisationGraphWidget()")
+
+	</div>
+
+}

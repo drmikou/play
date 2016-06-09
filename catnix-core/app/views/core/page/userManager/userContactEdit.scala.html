@@ -1,0 +1,34 @@
+@(user: models.core.User, contactForm: Form[formData.core.userManager.UserContactData])
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+@main("Roles", views.html.core.fragment.userManager.topMenu()) {
+
+    @widget(user.login()) {
+
+        @form(contactForm, controllers.core.routes.UserManager.editUserContactPost()) {
+            @inputHidden(contactForm("userId"))
+
+            <h1>Contact</h1>
+            @inputTextLine(contactForm("phone"), label = "Téléphone", placeholder = "06 xx xx xx xx")
+
+            @inputEmail(contactForm("mail"), label = "mail", placeholder = "Email")
+
+            @inputEmail(contactForm("mailAlt"), label = "mail altérnatif", placeholder = "Email hors isep")
+
+            <h1>Adresse</h1>
+            @inputTextLine(contactForm("adresse"), label = "rue et numéro", placeholder = "ex: 285 rue de Vaugirard")
+
+            @inputTextLine(contactForm("cp"), label = "code postal", placeholder = "75015")
+
+            @inputTextLine(contactForm("country"), label = "Pays", placeholder = "FRANCE")
+
+            <input type="submit" class="btn btn-sm btn-default" value="Mettre à jour">
+        }
+    }
+
+}

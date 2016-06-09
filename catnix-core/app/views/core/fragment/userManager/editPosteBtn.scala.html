@@ -1,0 +1,19 @@
+@(user: models.core.User, allPosteList: Array[security.EPoste])
+
+@import views.html.core.formTool._
+@import views.html.core.modelUnit.user._
+
+<a href="#modalRoleChange@user.userId" class="btn btn-default" data-toggle="modal">Editer Postes</a>
+
+@modalDynFormWidget("modalRoleChange" + user.userId, "Editer les droits de " + user.login(), controllers.core.routes.UserManager.updateRolePost()) {
+
+	<input type="hidden" name="userId" value="@user.userId">
+
+	@for(poste <- allPosteList) {
+		<input type="checkbox" name="@poste.getName()" value="@poste.getName()"
+                @if(user.getPosteList().contains(poste)){checked} >
+			@userPoste(poste)
+		<br>
+	}
+
+}

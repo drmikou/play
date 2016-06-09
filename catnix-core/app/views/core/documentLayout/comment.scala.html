@@ -1,0 +1,23 @@
+@(comment: common.DocumentDiscussion.Comment, currentUserLogin: String = "")
+
+@if(currentUserLogin == comment.speakerLogin) {
+	<li class="by-me">
+} else {
+	<li class="by-other">
+}
+    <div class="chat-content">
+        <div class="chat-meta">@comment.speakerLogin
+        	<span id="comment@comment.postDateTimeStamp.getTime()" class="pull-right">@comment.postDateTimeStamp</span>
+        </div>
+            @comment.content
+        <div class="clearfix"></div>
+    </div>
+</li>
+
+<script>
+	var commentTimeStr = $.timeago(new Date(@comment.postDateTimeStamp.getTime()));
+	
+	$(document).ready(function(){
+		$("#comment@comment.postDateTimeStamp.getTime()").text(commentTimeStr);
+	});
+</script>

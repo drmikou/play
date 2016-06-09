@@ -1,0 +1,21 @@
+@(title: String, size: Int = 12, footerContent: Html = Html(""))(content: Html)
+
+@import utils.core.templateHelper._
+
+@defineHash(title, "SmallWidget") { widgetHash =>
+	
+	<div class="col-xs-@size">
+	    <div class="small-box" id="@(widgetHash)">
+			<div class="inner">
+	            @content
+	        </div>
+
+			@if(footerContent.body.length > 0) {
+				<a href="#" class="small-box-footer">
+					@footerContent <i class="fa fa-arrow-circle-right"></i>
+				</a>
+			}
+	    </div>
+	</div>
+}
+

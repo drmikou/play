@@ -1,0 +1,26 @@
+@(faIcon: String, title: String)(menuList: Html)
+
+@import views.html.core.widget._
+
+<!-- à Remonter dans pageHead ? -->
+@smallWidget("pageHead") {
+  <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <h2 class="pull-left">
+        <span class="hidden-xs"><i class="fa fa-@faIcon"></i> @title</span>
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#pageHeadMenu" type="button"><i class="fa fa-@faIcon"></i> @title</button>
+      </h2>
+    </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="pageHeadMenu" style="padding-top: 14px;padding-bottom: 14px;">
+      <ul class="nav navbar-nav">
+      @menuList
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div> <!-- /.container-fluid -->
+}
+
+<div class="clearfix"></div>

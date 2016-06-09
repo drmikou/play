@@ -1,0 +1,168 @@
+@(title: String, onSubmitAction: play.api.mvc.Call, currentUser: models.core.User, onSubmitText: String="Submit", otherDynamicField: Html = Html(""))(documentContent: Html)
+
+@import views.html.core.widget._
+
+@documentFooter = {
+    <div id="errorDocument" class="alert alert-danger alert-dismissible hide">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <h4><i class="icon fa fa-ban"></i> Erreur lors de la sauvegarde!</h4>
+        Une erreur est survenue lors de lasauvegarde de votre document, pour eviter de perdre vos modifications celui-ci à automatiquement été sauvegardé dans votre navigateur.
+        Ce document sera resyncronisé automatiquement lors de votre retour sur CatNiX lorsque votre connection sera rétablie.
+    </div>
+    <div class="row">
+        <p id="editorSaveText" class="col-md-8"></p>
+        <button id="submit" class="btn btn-primary col-md-2 pull-right">@onSubmitText</button>
+    </div>
+}
+
+@helper.form(onSubmitAction) {
+
+    @otherDynamicField
+
+    @widget(title, footerContent = documentFooter) {
+        <div id="editor">
+        <div id="editorTop"></div>
+            <div id="documentEditorContent">
+                <div id="documentEditorDocumentContainer">
+                    <div class="">
+                        <textarea
+                            rows="15"
+                            id="editorTextArea"
+                            name="editorContent"
+                            >@documentContent.toString()</textarea>
+                    </div>
+                </div>
+                <div id="documentEditorAsideBarContainer" class="hide aside">
+
+                </div>
+            </div>
+
+
+        <div id="editorBottom"></div>
+        </div>
+    }
+}
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    CKEDITOR.config.contentsCss = [
+        '@controllers.core.routes.Assets.versioned("stylesheets/document/document.css")',
+        '@controllers.core.routes.Assets.versioned("stylesheets/document/documentEditorEdition.css")'
+    ];
+
+    CKEDITOR.config.skin = 'office2013';
+
+    CKEDITOR.config.customPluginPath = "@controllers.core.routes.Assets.versioned("ckeditor-custom-plugins/")";
+
+    CKEDITOR.config.allowedContent = true;
+    CKEDITOR.config.fullPage = true;
+
+    CKEDITOR.currentUserLogin = '@currentUser.login()';
+
+    CKEDITOR.plugins.addExternal( 'base64image', '@controllers.core.routes.Assets.versioned("ckeditor-custom-plugins/base64image/")' );
+    CKEDITOR.plugins.addExternal( 'pastebase64', '@controllers.core.routes.Assets.versioned("ckeditor-custom-plugins/pastebase64/")' );
+
+    //document styles
+
+    CKEDITOR.stylesSet.add("JuniorISEP",[
+        { name: "Société", element: "span", attributes: { "class": "company" } },
+        { name: "Client", element: "span", attributes: { "class": "customer" } },
+        { name: "Sous-signé", element: "p", attributes: { "class": "subSign" } }
+    ]);
+
+    //end document styles
+
+	var editor = CKEDITOR.replace( 'editorTextArea', {
+            on: {
+                instanceReady: function(ev) {
+
+                    //Aside Bar
+                    $("#editorTop").replaceWith($("#cke_1_top"));
+                    $("#editorBottom").replaceWith($("#cke_1_bottom"));
+                    console.log("editor ready !");
+
+                    //Save
+                    editor.addCommand( "save", {
+                            modes : { wysiwyg:1, source:1 },
+                            exec : function (editor) { saveEditorData(editor); }
+                    });
+                }
+            },
+            stylesSet: "JuniorISEP",
+            removePlugins: 'elementspath',
+            extraPlugins: 'sourcedialog,comment,quicktable,asideToggler,autoSave,autoReload,enterBehaviour,formatProvider,sectionSelector,fullscreen,base64image,pastebase64',
+            toolbar : [
+                { name: 'document', items : [ 'Save','Preview','Print' ] },
+                { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','-','Undo','Redo' ] },
+                { name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
+                '/',
+                { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+                { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
+                { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+                { name: 'insert', items : [ 'base64image','Table','HorizontalRule','SpecialChar','PageBreak' ] },
+                '/',
+                { name: 'styles', items : [ 'Styles','Format' ] },
+                { name: 'colors', items : [ 'TextColor','BGColor' ] },
+                { name: 'tools', items : [ 'fullscreen', 'ShowBlocks','-','About' ] },
+                '/',
+                { name: 'about', items : ['comment', 'chart', 'asideToggler'] }
+            ]
+
+    });
+
+
+});
+
+var interval = setInterval(function(){
+    //a blank interval to fix scope issues
+},1000);
+
+function saveEditorData(editor) {
+    var editorContent = editor.getData();
+    var fileName = getDocumentFileName(editor);
+
+
+    lockMutex("saving @title");
+    coreJsRoutes.controllers.core.FileManager.asyncUploadDraft(fileName).ajax({
+    	type : "POST",
+        contentType : 'text/plain; charset=utf-8',
+        data : editorContent,
+        success : function(data) {
+            unlockMutex("saving @title");
+            if (!$("#errorDocument").hasClass("hide")) {
+                $("#errorDocument").addClass("hide");
+            }
+
+            var saveTime = new Date();
+            clearInterval(interval);
+            $("#editorSaveText").text("Dernière sauvegarde: " + $.timeago(saveTime));
+            interval = setInterval(function(){
+        		$("#editorSaveText").text("Dernière sauvegarde: " + $.timeago(saveTime));
+        	}, 30000);
+        },
+        error : function () {
+            unlockMutex("saving @title");
+            console.error("error on ajax save document");
+            $("#errorDocument").removeClass("hide");
+            localStorage.setItem(fileName, editorContent);
+            if (localStorage.getItem("syncIt") && JSON.parse(localStorage.getItem("syncIt")).indexOf(fileName) == -1) {
+                var sync = JSON.parse(localStorage.getItem("syncIt"));
+                sync.push(fileName);
+                localStorage.setItem("syncIt", sync);
+            } else if (!localStorage.getItem("syncIt")) {
+                var sync = [];
+                sync.push(fileName);
+                localStorage.setItem("syncIt", JSON.stringify(sync));
+            }
+        }
+	});
+}
+
+function getDocumentFileName(editor) {
+	return $(editor.document.$).attr('title')
+}
+
+</script>
+

@@ -1,0 +1,21 @@
+
+@import views.html.core.main
+@import views.html.core.widget._
+
+@main("page title", views.html.core.fragment.demo.topMenu()) {
+	
+	@widget("widget title") {
+	
+	<h1>COUCOU</h1>
+	<p>saut de page en dessous du widget</p>
+	}
+	
+	<div style="page-break-after: always"><span style="display:none">&nbsp;</span></div>
+	
+	@widget("widget 2 title", minimizable = true) {
+	
+	<h1>COUCOU</h1>
+	
+	}
+
+}

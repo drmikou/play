@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Junior ISEP - Document editor</title>
+	<script src="../../../ckeditor.js"></script>
+	<link rel="stylesheet" href="../../../samples/sample.css">
+    <style>
+        html {
+            background: #dfdfdf;
+        }
+    </style>
+	<meta name="ckeditor-sample-name" content="Shared-Space plugin">
+	<meta name="ckeditor-sample-group" content="Plugins">
+	<meta name="ckeditor-sample-description" content="Having the toolbar and the bottom bar spaces shared by different editor instances.">
+</head>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <div id="top" style="position: fixed;top: 0;left: 0;right: 0;width: 100%;"></div>
+    <div id="pages" style="margin-top: 190px;">
+        <div id="page_container_1">
+	        <div id="page_1" style="width: 100%;"></div>
+        </div>
+    </div>
+    <div id="bottom" style="position: fixed;bottom: 0;left: 0;width: 100%;right: 0;"></div>
+	<script>
+        $(document).ready(function () {
+            var numberOfPages = 1;
+            var pagesElment = document.getElementById("pages");
+            pagesElment.style.marginBottom = 50+"px";
+            var editors = {
+                stylesSet: "Junior_ISEP",
+                extraPlugins: 'sharedspace',
+                removePlugins: 'maximize,resize',
+                sharedSpaces: {
+                    top: 'top',
+                    bottom: 'bottom'
+                },
+                on: {
+                    instanceReady: function(ev) {
+                        ev.editor
+                                .setData('test');
+
+                        ev.editor
+                                .config.contentsCss = '../../../../stylesheets/widget.css';
+                        ev.editor
+                                .config.extraPlugins = 'onchange';
+
+                        pagesElment.style.marginTop = document.getElementById("top").offsetHeight+"px";
+                        var $page = $("#page_"+numberOfPages);
+                        var $pageContainer = $("page_container_"+numberOfPages);
+                        $pageContainer.find("div").css("margin-top", "20px");
+                        $page.css("background","#dfdfdf");
+                        $page.find("div").css("width", "794px");
+                        $page.find("div").css("height", "1027px");
+                        $page.find("div").css("margin-left", "auto");
+                        $page.find("div").css("margin-right", "auto");
+
+
+                        ev.editor.on( 'change', function(e) {
+                            var docContent = e.editor.document.$.body.innerHTML;
+
+                            if (e.editor.document.$.body.offsetHeight >= numberOfPages*1027) {
+                                console.log("new page");
+                                numberOfPages++;
+                                var elem = document.createElement("div");
+                                elem.id = "page_"+numberOfPages;
+                                pagesElment.appendChild(elem);
+                                CKEDITOR.appendTo("page_"+numberOfPages,editors);
+                            }
+
+                        });
+                        /*$("#").parent().find("iframe")
+                         .css("width","794px")
+                         .css("min-height", "1027px")
+                         .css("margin","10px auto")
+                         .css("display","block")
+                         .css("box-shadow","0 0 4px #000");
+                         $("#").parent().find("iframe").parent().css("background","#dfdfdf");
+                         $("#").parent().find("iframe").parent().css("overflow-y","auto");*/
+
+                    }
+                }
+            };
+            // Turn off automatic editor creation first.
+            CKEDITOR.disableAutoInline = true;
+
+            CKEDITOR.stylesSet.add('Junior_ISEP', [
+                {
+                    name:'Entreprise',
+                    element: 'span',
+                    attributes: {
+                        'class': 'enterprise'
+                    }
+                }
+            ]);
+
+            CKEDITOR.appendTo('page_1', editors);
+
+        });
+
+	</script>
+</body>
+</html>

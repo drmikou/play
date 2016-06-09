@@ -1,0 +1,35 @@
+@(field: Field, label: String = "CHANGEME", help:String = "")
+
+@defining(Calendar.getInstance().getTime().format("dd-MM-yyyy")) { today =>
+	<div class="form-group">
+	    <label for="input@field.name">@label</label>
+		<div id="@field.name" class="input-append input-group dtpicker">
+			<input id="input@field.name" name="@field.name" data-format="dd-MM-yyyy"
+				class="form-control" type="text"
+				value="@field.value.getOrElse(today)">
+			<span class="input-group-addon">
+				<i class="fa fa-calendar" data-date-icon="fa fa-calendar"></i>
+			</span>
+		</div>
+	</div>
+}
+
+<script>
+$(function() {
+    $('#@field.name').datetimepicker({
+      format: 'DD-MM-YYYY',
+      useCurrent: true,
+      icons: {
+			time: "fa fa-clock-o",
+			date: "fa fa-calendar",
+			up: "fa fa-arrow-up",
+			down: "fa fa-arrow-down",
+			previous: 'fa fa-arrow-left',
+			next: 'fa fa-arrow-right',
+			today: 'fa fa-dot-circle-o',
+			clear: 'fa fa-trash',
+			close: 'fa fa-close'
+		}
+    });
+});
+</script>

@@ -1,0 +1,108 @@
+@(timeGapId: String, size: Integer = 12, extraContent: Html = Html(""))(onActuCallBack: Html)
+
+@import views.html.core.widget._
+
+@defining(Calendar.getInstance().getTime().format("dd-MM-yyyy")) { today =>
+
+	<div class="col-md-@size">
+		<div id="@(timeGapId)Content" class="row">
+		</div>
+		
+        <div class="row">
+			@extraContent
+		</div>
+
+        <div class="row">
+            <div class="col-md-6 row">
+                <h3 class="col-md-3">Début: </h3>
+
+                <div id="@(timeGapId)Start" class="col-md-9 input-append input-group dtpicker">
+                    <input data-format="dd-MM-yyyy"
+                        class="form-control" type="text" >
+                    <span class="input-group-addon add-on">
+                        <i class="fa fa-calendar" data-date-icon="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-6 row">
+                <h3 class="col-md-3">Fin: </h3>
+
+                <div id="@(timeGapId)End" class="col-md-9 input-append input-group dtpicker">
+                    <input data-format="dd-MM-yyyy"
+                        class="form-control" type="text">
+                    <span class="input-group-addon add-on">
+                        <i class="fa fa-calendar" data-date-icon="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+	</div>
+}
+
+<script>
+	function actuContent(startDate, endDate) {
+		if(startDate == null || endDate == null) {
+			return;
+		}
+		if(startDate > endDate) {
+			alert('impossible de revenir dans le temps');
+			return;
+		}
+
+		var mainContent = $('#@(timeGapId)Content');
+
+		@onActuCallBack
+
+	}
+
+	$(function() {
+		var startDatePicker = $('#@(timeGapId)Start');
+		var endDatePicker = $('#@(timeGapId)End');
+
+		var startDate = null;
+		var endDate = null;
+
+	    startDatePicker.datetimepicker({
+			format: 'DD-MM-YYYY',
+			useCurrent: true,
+			icons: {
+				time: "fa fa-clock-o",
+				date: "fa fa-calendar",
+				up: "fa fa-arrow-up",
+				down: "fa fa-arrow-down",
+				previous: 'fa fa-arrow-left',
+				next: 'fa fa-arrow-right',
+				today: 'fa fa-dot-circle-o',
+				clear: 'fa fa-trash',
+				close: 'fa fa-close'
+			}
+	    }).on('changeDate', function(e){
+			startDate = e.date;
+			actuContent(startDate, endDate);
+    	}).trigger('changeDate');
+
+		endDatePicker.datetimepicker({
+			format: 'DD-MM-YYYY',
+			useCurrent: true,
+			icons: {
+				time: "fa fa-clock-o",
+				date: "fa fa-calendar",
+				up: "fa fa-arrow-up",
+				down: "fa fa-arrow-down",
+				previous: 'fa fa-arrow-left',
+				next: 'fa fa-arrow-right',
+				today: 'fa fa-dot-circle-o',
+				clear: 'fa fa-trash',
+				close: 'fa fa-close'
+			}
+	    }).on('changeDate', function(e){
+	    	endDate = e.date;
+			actuContent(startDate, endDate);
+	    });
+
+	});
+</script>
+

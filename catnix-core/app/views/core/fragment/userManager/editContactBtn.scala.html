@@ -1,0 +1,6 @@
+@(user: models.core.User)
+
+@import views.html.core.modelUnit.user._
+
+<a href="@controllers.core.routes.UserManager.editUserContact(user.userId.toString())" class=" fa fa-envelope" </a>
+

@@ -1,4 +1,4 @@
-@(formSend : Boolean)
+@(formSend : Boolean, viewClient : List[User])
 
 @main2(title = "Admin - Création client"){
 
@@ -45,6 +45,25 @@
                 </div>
             </div>
         </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-5">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-th-list"></i> Liste des clients</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        @for(client <- viewClient){
+                            <li class="list-group-item">@client.nom</li>
+                        }
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
 </div>

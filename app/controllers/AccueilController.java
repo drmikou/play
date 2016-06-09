@@ -32,7 +32,7 @@ public class AccueilController extends Controller {
         //  -----------------------------------
         // |     Création de variables test    |
         //  -----------------------------------
-        User userPresence = (User) User.find.byId("1");
+        /*User userPresence = (User) User.find.byId("1");
         if( userPresence == null)
         {
             Promotion promotionObj = new Promotion();
@@ -91,7 +91,7 @@ public class AccueilController extends Controller {
             reunion.equipe = equipeObj;
             reunion.date = new Date(2016, 01, 01);
             reunion.save();
-        }
+        }/
 
 
 
@@ -99,10 +99,10 @@ public class AccueilController extends Controller {
         /*Projet editProjet = (Projet) Projet.find.byId("1");
         editProjet.nom = "azert";
         editProjet.save();*/
-        int userId2 = 3;
+        /*int userId2 = 3;
         User usertest = (User) User.find.byId(userId2);
         usertest.prenom="dedede";
-        usertest.update();
+        usertest.update();*/
 
         // Supprimer
         /*Projet suppProjet = (Projet) Projet.find.byId("2");

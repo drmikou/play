@@ -34,7 +34,7 @@ public class AdminUserController extends Controller {
         //  -----------------
         List<User> viewEleve = null;
         // On récupère tous les utilisateurs
-        viewEleve = User.find.where().eq("role","user").findList();
+        viewEleve = User.find.where().eq("role","eleve").findList();
 
 
 

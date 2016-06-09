@@ -12,55 +12,51 @@ import views.html.*;
 import java.util.*;
 import com.avaje.ebean.Ebean;
 
-/**
- * Created by Thomas on 19/05/2016.
- */
-public class AdminRegisterController extends Controller {
+public class AdminEquipeCreationController extends Controller {
 
-    public Result adminRegister(){
+
+    public Result adminEquipeCreation(){
 
         boolean formSend = false;
 
         //  ----------------------------
-        // |      Liste des clients     |
+        // |      Liste des équipes     |
         //  ----------------------------
-        List<User> viewClient = null;
+        List<Equipe> viewEquipe = null;
         // On récupère toutes les équipes
-        viewClient = User.find.where().eq("role", "client").findList();
+        viewEquipe = Equipe.find.findList();
 
-        return ok(adminRegister.render(formSend, viewClient));
+        return ok(adminEquipeCreation.render(formSend, viewEquipe));
 
     }
 
 
-    public Result adminRegisterSubmit(){
+    public Result adminEquipeCreationSubmit(){
 
         boolean formSend = false;
 
         //  ----------------------------
-        // |      Liste des clients     |
+        // |      Liste des équipes     |
         //  ----------------------------
-        List<User> viewClient = null;
+        List<Equipe> viewEquipe = null;
         // On récupère toutes les équipes
-        viewClient = User.find.where().eq("role","client").findList();
+        viewEquipe = Equipe.find.findList();
+
 
 
         // Récupération des champs du formulaire-
         DynamicForm dynamicForm = Form.form().bindFromRequest();
         String formNom = dynamicForm.get("nom");
-        String formPrenom = dynamicForm.get("prenom");
 
         // Création d'un nouveau client
-        User userObj = new User();
-        userObj.nom = formNom;
-        userObj.prenom = formPrenom;
-        userObj.role = "client";
-        userObj.save();
+        Equipe equipeObj = new Equipe();
+        equipeObj.nom = formNom;
+        equipeObj.save();
 
         // On passe la variable formSend pour afficher le bon envoi du formulaire
         formSend = true;
 
-        return ok(adminRegister.render(formSend, viewClient));
+        return ok(adminEquipeCreation.render(formSend, viewEquipe));
 
     }
 }

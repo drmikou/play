@@ -1,0 +1,79 @@
+@(viewEleve : List[User], viewEquipe : List[Equipe], formSend: Boolean)
+
+@main(title = "Choisir mon équipe"){
+
+
+<div class="container-fluid">
+
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Choisir mon équipe
+            </h1>
+        </div>
+    </div>
+
+    @if(formSend == true){
+        <div class="alert alert-success" role="alert">
+            Vous êtes bien associé à l'équipe
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-users"></i> Choisir mon équipe</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="@routes.EquipeChoisirController.equipeChoisirSubmit()">
+                        <div class="form-group">
+                            <label for="equipe">Equipe</label>
+                            <select class="form-control", name="equipe", id="equipe">
+                                <option>Aucun</option>
+                                @for(equipe <- viewEquipe){
+                                    <option>@equipe.nom</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-primary">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @for(equipe <- viewEquipe){
+            <div class="col-lg-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-users"></i> @equipe.nom</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            @for(eleve <- viewEleve){
+                                @if( eleve.equipe == equipe){
+                                    <li class="list-group-item">@eleve.nom @eleve.prenom </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+
+
+</div>
+
+
+}

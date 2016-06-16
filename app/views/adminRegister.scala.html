@@ -1,4 +1,6 @@
-@main(title = "New Client"){
+@(formSend : Boolean, viewClient : List[User])
+
+@main2(title = "Admin - Création client"){
 
 <div class="container-fluid">
 
@@ -6,57 +8,63 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Ajouter un nouveau client
+                Création d'un client
             </h1>
         </div>
+    </div>
+        @if(formSend == true){
+            <div class="alert alert-success" role="alert">
+                Le nouveau client a bien été ajouté.
+            </div>
+        }
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-users"></i> Création d'un nouveau client</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" action="@routes.AdminRegisterController.adminRegisterSubmit()">
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom du client">
+                            </div>
 
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Nom du client</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nom du client">
-            </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="password" class="form-control" id="exampleInpword1" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="">Mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputsword1" placeholder="Mot de passe">
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="page-header">
-                        Liste des équipes:
-                    </h2>
-                </div>
-            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom du client">
+                            </div>
 
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-users"></i> Assigner à une ou plusieurs équipes</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="list-group">
-                                <li class="list-group-item">Bleu <input type="checkbox"></li>
-                                <li class="list-group-item">Rouge <input type="checkbox"></li>
-                                <li class="list-group-item">Jaune <input type="checkbox"></li>
-                                <li class="list-group-item">Vert <input type="checkbox"></li>
-                                <li class="list-group-item">Violet <input type="checkbox"></li>
-                                <li class="list-group-item">Rose Bonbon <input type="checkbox"></li>
-                            </ul>
-                        </div>
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-2">
+                                <button class="btn btn-primary">Envoyer</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-           <!-- <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-            </div>-->
-                <button id="button">Submit</button>
-        </form>
+        </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-5">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-th-list"></i> Liste des clients</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        @for(client <- viewClient){
+                            <li class="list-group-item">@client.nom</li>
+                        }
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
 </div>
 

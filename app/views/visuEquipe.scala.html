@@ -1,4 +1,4 @@
-@(test: String)
+@(viewMonequipe: List[User], nomEquipe: String, viewMesreunions: List[Reunion], viewMesfonctionnalites: List[Fonctionnalite], viewMesdepots: List[Depot])
 
 @main(title = "Mon équipe"){
 
@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Equipe *Rose Bonbon*
+                    Equipe @nomEquipe
                 </h1>
             </div>
         </div>
@@ -25,15 +25,13 @@
             <div class="col-lg-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 1</h3>
+                        <h3 class="panel-title"><i class="fa fa-users"></i> Mon groupe</h3>
                     </div>
                     <div class="panel-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Membre 1</li>
-                            <li class="list-group-item">Membre 2</li>
-                            <li class="list-group-item">Membre 3</li>
-                            <li class="list-group-item">Membre 4</li>
-                            <li class="list-group-item">Membre 5</li>
+                            @for(monequipe <- viewMonequipe){
+                                <li class="list-group-item">@monequipe.nom  @monequipe.prenom</li>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -49,56 +47,25 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 1</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Date : <input type="date"></li>
-                            <li class="list-group-item">Heure de début : <input type="text"></li>
-                            <li class="list-group-item">Heure de fin : <input type="text"></li>
-                            <li class="list-group-item">Participants : <input type="text"></li>
-                            <li class="list-group-item">Commnetaires: <input type="text"></li>
-                        </ul>
+            @for(mareunion <- viewMesreunions){
+                <div class="col-lg-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-users"></i> @mareunion.nom</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Date : @mareunion.date</li>
+                                <li class="list-group-item">Heure de début : @mareunion.dateDebut</li>
+                                <li class="list-group-item">Heure de fin : @mareunion.dateFin</li>
+                                <li class="list-group-item">Participants : <input type="text"></li>
+                                <li class="list-group-item">Commentaires: @mareunion.commentaire</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
 
-            <div class="col-lg-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 2</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Date : <input type="date"></li>
-                            <li class="list-group-item">Heure de début : <input type="text"></li>
-                            <li class="list-group-item">Heure de fin : <input type="text"></li>
-                            <li class="list-group-item">Participants : <input type="text"></li>
-                            <li class="list-group-item">Commnetaires: <input type="text"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 3</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Date : <input type="date"></li>
-                            <li class="list-group-item">Heure de début : <input type="text"></li>
-                            <li class="list-group-item">Heure de fin : <input type="text"></li>
-                            <li class="list-group-item">Participants : <input type="text"></li>
-                            <li class="list-group-item">Commnetaires: <input type="text"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="row">
@@ -113,18 +80,16 @@
             <div class="col-lg-8">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 1</h3>
+                        <h3 class="panel-title"><i class="fa fa-users"></i> Fonctionnalités trouvées</h3>
                     </div>
                     <div class="panel-body">
                         <ul class="list-group">
-                            <li class="list-group-item">Fonction 1 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 2 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 3 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 4 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 5 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 6 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 7 <input type="checkbox"></li>
-                            <li class="list-group-item">Fonction 8 <input type="checkbox"></li>
+                            @for(mafonctionnalite <- viewMesfonctionnalites){
+                                @if(mafonctionnalite.trouve == true){
+                                    <li class="list-group-item">@mafonctionnalite.nom</li>
+                                }
+                            }
+
                         </ul>
                     </div>
                 </div>
@@ -141,18 +106,11 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><i class="fa fa-users"></i> Entretien 1</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Compte-rendu 1  <a href="#">Download <i class="fa fa-arrow-circle-right"></i></a></li>
-                            <li class="list-group-item">Compte-rendu 2  <a href="#">Download <i class="fa fa-arrow-circle-right"></i></a></li>
-                            <li class="list-group-item">Compte-rendu 3  <a href="#">Download <i class="fa fa-arrow-circle-right"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="list-group">
+                    @for(monDepot <- viewMesdepots){
+                        <li class="list-group-item">@monDepot.nom  <a href="#">Download <i class="fa fa-arrow-circle-right"></i></a></li>
+                    }
+                </ul>
             </div>
         </div>
 

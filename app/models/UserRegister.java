@@ -1,17 +1,15 @@
 package models;
-
 import com.avaje.ebean.Model;
 import play.data.validation.Constraints;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
-import java.util.List;
-
-@Entity
-public class User extends Model {
+/**
+ * Created by Thomas on 16/06/2016.
+ */
+public class UserRegister extends Model {
 
     @Id
     public Long id;
@@ -21,13 +19,7 @@ public class User extends Model {
 
     public String lastname;
 
-    public int promotion;
-
-    public String phone;
-
     public String mail;
-
-    public String adresse;
 
     public String loginIsep;
 
@@ -36,11 +28,6 @@ public class User extends Model {
     public String role;
 
     public String numberIsep;
-
-    @ManyToOne
-    public Equipe equipe;
-
-
 
     public Long getId() {
         return id;
@@ -61,20 +48,10 @@ public class User extends Model {
         this.lastname = lastname;
     }
 
-   // public void setPromotion(Promotion promotion) { this.promotion = 2017; }
-
-   /* public String getPhone() { return phone;}
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }*/
-
     public String getMail() { return mail;}
     public void setMail(String mail) {
         this.mail = mail;
     }
-
-   /* public String getAdresse() { return adresse;}
-    public void setAdresse(String adresse) {this.adresse = adresse;}*/
 
     public String getRole() { return role;}
     public void setRole(String role) {this.role = role;}
@@ -94,11 +71,16 @@ public class User extends Model {
         this.numberIsep = numberIsep;
     }
 
-    public Equipe getEquipe(){ return equipe; }
-    public void setEquipe(Equipe equipe) { this.equipe = equipe; }
+    public static Finder find = new Finder(Long.class, UserRegister.class);
 
-    public static Finder find = new Finder(Long.class, User.class);
+    public static void createUserRegister(Long id, String firstname, String lastname, String mail, String role, String loginIsep, String password, String numberIsep) {
+        UserRegister user;
+        //promotion = 2017;
+        user = new UserRegister();
+        user.save();
+    }
 
-
-//méthode "find" pour chercher ds la bdd (normalement find c'est deja une methode de play.. bizarre)
+    //méthode "find" pour chercher ds la bdd (normalement find c'est deja une methode de play.. bizarre)
+    public static UserRegister find(Long id) {
+    }
 }

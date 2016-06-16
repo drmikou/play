@@ -22,6 +22,12 @@ public class Reunion extends Model {
 
     public Date date;
 
+    public Date dateDebut;
+
+    public Date dateFin;
+
+    public String commentaire;
+
     @ManyToOne
     public Equipe equipe;
 
@@ -46,6 +52,27 @@ public class Reunion extends Model {
     }
     public void setDate(Date Date) {
         this.date = date;
+    }
+
+    public Date getDatedebut() {
+        return dateDebut;
+    }
+    public void setDatedebut(Date DateDebut) {
+        this.dateDebut = dateDebut;
+    }
+
+    public Date getDatefin() {
+        return dateFin;
+    }
+    public void setDatefin(Date DateFin) {
+        this.dateFin = dateFin;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
     }
 
     public Equipe getEquipe(){ return equipe; }

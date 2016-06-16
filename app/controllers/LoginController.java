@@ -5,17 +5,11 @@ import play.mvc.*;
 import views.html.*;
 import play.data.DynamicForm;
 import play.data.Form;
-import java.util.Arrays;
-import java.util.List;
-
-import models.User;
-import play.mvc.Controller;
-import play.mvc.Result;
-/**
-import security.EPoste;
-import be.objectify.deadbolt.java.actions.SubjectNotPresent;
-import be.objectify.deadbolt.java.actions.SubjectPresent;**/
-
+import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import models.UserRegister;
+import ldap.LDAPObject;
+import ldap.LDAPaccess;
 
 
 /**
@@ -40,76 +34,60 @@ public class LoginController extends Controller {
         return ok(login.render(test));
     }
 
-    public Result logUser(String userId, String role) {
-        session("userId", userId);
-        //j'ai rajouté role pour pouvoir en fonction qu'il prenne la valeur "admin","eleve" ou "client"
-        // çà affiche des pges ou pas/permissions
-        session("role", role);
-        User user = User.find.byId(userId);
-        return ok(user.firstName + " logged");
-    }
-
-    public Result logout() {
-        session().clear();
-        return redirect(controllers.AccueilController.accueil());
-    }
-
-
-    public static User getCurrentUser() {
-        String userId = session().get("userId");
-        String role = session().get("role");
-
-        if (userId == null)
-            return null;
-
-        User currentUser = User.find.byId(userId);
-
-        if (currentUser == null)
-            return null;
-        return currentUser;
-
-    }
-//Cette partie çà gère la durée des sessions je crois, mais le code qui définit la durée et tt est pas dans ce controller
-    @SubjectPresent
-    public Result sp()
-    {
-        String message = "subj IS present";
-        return ok(message);
-    }
-
-    @SubjectNotPresent
-    public Result snp()
-    {
-        return ok(session("userId") + "subj NOT present");
-    }
-
-    @SubjectPresent
-    public Result who()
-    {
-        String msg = "";
-        User u = User.find.byId(session("userId"));
-
-        msg += u.toString() + "\n";
-        msg += u.firstName + "\n";
-
-        return ok(msg);
-    }
-
-    public Result listRole()
-    {
-        List<EPoste> allList = Arrays.asList(EPoste.values());
-
-        return ok(allList.toString());
-    }
-}
-
-
-    /*public Result loginSubmit()
+    public Result loginSubmit()
     {
 
         DynamicForm dynamicForm = Form.form().bindFromRequest();
-        String test = dynamicForm.get("Email");
+       // String test = dynamicForm.get("Email");
+//on récupère les valeurs entrées login et password
+        String l = dynamicForm.get("login");
+        String p = dynamicForm.get("password");
+        LDAPObject reponse =null;
 
-        return ok(login.render(test));
-    }*/
+//on test leur existence dans ldap
+        		try {
+			 reponse =LDAPaccess.LDAPget(l, p);
+		} catch (Exception e) {
+			//TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+			long id= Integer.parseInt(reponse.getNumber());
+//si ils existent
+			if(reponse!=null){
+                //instanciation de l'obj nwUser de la table "User"
+                UserRegister nwUserRegister = new UserRegister();
+                //on remplie l'objet nwUser de type "User" avec les données récupérées dans Ldap
+                nwUserRegister.setId(id);
+                String firstname = reponse.getNom().split(" ")[0];
+                nwUserRegister.setFirstname(firstname);
+                nwUserRegister.setLastname(reponse.getNomFamille());
+                nwUserRegister.setMail(reponse.getMail());
+                nwUserRegister.setRole(reponse.getType());
+                nwUserRegister.setLoginIsep(reponse.getLogin());
+                nwUserRegister.setPassword(p);
+                nwUserRegister.setNumberIsep(reponse.getNumber());
+                //on crée un nouveau User dans notre table "User"
+                UserRegister.createUserRegister(id, firstname, reponse.getNomFamille(), reponse.getMail(), reponse.getType(), reponse.getLogin(),
+                        p, reponse.getNumber());
+                //on créé une nouvelle session et le mec est co
+                HttpSession s = dynamicForm.getSession();
+                UserRegister createSessionUserRegister = UserRegister.find(nwUserRegister.getId());
+                s.setAttribute("connected", "true");
+                s.setAttribute("Id",createSessionUserRegister.getId() );
+                s.setAttribute("firstname",createSessionUserRegister.getFirstname());
+                s.setAttribute("name", createSessionUserRegister.getLastname());
+                s.setAttribute("role", createSessionUserRegister.getRole());
+               //return ok(controllers.AccueilController.accueil());
+			}
+			else{
+                return ok(login.render(""));
+    }
+
+}
+    public Result logout() {
+        session().clear();
+        return ok(login.render(""));
+    }
+}
 

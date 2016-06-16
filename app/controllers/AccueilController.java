@@ -7,6 +7,7 @@ import models.Equipe;
 import models.User;
 import models.Projet;
 import models.Depot;
+import models.Reunion;
 
 import play.mvc.*;
 
@@ -31,7 +32,7 @@ public class AccueilController extends Controller {
         //  -----------------------------------
         // |     Création de variables test    |
         //  -----------------------------------
-        User userPresence = (User) User.find.byId("0");
+        /*User userPresence = (User) User.find.byId("1");
         if( userPresence == null)
         {
             Promotion promotionObj = new Promotion();
@@ -57,18 +58,21 @@ public class AccueilController extends Controller {
             userObj.nom = "testNom";
             userObj.prenom = "testPrenom";
             userObj.equipe = equipeObj;
+            userObj.role = "user";
             userObj.save();
 
             User user2Obj = new User();
             user2Obj.nom = "test2Nom";
             user2Obj.prenom = "test2Prenom";
             user2Obj.equipe = equipeObj;
+            user2Obj.role = "user";
             user2Obj.save();
 
             User user3Obj = new User();
             user3Obj.nom = "test3Nom";
             user3Obj.prenom = "test3Prenom";
             user3Obj.equipe = equipeObj;
+            user3Obj.role = "user";
             user3Obj.save();
 
             Projet projet = new Projet();
@@ -81,14 +85,24 @@ public class AccueilController extends Controller {
             depot.equipe = equipeObj;
             depot.commentaire = "testDepotCommentaire commentaire";
             depot.save();
-        }
+
+            Reunion reunion = new Reunion();
+            reunion.nom = "reunionNom";
+            reunion.equipe = equipeObj;
+            reunion.date = new Date(2016, 01, 01);
+            reunion.save();
+        }/
 
 
 
         // Editer
         /*Projet editProjet = (Projet) Projet.find.byId("1");
-        editProjet.nom = "edi1t";
+        editProjet.nom = "azert";
         editProjet.save();*/
+        /*int userId2 = 3;
+        User usertest = (User) User.find.byId(userId2);
+        usertest.prenom="dedede";
+        usertest.update();*/
 
         // Supprimer
         /*Projet suppProjet = (Projet) Projet.find.byId("2");
@@ -102,7 +116,7 @@ public class AccueilController extends Controller {
         //  -----------------
         // Utilisateur
             // On récupère la variable de session userId
-            int userId = 2;
+            int userId = 1;
             // On recherche l'utilisateur à partir de userId
             User user = (User) User.find.byId(userId);
 
@@ -120,13 +134,25 @@ public class AccueilController extends Controller {
             viewMonequipe = User.find.where().eq("equipe", userEquipe).findList();
         }
 
+        //  -----------------
+        // |    Mes dates    |
+        //  -----------------
+        List<Reunion> viewMesdates = null;
+        // On récupère tous les utilisateurs d'une même équipe
+        // On vérifie si user existe bien dans la bdd
+        if(user != null) {
+            // On récupère l'équipe de l'utilisateur
+            Equipe userEquipe = user.getEquipe();
+            // On crée une liste à partir des élèves d'une même équipe
+            viewMesdates = Reunion.find.where().eq("equipe", userEquipe).findList();
+        }
 
         String[] visualisationArray = new String[2];
         visualisationArray[0] = "0";
         visualisationArray[1] = "1";
 
 
-        return ok(accueil.render(viewMonequipe, visualisationArray));
+        return ok(accueil.render(viewMonequipe, viewMesdates, visualisationArray));
     }
 
 }

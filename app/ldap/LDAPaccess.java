@@ -1,15 +1,21 @@
 package ldap;
-
 import java.io.Serializable;
 import java.util.Hashtable;
 
 import javax.naming.*;
 import javax.naming.directory.*;
 
+
 /**
- * Created by Thomas on 10/06/2016.
+ * accès à l'annuaire LDAP de l'ISEP
+ * pour :
+ * authentification des utilisateurs
+ * retrouver le mail ISEP d'un utilisateur
+ * @author gilles Carpentier
+ * @version 09/02/2015 ajout de la fermeture du contexte pour libérer les ressources plus rapidement
  */
-public class LDAPaccess implements Serializable {
+public class LDAPaccess implements Serializable
+{
     private static final long serialVersionUID = 1L;
 
 
@@ -17,13 +23,13 @@ public class LDAPaccess implements Serializable {
      * authentification
      * @param user
      * @param mot de passe
-     * @return l'objet LDAP ou null si pas trouvÃ©
+     * @return l'objet LDAP ou null si pas trouvé
      * @throws Exception
      */
+
     public static LDAPObject LDAPget(String user, String mdp) throws Exception
     {
-        //System.out.println(user + " " + mdp);
-
+//		System.out.println(user + " " + mdp);
         // Initial context implementation
         String INITCTX = "com.sun.jndi.ldap.LdapCtxFactory";
         String MY_HOST = "ldap://ldap.isep.fr:389";
@@ -42,6 +48,7 @@ public class LDAPaccess implements Serializable {
         String messageErreur = "LOGIN INVALIDE";
         try
         {
+
             // Hashtable for environmental information
             Hashtable<String, String> env = new Hashtable<String, String>();
 
@@ -72,8 +79,8 @@ public class LDAPaccess implements Serializable {
             {
                 SearchResult sr = results.next();
 
-                // String dn = sr.getName();
-                // System.out.println("Distinguished Name is " + dn);
+                //String dn = sr.getName();
+//				System.out.println("Distinguished Name is " + dn);
 
                 Attribute cn = sr.getAttributes().get("cn");
                 nom = (String) cn.get();
@@ -90,16 +97,15 @@ public class LDAPaccess implements Serializable {
                     Attribute en = sr.getAttributes().get("employeeNumber");
                     employeeNumber = (String) en.get();
                 } catch (Exception e) {
-                    messageErreur = "numéro d'élève inexistant dans l'annuaire";
+                    messageErreur = "numéro d'élève non trouvé dans l'annuaire";
                 }
                 Attribute em = sr.getAttributes().get("mail");
                 mail = (String) em.get();
-                // System.out.println("nom=" + nom + " login=" + login+ " type=" + type + " numero=" + employeeNumber + " mail=" + mail);
+//				System.out.println("nom=" + nom + " login=" + login+ " type=" + type + " numero=" + employeeNumber + " mail=" + mail);
 
                 ctx.close();
             }
-        }
-        catch (Exception e)
+        } catch (Exception e)
         {
             System.err.println(e);
             throw (new Exception(messageErreur));

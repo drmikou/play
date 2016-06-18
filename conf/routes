@@ -16,17 +16,66 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /login                      controllers.LoginController.login
 POST    /login/submit               controllers.LoginController.loginSubmit
 
-# Page d'accueil User
-GET     /accueil                    controllers.AccueilController.accueil
 
-# Page dépot User
-GET     /depot                      controllers.DepotEleveController.depot
 
-# Page de réunion
-GET     /reunion                    controllers.ReunionController.reunion
 
-# Page de visualisation d'une équipe
-GET     /equipe                 controllers.VisuEquipeController.visuEquipe
+# Eleve accueil
+GET     /eleve                  controllers.AccueilController.accueil
 
-# Page inscription client
+# Eleve dépot
+GET     /eleve/depot                      controllers.DepotEleveController.depot
+
+# Eleve réunion
+GET     /eleve/reunion                    controllers.ReunionController.reunion
+
+# Eleve équipe
+GET     /eleve/equipe                       controllers.VisuEquipeController.visuEquipe
+
+# Eleve choisir équipe
+GET     /eleve/equipe/choisir               controllers.EquipeChoisirController.equipeChoisir
+POST    /eleve/equipe/choisir/submit        controllers.EquipeChoisirController.equipeChoisirSubmit
+
+# Eleve messagerie
+#GET     /eleve/messagerie              controllers.MessagerieController.messagerie
+#POST    /eleve/messagerie/submit        controllers.MessagerieController.messagerieSubmit
+
+
+
+# Admin accueil / tableau de bord
+GET     /admin                      controllers.AdminController.admin
+
+# Admin liste des utilisateurs
+GET     /admin/utilisateurs            controllers.AdminUserController.adminUser
+
+# Admin inscription projet
+GET     /admin/projet/ajouter                controllers.AdminProjetCreationController.adminProjetCreation
+POST    /admin/projet/ajouter/submit         controllers.AdminProjetCreationController.adminProjetCreationSubmit
+
+# Admin inscription client
 GET     /admin/client/ajouter                controllers.AdminRegisterController.adminRegister
+POST    /admin/client/ajouter/submit         controllers.AdminRegisterController.adminRegisterSubmit
+
+# Admin inscription équipe
+GET     /admin/equipe/ajouter                controllers.AdminEquipeCreationController.adminEquipeCreation
+POST    /admin/equipe/ajouter/submit         controllers.AdminEquipeCreationController.adminEquipeCreationSubmit
+
+# Admin inscription groupe
+GET     /admin/groupe/ajouter                controllers.AdminGroupeCreationController.adminGroupeCreation
+POST    /admin/groupe/ajouter/submit         controllers.AdminGroupeCreationController.adminGroupeCreationSubmit
+
+# Admin association client/equipe
+GET     /admin/client/associer                controllers.AdminAssocierClientController.adminAssocierClient
+POST    /admin/client/associer/submit         controllers.AdminAssocierClientController.adminAssocierClientSubmit
+
+
+
+# Client Accueil
+GET     /client                             controllers.ClientController.accueil
+
+# Client Fixer réunion
+GET     /client/reunion/fixer               controllers.ClientFixerReunionController.clientFixerReunion
+POST    /client/reunion/fixer/submit        controllers.ClientFixerReunionController.clientFixerReunionSubmit
+
+
+# TEST Création utilisateur de base
+GET    /test                                controllers.TestCreationController.testCreation

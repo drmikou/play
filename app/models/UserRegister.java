@@ -80,7 +80,5 @@ public class UserRegister extends Model {
         user.save();
     }
 
-    //méthode "find" pour chercher ds la bdd (normalement find c'est deja une methode de play.. bizarre)
-    public static UserRegister find(Long id) {
-    }
+
 }

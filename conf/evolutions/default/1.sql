@@ -51,6 +51,9 @@ create table reunion (
   id                            bigint auto_increment not null,
   nom                           varchar(255),
   date                          datetime(6),
+  date_debut                    datetime(6),
+  date_fin                      datetime(6),
+  commentaire                   varchar(255),
   equipe_id                     bigint,
   constraint pk_reunion primary key (id)
 );
@@ -66,6 +69,7 @@ create table user (
   id                            bigint auto_increment not null,
   nom                           varchar(255),
   prenom                        varchar(255),
+  role                          varchar(255),
   equipe_id                     bigint,
   constraint pk_user primary key (id)
 );

@@ -74,6 +74,18 @@ create table user (
   constraint pk_user primary key (id)
 );
 
+create table user_register (
+  id                            bigint auto_increment not null,
+  firstname                     varchar(255),
+  lastname                      varchar(255),
+  mail                          varchar(255),
+  login_isep                    varchar(255),
+  password                      varchar(255),
+  role                          varchar(255),
+  number_isep                   varchar(255),
+  constraint pk_user_register primary key (id)
+);
+
 alter table depot add constraint fk_depot_equipe_id foreign key (equipe_id) references equipe (id) on delete restrict on update restrict;
 create index ix_depot_equipe_id on depot (equipe_id);
 
@@ -142,4 +154,6 @@ drop table if exists reunion;
 drop table if exists session;
 
 drop table if exists user;
+
+drop table if exists user_register;
 

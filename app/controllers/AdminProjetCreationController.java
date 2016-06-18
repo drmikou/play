@@ -85,7 +85,7 @@ public class AdminProjetCreationController extends Controller {
         if( formNom != null) {
             for (String value : formEquipeArray) {
                 // On ne crée pas de projet lorsque le champs est null
-                if (value != "Aucun") {
+                if (!value.equals("Aucun")) {
                     Equipe equipeObj = (Equipe) Equipe.find.where().eq("nom", value).findUnique();
                     Projet projetObj = new Projet();
                     projetObj.nom = formNom;

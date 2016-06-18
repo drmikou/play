@@ -67,7 +67,7 @@ public class AdminAssocierClientController extends Controller {
         String formClient = dynamicForm.get("client");
         String formEquipe = dynamicForm.get("equipe");
 
-        if( formClient != "Aucun" && formEquipe != "Aucun"){
+        if( !formClient.equals("Aucun") && !formEquipe.equals("Aucun")){
             User associationClient = (User) User.find.where().eq("nom", formClient).findUnique();
             Equipe associationEquipe = (Equipe) Equipe.find.where().eq("nom", formEquipe).findUnique();
 

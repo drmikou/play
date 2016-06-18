@@ -26,7 +26,7 @@ GET     /eleve                  controllers.AccueilController.accueil
 GET     /eleve/depot                      controllers.DepotEleveController.depot
 
 # Eleve réunion
-GET     /eleve/eunion                    controllers.ReunionController.reunion
+GET     /eleve/reunion                    controllers.ReunionController.reunion
 
 # Eleve équipe
 GET     /eleve/equipe                       controllers.VisuEquipeController.visuEquipe
@@ -34,6 +34,10 @@ GET     /eleve/equipe                       controllers.VisuEquipeController.vis
 # Eleve choisir équipe
 GET     /eleve/equipe/choisir               controllers.EquipeChoisirController.equipeChoisir
 POST    /eleve/equipe/choisir/submit        controllers.EquipeChoisirController.equipeChoisirSubmit
+
+# Eleve messagerie
+GET     /eleve/messagerie              controllers.MessagerieController.messagerie
+POST    /eleve/messagerie/submit        controllers.MessagerieController.messagerieSubmit
 
 
 

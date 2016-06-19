@@ -47,7 +47,7 @@ public class Equipe extends Model {
     public String getNom() {
         return nom;
     }
-    public void setNom(int Nom) {
+    public void setNom(String Nom) {
         this.nom = nom;
     }
 

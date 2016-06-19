@@ -1,0 +1,123 @@
+@(mesReunions : List[Reunion], formSend : Boolean, reunionEdit : Reunion)
+
+@main3(title = "Client - Editer une réunion"){
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Editer une réunion
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-users"></i> Editer une réunion</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="@routes.ClientEditReunionController.clientEditReunionSubmit()">
+                        <div class="form-group">
+                            <label for="reunion">Réunion</label>
+                            <select class="form-control", name="reunion", id="reunion">
+                                <option>Aucun</option>
+                                @for(reunion <- mesReunions){
+                                <option>@reunion.nom</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-primary">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if( formSend != false){
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Information de la réunion à éditer
+                    </div>
+                    <div class="panel-body">
+                        <h5>Equipe :</h5>
+                        @reunionEdit.equipe.id
+                        <hr>
+
+                        <h5>Date :</h5>
+                        @reunionEdit.date.format("dd/MM/yyyy")
+                        <hr>
+
+                        <h5>Heure de début :</h5>
+                        @reunionEdit.dateDebut.format("HH:mm")
+                        <hr>
+
+                        <h5>Heure de fin :</h5>
+                        @if( reunionEdit.dateFin != null){
+                            @reunionEdit.dateFin.format("HH:mm")
+                        }
+                        <hr>
+
+                        <h5>Commentaires :</h5>
+                        @if( reunionEdit.commentaire != null){
+                            @reunionEdit.commentaire
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Informations à éditer
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" action="@routes.ClientEditReunionController.clientEdit2ReunionSubmit()">
+                            <h5>Equipe :</h5>
+                            <select class="form-control", name="reunion", id="reunion">
+                                <option>@reunionEdit.nom</option>
+                                @for(reunion <- mesReunions){
+                                    if(reunion != reunionEdit.nom){
+                                        <option>@reunion.nom</option>
+                                    }
+                                }
+                            </select>
+                            <h5>Date :</h5>
+                                <input type="date" class="form-control" name="date" id="date" placeholder="Nom du groupe">
+                            <hr>
+
+                            <h5>Heure de début :</h5>
+                                <input type="time" class="form-control" name="dateDebut" id="dateDebut" placeholder="Heure de début">
+                            <hr>
+
+                            <h5>Heure de fin :</h5>
+                            <input type="time" class="form-control" name="dateFin" id="dateFin" placeholder="Heure de fin">
+                            <hr>
+
+                            <h5>Commentaires :</h5>
+                            <input type="text" class="form-control" name="formCommentaire" id="formCommentaire" placeholder="Commentaire">
+
+                            <br>
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-2">
+                                <button class="btn btn-primary">Envoyer</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+    }
+
+}

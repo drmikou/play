@@ -37,7 +37,7 @@ public class AdminProjetCreationController extends Controller {
         // On récupère toutes les équipes
         viewEquipe = Equipe.find.findList();
 
-        return ok(adminProjetCreation.render(formSend, viewProjet, viewEquipe,formEquipe1,formEquipe2,formEquipe3,formEquipe4));
+        return ok(adminProjetCreation.render(formSend, viewProjet, viewEquipe));
 
     }
 
@@ -101,7 +101,7 @@ public class AdminProjetCreationController extends Controller {
         // On passe la variable formSend pour afficher le bon envoi du formulaire
         formSend = true;
 
-        return ok(adminProjetCreation.render(formSend, viewProjet, viewEquipe, formEquipe1,formEquipe2,formEquipe3,formEquipe4));
+        return ok(adminProjetCreation.render(formSend, viewProjet, viewEquipe));
 
     }
 }

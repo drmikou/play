@@ -1,0 +1,74 @@
+@(mesReunions : List[Reunion])
+
+@main3(title = "Client - Réunion"){
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Mes réunions
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3">
+            <button class="btn btn-warning" type="button">
+                <a href="@routes.ClientFixerReunionController.clientFixerReunion" ><i class="fa fa-plus"></i> Fixer une réunion</a>
+            </button>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3">
+            <button class="btn btn-warning" type="button">
+                <a href="@routes.ClientEditReunionController.clientEditReunion" ><i class="fa fa-pencil"></i> Editer une réunion</a>
+            </button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+    @if( mesReunions != null){
+        @for(reunion <- mesReunions){
+        <div class="col-lg-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-clock-o"></i> @reunion.nom</h3>
+                </div>
+                <div class="panel-body">
+                    <h5>Equipe :</h5>
+                        @reunion.equipe.id
+                    <hr>
+
+                    <h5>Date :</h5>
+
+                        @reunion.date.format("dd/MM/yyyy")
+
+                    <hr>
+
+                    <h5>Heure de début :</h5>
+
+                        @reunion.dateDebut.format("HH:mm")
+
+                    <hr>
+
+                    <h5>Heure de fin :</h5>
+                    @if( reunion.dateFin != null){
+                        @reunion.dateFin.format("HH:mm")
+                    }
+                    <hr>
+
+                    <h5>Commentaires :</h5>
+                    @if( reunion.commentaire != null){
+                        @reunion.commentaire
+                    }
+                </div>
+            </div>
+        </div>
+        }
+
+    }
+}

@@ -10,10 +10,13 @@ import play.mvc.*;
 
 import views.html.*;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 public class ClientFixerReunionController extends Controller {
@@ -21,7 +24,6 @@ public class ClientFixerReunionController extends Controller {
     public Result clientFixerReunion(){
 
         int clientId = 52;
-        String date = null;
         User viewClient = (User) User.find.where().eq("id",clientId).findUnique();
 
         //  ----------------------------
@@ -45,7 +47,7 @@ public class ClientFixerReunionController extends Controller {
         // On récupère tous les projets
         viewProjet = Projet.find.findList();
 
-        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet,date));
+        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet));
     }
 
 
@@ -87,20 +89,46 @@ public class ClientFixerReunionController extends Controller {
         String formDate = dynamicForm.get("date");
         String formHeure = dynamicForm.get("heure");
 
-        String date = formDate;
+        String date = formHeure;
 
-        Equipe equipeResult = (Equipe) Equipe.find.where().eq("nom", formNom).findUnique();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        //Date date2 = formatter.parse(formDate);
-        //Date dateResult = formatter.format(date2);
+        Date date2 = null;
+        Date date3 = null;
+
+        Equipe equipeResult = (Equipe) Equipe.find.where().eq("nom", formEquipe).findUnique();
+
+        try{
+             DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+             date2 = format.parse(formDate);
+
+            DateFormat format2 = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
+            date3 = format2.parse(formHeure);
+
+        }
+        catch(ParseException e)
+        {
+
+        }
+
+        try{
+            DateFormat format2 = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
+            date3 = format2.parse(formHeure);
+        }
+        catch(ParseException e)
+        {
+
+        }
+
+
 
         Reunion reunionObj = new Reunion();
         reunionObj.nom = formNom;
         reunionObj.equipe = equipeResult;
-        //reunionObj.date = dateResult;
+        reunionObj.date = date2;
+        reunionObj.dateDebut = date3;
+        reunionObj.save();
 
 
-        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet, date));
+        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet));
     }
 
 }

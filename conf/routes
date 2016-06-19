@@ -72,9 +72,31 @@ POST    /admin/client/associer/submit         controllers.AdminAssocierClientCon
 # Client Accueil
 GET     /client                             controllers.ClientController.accueil
 
+# Client Mes réunions
+GET     /client/reunion               controllers.ClientReunionController.clientReunion
+POST    /client/reunion/submit        controllers.ClientReunionController.clientReunionSubmit
+
+
 # Client Fixer réunion
 GET     /client/reunion/fixer               controllers.ClientFixerReunionController.clientFixerReunion
 POST    /client/reunion/fixer/submit        controllers.ClientFixerReunionController.clientFixerReunionSubmit
+
+# Client Editer réunion
+GET     /client/reunion/edit               controllers.ClientEditReunionController.clientEditReunion
+POST    /client/reunion/edit/submit        controllers.ClientEditReunionController.clientEditReunionSubmit
+POST    /client/reunion/edit/submit2        controllers.ClientEditReunionController.clientEdit2ReunionSubmit
+
+# Client Fonctionnalités
+GET     /client/fonctionnalite              controllers.ClientFonctionnaliteController.clientFonctionnalite
+POST    /client/fonctionnalite/submit       controllers.ClientFonctionnaliteController.clientFonctionnaliteSubmit
+
+# Client Fonctionnalités valider
+GET     /client/fonctionnalite/valider              controllers.ClientFonctionnaliteValiderController.clientFonctionnaliteValider
+POST    /client/fonctionnalite/valider/submit       controllers.ClientFonctionnaliteValiderController.clientFonctionnaliteValiderSubmit
+
+# Client Depot création
+GET     /client/depot/creation              controllers.ClientDepotCreationController.clientDepotCreation
+POST    /client/depot/creation/submit       controllers.ClientDepotCreationController.clientDepotCreationSubmit
 
 
 # TEST Création utilisateur de base

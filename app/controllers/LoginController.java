@@ -11,6 +11,8 @@ import models.UserRegister;
 import ldap.LDAPObject;
 import ldap.LDAPaccess;
 
+import javax.naming.CommunicationException;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -41,16 +43,19 @@ public class LoginController extends Controller {
         String p = dynamicForm.get("password");
 
 
-        LDAPObject reponse =null;
+        LDAPObject reponse = null;
         //on test leur existence dans ldap
         try {
-            reponse = LDAPaccess.LDAPget(l, p);
+            LDAPaccess ldapaccess = new LDAPaccess();
+            reponse = ldapaccess.LDAPget(l, p);
+            System.out.println("HERE : " + l + " " +p);
         } catch (Exception e) {
             //TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        long id = Integer.parseInt(reponse.getNumber());
+
+       /* long id = Integer.parseInt(reponse.getNumber());
         //si ils existent
         if(reponse!=null){
             //instanciation de l'obj nwUser de la table "User"
@@ -84,9 +89,10 @@ public class LoginController extends Controller {
         }
         else
         {
-            return ok(login.render(test));
-        }
 
+        }
+        */
+        return ok(login.render(test));
     }
 
     public Result logout() {

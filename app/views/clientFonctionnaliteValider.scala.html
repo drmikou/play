@@ -1,0 +1,106 @@
+@(fonctionnaliteList : List[Fonctionnalite], mesEquipes: Equipe)
+
+@main3(title = "Client - Valider une fonctionnalité"){
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Valider une fonctionnalité
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-5">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-plus"></i> Valider une fonctionnalité</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post" action="@routes.ClientFonctionnaliteValiderController.clientFonctionnaliteValiderSubmit()">
+                        <div class="form-group">
+                            <label for="equipe">Equipe</label>
+                            <select class="form-control", name="equipe", id="equipe">
+                                <option>Aucun</option>
+                                <option>@mesEquipes.nom</option>
+                            </select><br>
+                            <label for="nom">Nom de la fonctionnalité</label>
+                            <select class="form-control", name="nom", id="nom">
+                                <option>Aucun</option>
+                                @for(fonctionnalite <-fonctionnaliteList){
+                                    <option>@fonctionnalite.nom</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-primary">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-align-left"></i> Mes fonctionnalités</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        @for(fonctionnalite <- fonctionnaliteList){
+                        <li class="list-group-item">@fonctionnalite.nom</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-align-left"></i> Fonctionnalités des groupes</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>Equipe</th>
+                                <th>Fonctionnalité</th>
+                                <th>Validé</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @for(fonctionnalite <- fonctionnaliteList){
+                            <tr>
+                                <td>@mesEquipes.nom</td>
+                                <td>@fonctionnalite.nom</td>
+                                @if(fonctionnalite.trouve == true){
+                                    <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                                }
+                                @if(fonctionnalite.trouve == false){
+                                    <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                                }
+
+                            </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -15,6 +15,7 @@ public class ClientFonctionnaliteValiderController extends Controller {
 
     public Result clientFonctionnaliteValider(){
 
+        Boolean formSend = false;
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -25,13 +26,14 @@ public class ClientFonctionnaliteValiderController extends Controller {
         List<Fonctionnalite> fonctionnaliteList = null;
         fonctionnaliteList = Fonctionnalite.find.where().eq("equipe", clientEquipe).findList();
 
-        return ok(clientFonctionnaliteValider.render(fonctionnaliteList, equipeObj));
+        return ok(clientFonctionnaliteValider.render(fonctionnaliteList, equipeObj, formSend));
 
     }
 
 
     public Result clientFonctionnaliteValiderSubmit(){
 
+        Boolean formSend = false;
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -56,8 +58,10 @@ public class ClientFonctionnaliteValiderController extends Controller {
         fonctionnaliteForm.setTrouve(true);
         fonctionnaliteForm.save();
 
+        formSend = true;
 
-        return ok(clientFonctionnaliteValider.render(fonctionnaliteList, equipeObj));
+
+        return ok(clientFonctionnaliteValider.render(fonctionnaliteList, equipeObj, formSend));
 
     }
 }

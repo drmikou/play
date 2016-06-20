@@ -50,21 +50,21 @@ public class Reunion extends Model {
     public Date getDate() {
         return date;
     }
-    public void setDate(Date Date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
     public Date getDatedebut() {
         return dateDebut;
     }
-    public void setDatedebut(Date DateDebut) {
+    public void setDatedebut(Date dateDebut) {
         this.dateDebut = dateDebut;
     }
 
     public Date getDatefin() {
         return dateFin;
     }
-    public void setDatefin(Date DateFin) {
+    public void setDatefin(Date dateFin) {
         this.dateFin = dateFin;
     }
 

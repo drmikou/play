@@ -1,4 +1,4 @@
-@(fonctionnaliteList : List[Fonctionnalite])
+@(fonctionnaliteList : List[Fonctionnalite], formSend : Boolean)
 
 @main3(title = "Client - Fonctionnalite"){
 
@@ -12,6 +12,12 @@
             </h1>
         </div>
     </div>
+
+    @if(formSend == true){
+    <div class="alert alert-success" role="alert">
+        La fonctionnalité a bien été crée.
+    </div>
+    }
 
     <div class="row">
         <div class="col-lg-3"></div>

@@ -29,6 +29,7 @@ public class ClientEditReunionController extends Controller {
         clientEquipe = clientObj.getEquipe();
 
         Boolean formSend = false;
+        Boolean formSend2 = false;
 
         Reunion reunionEdit = null;
 
@@ -41,7 +42,7 @@ public class ClientEditReunionController extends Controller {
         }
 
 
-        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit));
+        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit, formSend2));
 
     }
 
@@ -55,6 +56,7 @@ public class ClientEditReunionController extends Controller {
         clientEquipe = clientObj.getEquipe();
 
         Boolean formSend = false;
+        Boolean formSend2 = false;
 
         //  ----------------------------
         // |      Liste des réunions     |
@@ -75,11 +77,12 @@ public class ClientEditReunionController extends Controller {
 
 
         formSend = true;
+        formSend2 = false;
 
 
 
 
-        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit));
+        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit, formSend2));
 
     }
 
@@ -92,6 +95,7 @@ public class ClientEditReunionController extends Controller {
         clientEquipe = clientObj.getEquipe();
 
         Boolean formSend = false;
+        Boolean formSend2 = false;
 
         //  ----------------------------
         // |      Liste des réunions     |
@@ -112,44 +116,50 @@ public class ClientEditReunionController extends Controller {
         String formDateFin = dynamicForm.get("dateFin");
         String formCommentaire = dynamicForm.get("formCommentaire");
 
-        Reunion reunionEdit = (Reunion) Reunion.find.where().eq("nom",formReunion).findUnique();
-
-        Date date2 = null;
         Date date3 = null;
         Date date4 = null;
+        DateFormat format = new SimpleDateFormat("HH:mm");
 
         try{
-            DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
-            date2 = format.parse(formDate);
-
-            DateFormat format2 = new SimpleDateFormat("HH:mm", Locale.ENGLISH);
-            date3 = format2.parse(formDateDebut);
-
-            date4 = format2.parse(formDateFin);
+            date3 = format.parse(formDateDebut);
         }
         catch(ParseException e)
         {
 
         }
-
-        if( formDateDebut.equals("")){
-            reunionEdit.setDatedebut(date3);
+        try{
+            date4 = format.parse(formDateFin);
         }
-        if( formDateFin.equals("")){
+        catch(ParseException e)
+        {
+
+        }
+        System.out.println("formDateDebut"+formDateDebut);
+        System.out.println("date3"+date3);
+        System.out.println("formdatefin"+formDateFin);
+        System.out.println("date4"+date4);
+
+        Reunion reunionEdit = (Reunion) Reunion.find.where().eq("nom",formReunion).findUnique();
+        if( date3 != null) {
+            reunionEdit.setDatedebut(date3);
+       }
+        if( date4 != null){
             reunionEdit.setDatefin(date4);
         }
-        if( !formCommentaire.equals("") ){
+        if( !"".equals(formCommentaire) ){
             reunionEdit.setCommentaire(formCommentaire);
         }
-
         reunionEdit.save();
 
+        System.out.println("reunionEdit"+reunionEdit.getDatefin());
+
+        //  ----------------------------------------
+        // |           Variable d'affichage          |
+        //  ----------------------------------------
         formSend = true;
+        formSend2 = true;
 
-
-
-
-        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit));
+        return ok(clientEditReunion.render(mesReunions, formSend, reunionEdit, formSend2));
 
     }
 }

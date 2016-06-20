@@ -1,4 +1,4 @@
-@(viewClient : User, viewEleve: List[User], viewEquipe:List[Equipe], viewProjet: List[Projet])
+@(viewClient : User, viewEleve: List[User], viewEquipe:List[Equipe], viewProjet: List[Projet], viewReunions : List[Reunion], viewFonctionnalite : List[Fonctionnalite], viewDepot : List[Depot])
 
 @main3(title = "Client - Accueil"){
 
@@ -37,6 +37,94 @@
             }
         }
     </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-clock-o"></i> Mes réunions  </h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Commentaire</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @for(reunion <- viewReunions){
+                                <tr>
+                                    <td>@reunion.nom</td>
+                                    <td>
+                                        @if( reunion.date != null){
+                                            @reunion.date.format("dd/MM/yyyy")
+                                        }
+                                    </td>
+                                    <td>@reunion.commentaire</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-align-left"></i> Mes fonctionnalités  </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        @for(fonctionnalite <- viewFonctionnalite){
+                            <li class="list-group-item">@fonctionnalite.nom</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-folder-open"></i> Mes dépôts  </h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Commentaire</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @for(depot <- viewDepot){
+                            <tr>
+                                <td>@depot.nom</td>
+
+                                <td>
+                                    @if( depot.datedepot != null){
+                                        @depot.datedepot.format("dd/MM/yyyy")
+                                    }
+                                </td>
+                                <td>@depot.commentaire</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 

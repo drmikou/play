@@ -13,14 +13,12 @@ public class VisuEquipeController extends Controller {
 
     public Result visuEquipe(){
 
-        String test = "dd";
-
         //  -----------------
         // |     Variable    |
         //  -----------------
         // Utilisateur
         // On récupère la variable de session userId
-        int userId = 1;
+        int userId = 2;
         // On recherche l'utilisateur à partir de userId
         User user = (User) User.find.byId(userId);
 

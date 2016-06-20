@@ -1,4 +1,4 @@
-@(test: String)
+@(formSend : Boolean, viewDepot : List[Depot])
 
 @main(title = "Dépôt de documents"){
 
@@ -10,38 +10,74 @@
                 <h1 class="page-header">
                     Dépôt de documents
                 </h1>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Déposer le fichier souhaité</h3>
-                            </div>
-                            <div class="panel-body">
-                                choisissez un fichier : X
-                                <button> Déposer</button>
-                            </div>
-                        </div>
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Documents déposés</h3>
-                            </div>
-                            <div class="panel-body">
-                                Document - Date - Client -
-                                doc1.pdf - 16/02/2015 - Kazi-Aoul
-                                Doc2.pdf - 21/03/2015 - J.E.
-                                Doc3.pdf - 15/04/2015 - Sellami
-                            </div>
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-folder-open"></i> Dépôts disponibles </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Date limite</th>
+                                    <th>Commentaire</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @for(depot <- viewDepot){
+                                    <tr>
+                                        <td>@depot.nom</td>
+                                        <td>@depot.datedepot.format("dd/MM/yyyy")</td>
+                                        <td>@depot.commentaire</td>
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><i class="fa fa-folder-open"></i> Envoyer un fichier </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" action="@routes.DepotEleveController.depotSubmit()" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="client">Client à associer</label>
+                                <select class="form-control", name="client", id="client">
+                                    <option>Aucun</option>
+                                    @for(depot <- viewDepot){
+                                        <option>@depot.nom</option>
+                                    }
+                                </select>
+                                <br>
+                                <label for="file">Document à envoyer</label>
+                                <input type="file" name="file" id="file">
+                            </div>
 
-    </div>
-    <!-- /.container-fluid -->
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-2">
+                                <button class="btn btn-primary">Envoyer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-    }
+}

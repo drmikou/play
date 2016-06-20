@@ -52,6 +52,7 @@ public class LoginController extends Controller {
         } catch (Exception e) {
             //TODO Auto-generated catch block
             e.printStackTrace();
+            return null;
         }
 
 

@@ -12,6 +12,15 @@ create table depot (
   constraint pk_depot primary key (id)
 );
 
+create table depot_user (
+  id                            bigint auto_increment not null,
+  nom                           varchar(255),
+  commentaire                   varchar(255),
+  datedepot                     datetime(6),
+  depot_id                      bigint,
+  constraint pk_depot_user primary key (id)
+);
+
 create table equipe (
   id                            bigint auto_increment not null,
   nom                           varchar(255),
@@ -89,6 +98,9 @@ create table user_register (
 alter table depot add constraint fk_depot_equipe_id foreign key (equipe_id) references equipe (id) on delete restrict on update restrict;
 create index ix_depot_equipe_id on depot (equipe_id);
 
+alter table depot_user add constraint fk_depot_user_depot_id foreign key (depot_id) references depot (id) on delete restrict on update restrict;
+create index ix_depot_user_depot_id on depot_user (depot_id);
+
 alter table equipe add constraint fk_equipe_groupe_id foreign key (groupe_id) references groupe (id) on delete restrict on update restrict;
 create index ix_equipe_groupe_id on equipe (groupe_id);
 
@@ -116,6 +128,9 @@ create index ix_user_equipe_id on user (equipe_id);
 alter table depot drop foreign key fk_depot_equipe_id;
 drop index ix_depot_equipe_id on depot;
 
+alter table depot_user drop foreign key fk_depot_user_depot_id;
+drop index ix_depot_user_depot_id on depot_user;
+
 alter table equipe drop foreign key fk_equipe_groupe_id;
 drop index ix_equipe_groupe_id on equipe;
 
@@ -138,6 +153,8 @@ alter table user drop foreign key fk_user_equipe_id;
 drop index ix_user_equipe_id on user;
 
 drop table if exists depot;
+
+drop table if exists depot_user;
 
 drop table if exists equipe;
 

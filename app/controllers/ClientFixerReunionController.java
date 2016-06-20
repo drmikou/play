@@ -23,6 +23,7 @@ public class ClientFixerReunionController extends Controller {
 
     public Result clientFixerReunion(){
 
+        Boolean formSend = false;
         int clientId = 52;
         User viewClient = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -47,7 +48,7 @@ public class ClientFixerReunionController extends Controller {
         // On récupère tous les projets
         viewProjet = Projet.find.findList();
 
-        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet));
+        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet, formSend));
     }
 
 
@@ -55,6 +56,7 @@ public class ClientFixerReunionController extends Controller {
 
     public Result clientFixerReunionSubmit(){
 
+        Boolean formSend = false;
         int clientId = 52;
 
         User viewClient = (User) User.find.where().eq("id",clientId).findUnique();
@@ -127,8 +129,8 @@ public class ClientFixerReunionController extends Controller {
         reunionObj.dateDebut = date3;
         reunionObj.save();
 
-
-        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet));
+        formSend = true;
+        return ok(clientFixerReunion.render(viewClient, viewEleve, viewMesequipes, viewProjet, formSend));
     }
 
 }

@@ -24,6 +24,7 @@ GET     /eleve                  controllers.AccueilController.accueil
 
 # Eleve dépot
 GET     /eleve/depot                      controllers.DepotEleveController.depot
+POST    /eleve/depot/submit               controllers.DepotEleveController.depotSubmit
 
 # Eleve réunion
 GET     /eleve/reunion                    controllers.ReunionController.reunion

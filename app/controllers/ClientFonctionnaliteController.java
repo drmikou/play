@@ -15,6 +15,7 @@ public class ClientFonctionnaliteController extends Controller {
 
     public Result clientFonctionnalite(){
 
+        Boolean formSend = false;
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -23,13 +24,14 @@ public class ClientFonctionnaliteController extends Controller {
         List<Fonctionnalite> fonctionnaliteList = null;
         fonctionnaliteList = Fonctionnalite.find.where().eq("equipe", clientEquipe).findList();
 
-        return ok(clientFonctionnalite.render(fonctionnaliteList));
+        return ok(clientFonctionnalite.render(fonctionnaliteList, formSend));
 
     }
 
 
     public Result clientFonctionnaliteSubmit(){
 
+        Boolean formSend = false;
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -51,7 +53,9 @@ public class ClientFonctionnaliteController extends Controller {
         fonctionnaliteObj.trouve = false;
         fonctionnaliteObj.save();
 
-        return ok(clientFonctionnalite.render(fonctionnaliteList));
+        formSend = true;
+
+        return ok(clientFonctionnalite.render(fonctionnaliteList, formSend));
 
     }
 }

@@ -1,4 +1,4 @@
-@(mesReunions : List[Reunion], formSend : Boolean, reunionEdit : Reunion)
+@(mesReunions : List[Reunion], formSend : Boolean, reunionEdit : Reunion, formSend2 : Boolean)
 
 @main3(title = "Client - Editer une réunion"){
 
@@ -12,6 +12,12 @@
             </h1>
         </div>
     </div>
+
+    @if(formSend2 == true){
+    <div class="alert alert-success" role="alert">
+        La réunion a bien été mis à jour.
+    </div>
+    }
 
     <div class="row">
         <div class="col-lg-3"></div>
@@ -59,7 +65,9 @@
                         <hr>
 
                         <h5>Heure de début :</h5>
-                        @reunionEdit.dateDebut.format("HH:mm")
+                        @if( reunionEdit.dateDebut != null){
+                            @reunionEdit.dateDebut.format("HH:mm")
+                        }
                         <hr>
 
                         <h5>Heure de fin :</h5>
@@ -85,7 +93,7 @@
                         <form method="post" action="@routes.ClientEditReunionController.clientEdit2ReunionSubmit()">
                             <h5>Equipe :</h5>
                             <select class="form-control", name="reunion", id="reunion">
-                                <option>@reunionEdit.nom</option>
+
                                 @for(reunion <- mesReunions){
                                     if(reunion != reunionEdit.nom){
                                         <option>@reunion.nom</option>

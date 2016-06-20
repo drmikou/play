@@ -1,4 +1,4 @@
-@(fonctionnaliteList : List[Fonctionnalite], mesEquipes: Equipe)
+@(mesEquipes: Equipe, formSend : Boolean)
 
 @main3(title = "Client - Création d'un dépôt"){
 
@@ -13,6 +13,12 @@
         </div>
     </div>
 
+    @if(formSend == true){
+    <div class="alert alert-success" role="alert">
+        Le dépôt a bien été crée.
+    </div>
+    }
+
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-5">
@@ -21,7 +27,7 @@
                     <h3 class="panel-title"><i class="fa fa-plus"></i> Création d'un dépôt</h3>
                 </div>
                 <div class="panel-body">
-                    <form method="post" action="@routes.ClientFonctionnaliteValiderController.clientFonctionnaliteValiderSubmit()">
+                    <form method="post" action="@routes.ClientDepotCreationController.clientDepotCreationSubmit()">
                         <div class="form-group">
                             <label for="equipe">Equipe</label>
                             <select class="form-control", name="equipe", id="equipe">

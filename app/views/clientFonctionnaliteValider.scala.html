@@ -1,4 +1,4 @@
-@(fonctionnaliteList : List[Fonctionnalite], mesEquipes: Equipe)
+@(fonctionnaliteList : List[Fonctionnalite], mesEquipes: Equipe, formSend : Boolean)
 
 @main3(title = "Client - Valider une fonctionnalité"){
 
@@ -12,6 +12,12 @@
             </h1>
         </div>
     </div>
+
+    @if(formSend == true){
+    <div class="alert alert-success" role="alert">
+        La réunion a bien été mis à jour.
+    </div>
+    }
 
     <div class="row">
         <div class="col-lg-3"></div>

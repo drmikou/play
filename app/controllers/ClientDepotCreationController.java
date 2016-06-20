@@ -19,6 +19,7 @@ public class ClientDepotCreationController extends Controller {
 
     public Result clientDepotCreation(){
 
+        boolean formSend = false;
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
@@ -26,23 +27,20 @@ public class ClientDepotCreationController extends Controller {
 
         Equipe equipeObj = (Equipe) Equipe.find.where().eq("id",clientEquipe.getId()).findUnique();
 
-        List<Fonctionnalite> fonctionnaliteList = null;
-        fonctionnaliteList = Fonctionnalite.find.where().eq("equipe", clientEquipe).findList();
 
-        return ok(clientDepotCreation.render(fonctionnaliteList, equipeObj));
+        return ok(clientDepotCreation.render(equipeObj,formSend));
 
     }
 
 
     public Result clientDepotCreationSubmit(){
 
+        boolean formSend = false;
+
         int clientId = 52;
         User clientObj = (User) User.find.where().eq("id",clientId).findUnique();
 
         Equipe clientEquipe = clientObj.getEquipe();
-
-        List<Fonctionnalite> fonctionnaliteList = null;
-        fonctionnaliteList = Fonctionnalite.find.where().eq("equipe", clientEquipe).findList();
 
         Equipe equipeObj = (Equipe) Equipe.find.where().eq("id",clientEquipe.getId()).findUnique();
 
@@ -56,7 +54,8 @@ public class ClientDepotCreationController extends Controller {
         String formDate = dynamicForm.get("date");
         String formCommentaire = dynamicForm.get("commentaire");
 
-        Equipe formEquipeObj = (Equipe) Equipe.find.where().eq("nom",formEquipe).findUnique();
+        Equipe formEquipeObj = null;
+        formEquipeObj = (Equipe) Equipe.find.where().eq("nom",formEquipe).findUnique();
 
         Date formDateObj = null;
         try{
@@ -75,8 +74,9 @@ public class ClientDepotCreationController extends Controller {
         depotObj.datedepot = formDateObj;
         depotObj.save();
 
+        formSend = true;
 
-        return ok(clientDepotCreation.render(fonctionnaliteList, equipeObj));
+        return ok(clientDepotCreation.render(equipeObj, formSend));
 
     }
 }

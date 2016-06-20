@@ -41,7 +41,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">
-                    Entretiens:
+                    Mes réunions:
                 </h2>
             </div>
         </div>
@@ -55,17 +55,15 @@
                         </div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item">Date : @mareunion.date</li>
-                                <li class="list-group-item">Heure de début : @mareunion.dateDebut</li>
-                                <li class="list-group-item">Heure de fin : @mareunion.dateFin</li>
-                                <li class="list-group-item">Participants : <input type="text"></li>
+                                <li class="list-group-item">Date : @if( mareunion.date != null){ @mareunion.date.format("dd/MM/yyyy")}</li>
+                                <li class="list-group-item">Heure de début : @if( mareunion.dateDebut != null){ @mareunion.dateDebut.format("HH:mm")}</li>
+                                <li class="list-group-item">Heure de fin : @if( mareunion.dateFin != null){ @mareunion.dateFin.format("HH:mm")}</li>
                                 <li class="list-group-item">Commentaires: @mareunion.commentaire</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             }
-
         </div>
 
         <div class="row">
@@ -99,7 +97,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">
-                    Compte-rendus:
+                    Mes dépôts :
                 </h2>
             </div>
         </div>

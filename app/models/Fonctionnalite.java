@@ -36,14 +36,14 @@ public class Fonctionnalite extends Model {
     public String getNom() {
         return nom;
     }
-    public void setNom(int Nom) {
+    public void setNom(String nom) {
         this.nom = nom;
     }
 
     public Boolean getTrouve() {
         return trouve;
     }
-    public void setTrouve(int Trouve) {
+    public void setTrouve(boolean Trouve) {
         this.trouve = trouve;
     }
 

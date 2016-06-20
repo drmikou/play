@@ -1,4 +1,4 @@
-@(viewClient: User, viewEleve: List[User],viewMesequipes:List[Equipe], viewProjet: List[Projet])
+@(viewClient: User, viewEleve: List[User],viewMesequipes:List[Equipe], viewProjet: List[Projet], formSend : Boolean)
 
 @main3(title = "Client - Fixer une réunion"){
 
@@ -14,6 +14,12 @@
             </h1>
         </div>
     </div>
+
+    @if(formSend == true){
+    <div class="alert alert-success" role="alert">
+        La réunion a bien été crée.
+    </div>
+    }
 
     <div class="row">
         <div class="col-lg-6">

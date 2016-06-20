@@ -94,4 +94,29 @@ public class LoginController extends Controller {
         return ok(login.render(""));
     }
 }
+    // Code Ldap du poto
+    public User Connect(String login, String mdp) throws ServiceException {
+        // Need to be tested
+        error = null;
+        LDAPaccess access = new LDAPaccess();
+        try {
+            LDAPObject userLdap = access.LDAPget(login, mdp);
+            if (userLdap == null) {
+                error = "Login invalide";
+                return null;
+            }
+            User userDb = userRepository.findByLogin(login);
+            if(userDb == null){
+                error = "Utilisateur non inscrit dans la base de donnée. Veuillez contacter votre responsable de parcours.";
+                return null;
+            }
+            if((userDb.getFname() == null)|| (userDb.getLname() == null))
+                userDb.Complete(userLdap.getNumber(), userLdap.getPrenom(), userLdap.getNomFamille(), userLdap.getMail(), userLdap.getType());
+            return userDb;
+        } catch (Exception e) {
+            error = "Connexion impossible. Veuillez contacter l'administrateur.";
+            e.printStackTrace();
+            return null;
+        }
+    }
 
